@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="bg-white">
       <Header />
-      <h1 className= "text-center font-light text-red-700">Michael Portfolio</h1>
+      <h1 className= "text-center font-light text-red-700">Welcome to my portfolio</h1>
       <Hero />
       <Button />
       <Projects />
