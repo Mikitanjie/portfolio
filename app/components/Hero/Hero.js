@@ -8,8 +8,11 @@ const Hero = () => {
         <h1 className="font-semibold mt-11 ml-11 text-3xl text-green-500">Michael Catania,</h1>
         <br />
         <h1 className="font-semibold text-5xl ml-11 pr-12 text-green-500">Fullstack Web Developer</h1>
+        <div className="ml-11 mt-4">
+          <Button text="Click Here" />
+        </div>
       </div>
-      <div className="flex justify-end">
+      <div className="flex justify-end items-center">
         <Image
           className="relative rounded-full mt-6 mb-0 mr-8"
           src="/ProfilePic.png"
@@ -18,7 +21,6 @@ const Hero = () => {
           height={150}
         />
       </div>
-      <Button />
     </div>
   );
 }
