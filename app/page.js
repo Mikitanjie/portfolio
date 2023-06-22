@@ -15,7 +15,6 @@ export default function Home() {
           </span>
           </div>
       <Hero />
-      <Button />
       <Projects />
       <About />
     </div>
