@@ -59,7 +59,7 @@ const Projects = () => {
         </ul>
       </section>
           </div>
-        )
-      }
+      )
+    }
 
 export default Projects;
