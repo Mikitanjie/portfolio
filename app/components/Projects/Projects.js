@@ -1,8 +1,10 @@
 const Projects = () => {
   return (
-    <div>
-      Project
-    </div>
+    <nopadding id="Skills">
+      <div>
+        Project
+      </div>
+    </nopadding>
   )
 }
 
