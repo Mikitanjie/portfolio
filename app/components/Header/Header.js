@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Header = () => {
   return (
@@ -12,18 +13,14 @@ const Header = () => {
               </div>
               <div className="hidden md:block">
                 <div className="ml-11 flex items-baseline space-x-4">
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Home
-                  </a>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    About me
-                  </a>
+                  <Link href="/">
+                    <a className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"/>
+                    <span>Home</span>
+                  </Link>
+                  <Link href="#about">
+                    <a className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"/>
+                    <span>About Me</span>
+                  </Link>
                   <a
                     href="#"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
