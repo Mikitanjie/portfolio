@@ -3,12 +3,12 @@ import Button from "../Button/Button";
 
 const Hero = () => {
   return (
-    <div className="h-56 grid grid-cols-3 gap-4 content-center ">
+    <div className=" mt-16 h-56 grid grid-cols-3 gap-4 content-center ">
       <div className="col-span-2">
-        <h1 className="font-semibold mb-2 mt-11 ml-11 text-3xl text-green-500">Michael Catania,</h1>
+        <h1 className="font-semibold mb-2 mt-12 ml-11 text-3xl text-green-500">Michael Catania,</h1>
         <br />
-        <h1 className="font-semibold text-5xl mb-8 ml-11 pr-12 text-green-500">Fullstack Web Developer</h1>
-        <div className="ml-11 mt-4">
+        <h1 className="font-semibold text-5xl mb-4 ml-11 pr-12 text-green-500">Fullstack Web Developer</h1>
+        <div className="ml-11">
           <Button text="Click Here" />
         </div>
       </div>
