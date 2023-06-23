@@ -3,6 +3,7 @@ import {} from 'react-icons/di';
 
 const Skills = () => {
   return (
+    <nopadding id="Skills">
     <div>
       <h3 style={{ textAlign: 'left', color: 'blue' }}>Programing languages and tools:</h3>
       <div style={{ display: 'flex' }}>
@@ -44,6 +45,7 @@ const Skills = () => {
       </a>
       </div>
     </div>
+    </nopadding>
   );
 };
 
