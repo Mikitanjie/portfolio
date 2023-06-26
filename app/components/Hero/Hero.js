@@ -12,9 +12,9 @@ const Hero = () => {
           <Button text="Click Here" />
         </div>
       </div>
-      <div className="flex justify-end items-center">
+      <div className="flex justify-end items-center ">
         <Image
-          className="relative w-60 h-60 rounded-full"
+          className="relative left-[-60px] w-60 h-60 rounded-full"
           src="/ProfilePic.png"
           alt="Picture of the author"
           width={300}
