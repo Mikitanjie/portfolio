@@ -14,7 +14,7 @@ const Hero = () => {
       </div>
       <div className="flex justify-end items-center">
         <Image
-          className="relative rounded-full mt-6 mb-0 mr-8"
+          className="relative w-60 h-60 rounded-full"
           src="/ProfilePic.png"
           alt="Picture of the author"
           width={300}

@@ -27,7 +27,7 @@ const Projects = () => {
           </li>
         </ul>
       </section>
-          </div>
+    </div>
       )
     }
 
