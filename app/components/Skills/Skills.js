@@ -4,6 +4,7 @@ import {} from 'react-icons/di';
 const Skills = () => {
   return (
     <nopadding id="Skills">
+
         <div className="flex flex-col justify-between p-4 leading-normal">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-black">Languages and tools</h5>
         <div className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-width dark:border-gray-700 dark:bg-gray-800">
