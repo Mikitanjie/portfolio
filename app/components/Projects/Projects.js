@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from 'react';
+import Link from "next/link";
 
 
 const Projects = () => {
@@ -14,6 +15,7 @@ const Projects = () => {
         <ul className="bg-sky-900 p-4 sm:px-8 sm:pt-6 sm:pb-8 lg:p-4 xl:px-8 xl:pt-6 xl:pb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 text-sm leading-6">
           <li className="project in projects">
             <div>
+              <Link href="http://www.mytravelpal.xyz/" target="_blank">
              <Image
                 style= ""
                 src="/Projectpic.png"
@@ -21,6 +23,7 @@ const Projects = () => {
                 width={200}
                 height={150}
             />
+            </Link>
           </div>
           </li>
           <li className="flex">
