@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="col-span-2">
         <h1 className="font-semibold mb-2 mt-12 ml-11 text-3xl text-green-500">Michael Catania,</h1>
         <br />
-        <h1 className="font-semibold text-5xl mb-4 ml-11 pr-12 text-green-500">Fullstack Web Developer</h1>
+        <h1 className=" animate-pulse font-semibold text-5xl mb-4 ml-11 pr-12 text-green-500">Fullstack Web Developer</h1>
         <div className="ml-11">
           <Button text="Click Here" />
         </div>

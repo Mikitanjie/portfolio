@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Header = () => {
   return (
-    <nav className="bg-gray-800" style={{ backgroundImage: `url('/NavPic.png')`, backgroundSize: 'cover', backgroundPosition: '50% 50%'}}>
+    <nav className="bg-gray-800" style={{ backgroundImage: `url('/NavPic.png')`, backgroundSize: 'cover', backgroundPosition: '64%'}}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-28">
             <div className="flex items-center">
@@ -12,22 +12,22 @@ const Header = () => {
                 <span className="text-white font-semibold text-lg">MC</span>
               </div>
               <div className="hidden md:block">
-                <div className="ml-11 flex items-baseline space-x-4">
+                <div className="ml-1 flex items-baseline space-x-4">
                   <Link href="/">
-                    <a className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"/>
-                    <span>Home</span>
+                    <a className="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium"/>
+                    Home
                   </Link>
                   <Link href="#About">
                     <a className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"/>
-                    <span>About Me</span>
+                    About Me
                   </Link>
                   <Link href="#Projects">
                     <a className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"/>
-                    <span>Projects</span>
+                    Projects
                   </Link>
                   <Link href="#Skills">
                     <a className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"/>
-                    <span>Skills</span>
+                    Skills
                   </Link>
                   <a
                     href="#"
