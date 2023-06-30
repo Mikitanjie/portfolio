@@ -20,7 +20,7 @@ const Footer = () => {
                   <a href="" className="hover:underline"></a>
                 </li>
                 <li>
-                  <Link href="mailto: cataniamike16gmail.com">
+                  <Link href="mailto: cataniamike16gmail.com" passHref>
                     <MdEmail size="3rem" className="hover:underline" />
                   </Link>
                 </li>
@@ -29,10 +29,10 @@ const Footer = () => {
             <div>
               <h2 className="mb-7 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow me</h2>
               <div className="flex gap-4">
-                <Link href="https://github.com/Mikitanjie" target="_blank">
+                <Link href="https://github.com/Mikitanjie" target="_blank" passHref>
                   <AiFillGithub size="3rem" className=" mr-3 hover:underline" />
                 </Link>
-                <Link href="https://www.linkedin.com/in/mc16/" target="_blank">
+                <Link href="https://www.linkedin.com/in/mc16/" target="_blank" passHref>
                   <AiFillLinkedin size="3rem" className="hover:underline" />
                 </Link>
               </div>
@@ -41,7 +41,7 @@ const Footer = () => {
               <h2 className="mb-7 text-sm font-semibold text-gray-900 uppercase dark:text-white">Call Me</h2>
               <ul className="dark:text-gray-100 font-medium">
                 <li className="mb-4">
-                  <Link href="tel:+393534440733">
+                  <Link href="tel:+393534440733" passHref>
                     <AiFillPhone size="3rem" />
                   </Link>
                 </li>
