@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Header = () => {
   return (
-    <nav className="bg-gray-800" style={{ backgroundImage: `url('/NavPic.png')`, backgroundSize: 'cover', backgroundPosition: '64%' , marginBottom: 0}}>
+    <nav className="bg-gray-800 fixed top-0 left-0 right-0" style={{ backgroundImage: `url('/NavPic.png')`, backgroundSize: 'cover', backgroundPosition: '64%' , marginBottom: 0}}>
           <div className="flex items-center justify-between h-28 ">
             <div className="flex items-center">
               <div className="flex-shrink-0">
