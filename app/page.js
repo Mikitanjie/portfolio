@@ -12,16 +12,18 @@ export default function Home() {
   return (
     <div className="bg-emerald-505">
       <Header />
-      <div className="text-center mt-5 text-5xl font-extrabold ...">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
-                Welcome to my portfolio
-          </span>
-          </div>
-      <Hero />
-      <Projects />
-      <About />
-      <Skills />
-      <Footer />
+      <div className="text-center mt-5 text-5xl font-extrabold pt-40">
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+          Welcome to my portfolio
+        </span>
+      </div>
+      <div className="pt-40">
+        <Hero />
+        <Projects />
+        <About />
+        <Skills />
+        <Footer />
+      </div>
     </div>
   )
 }
