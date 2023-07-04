@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Projects = () => {
   return (
-    <div className="mt-16 mb-16">
+    <div className="mt-24 mb-24">
       <section>
         <header className="bg-sky-500 space-y-4 p-4 sm:px-8 sm:py-6 lg:p-4 xl:px-8 xl:py-6">
           <div className="flex items-center justify-between">
