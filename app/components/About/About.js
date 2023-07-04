@@ -17,7 +17,7 @@ const About = () => {
       </div>
       <div className="w-1/2 flex justify-end items-center">
         <Image
-          className="mr-11 mt-1 w-96 h-94 "
+          className="mr-11 mt-1 w-96 h-94 grayscale hover:grayscale-0 transition-[filter]"
           src="/ProfilePic.png"
           alt="Picture of the author"
           width={240}
