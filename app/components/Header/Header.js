@@ -4,29 +4,29 @@ import Link from 'next/link';
 
 const Header = () => {
   return (
-    <nav className="bg-gray-800 fixed top-0 left-0 right-0 z-50" style={{ backgroundImage: `url('/NavPic.png')`, backgroundSize: 'cover', backgroundPosition: '64%', marginBottom: 0 }}>
+    <nav className="bg-black fixed top-0 left-0 right-0 z-50" style={{ backgroundImage: `url(https://e0.pxfuel.com/wallpapers/170/477/desktop-wallpaper-matrix-miscellanea-miscellaneous-numbers-binary-code.jpg)`, background: 'cover', backgroundPosition: '152%' }}>
       <div className="flex items-center justify-between h-28">
         <div className="flex items-center">
           <div className="flex-shrink-0">
-            <span className="text-white font-semibold text-lg ml-11">MC</span>
+            <span className="text-white font-semibold text-lg ml-11"></span>
           </div>
           <div className="hidden md:block">
             <div className="ml-1 flex items-baseline space-x-4">
-              <Link className="text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium" href="/">
+              <Link className="text-white-300 hover:text-emerald-600 px-4 py-2 rounded-md text-md font-bold" href="/">
                 Home
               </Link>
-              <Link className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="#About">
+              <Link className="text-white-300 hover:text-emerald-600 px-3 py-2 rounded-md text-md font-bold" href="#About">
                 About Me
               </Link>
-              <Link className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="#Projects">
+              <Link className="text-white-300 hover:text-emerald-600 px-3 py-2 rounded-md text-md font-bold" href="#Projects">
                 Projects
               </Link>
-              <Link className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="#Skills">
+              <Link className="text-white-300 hover:text-emerald-600 px-3 py-2 rounded-md text-md font-bold" href="#Skills">
                 Skills
               </Link>
               <a
                 href="#"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                className="text-white-300 hover:text-emerald-600 px-3 py-2 rounded-md text-md font-bold"
               >
                 Get in touch
               </a>
