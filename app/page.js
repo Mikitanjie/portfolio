@@ -15,14 +15,12 @@ export default function Home() {
       <Header />
       <div className="text-center mt-5 text-5xl font-extrabold pt-40 relative">
         <span
-          className="bg-clip-text text-transparent text-emerald-600"
+          className="bg-clip-text text-emerald-600"
           style={{
             animation: 'lightingEffect 2s linear infinite',
             filter: 'drop-shadow(0 0 20px green)',
           }}
-        >
-          Welcome to my portfolio
-        </span>
+        >Welcome to my portfolio</span>
       </div>
       <div className="pt-40">
         <Hero />
