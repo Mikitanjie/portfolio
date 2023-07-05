@@ -15,7 +15,7 @@ export default function Home() {
       <Header />
       <div className="text-center mt-5 text-5xl font-extrabold pt-40 relative">
         <span
-          className="bg-clip-text text-transparent text-violet-500"
+          className="bg-clip-text text-transparent text-emerald-600"
           style={{
             animation: 'lightingEffect 2s linear infinite',
             filter: 'drop-shadow(0 0 20px green)',
