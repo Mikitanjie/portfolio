@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Header = () => {
   return (
-    <nav className="bg-black fixed top-0 left-0 right-0 z-50" style={{ backgroundImage: `url(https://e0.pxfuel.com/wallpapers/170/477/desktop-wallpaper-matrix-miscellanea-miscellaneous-numbers-binary-code.jpg)`, background: 'cover', backgroundPosition: '152%' }}>
+    <nav className="bg-black sticky top-0 left-0 right-0 z-50" style={{ backgroundImage: `url(https://e0.pxfuel.com/wallpapers/170/477/desktop-wallpaper-matrix-miscellanea-miscellaneous-numbers-binary-code.jpg)`, background: 'cover', backgroundPosition: '152%' }}>
       <div className="flex items-center justify-between h-28">
         <div className="flex items-center">
           <div className="flex-shrink-0">
@@ -25,10 +25,10 @@ const Header = () => {
                 Skills
               </Link>
               <a
-                href="#"
+                href="#Contacts"
                 className="text-white-300 hover:text-emerald-600 px-3 py-2 rounded-md text-md font-bold"
               >
-                Get in touch with me I'm Michael
+                Get in touch
               </a>
             </div>
           </div>

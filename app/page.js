@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="bg-emerald-505">
       <Header />
-      <div className="text-center mt-5 text-5xl font-extrabold pt-40 relative">
+      <div className="text-center text-5xl font-extrabold pt-20 relative">
         <span
           className="bg-clip-text text-emerald-600"
           style={{
