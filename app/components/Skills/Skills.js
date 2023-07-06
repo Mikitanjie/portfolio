@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Skills = () => {
   return (
-    <div className="flex justify-end" style={{ marginTop: '250px' }}>
+    <div  id="Skills" className="flex justify-end" style={{ marginTop: '250px' }}>
       <div className="flex justify-end leading-normal mb-11">
         <p>Languages and tools</p>
       </div>
