@@ -28,7 +28,7 @@ const Header = () => {
                 href="#"
                 className="text-white-300 hover:text-emerald-600 px-3 py-2 rounded-md text-md font-bold"
               >
-                Get in touch
+                Get in touch with me I'm Michael
               </a>
             </div>
           </div>
