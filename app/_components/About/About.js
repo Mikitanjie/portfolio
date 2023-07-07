@@ -3,8 +3,12 @@ import Image from 'next/image';
 
 const About = () => {
   return (
-    <div nopadding id="About" className="flex mb-24 ml-11 font-lg text-medium text-emerald-600">
+    <div id="About" className="flex mb-24 ml-11 font-lg text-medium text-emerald-600"style={{ marginBottom: '120px'}}>
       <div className="w-1/2">
+          <br />
+          <br />
+          <br />
+          <br />
         <h1>About Me</h1>
         <div className="mt-12 mr-11 font-lg text-lg text-white">
           <p>
@@ -36,11 +40,11 @@ const About = () => {
           className="mr-11 mt-11 w-96 h-96 grayscale hover:grayscale-0 transition-[filter]"
           src="/ProfilePic.png"
           alt="Picture of the author"
-          width={600} // Adjust the width to your desired size
-          height={600} // Adjust the height to your desired size
+          width={600}
+          height={600}
         />
       </div>
-    </div>
+      </div>
   );
 };
 
