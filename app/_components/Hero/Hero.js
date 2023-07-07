@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 
 const Hero = () => {
   return (
-    <div className="relative mt-16 h-56 grid grid-cols-3 gap-4 content-center">
+    <div className="relative mt-16 h-56 gridcontent-center" style={{ marginTop: '150px', marginBottom: '5px'}}>
       <div className="col-span-2 relative z-10">
         <h1 className="font-semibold mb-2 mt-12 ml-11 text-3xl text-emerald-600">Hi, I&apos;m Michael</h1>
         <br />

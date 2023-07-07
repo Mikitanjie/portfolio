@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Languages = () => {
   return (
-    <div style={{ display: 'flex', marginTop: '200px'}}>
+    <div nopadding style={{ display: 'flex', marginBottom: '100px', marginTop:'-250px' }}>
       <div style={{ marginRight: '25px', textAlign: 'center' }}>
         <div style={{ width: '60px', height: '60px' }}>
           <Image
