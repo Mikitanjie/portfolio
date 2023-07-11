@@ -3,10 +3,10 @@ import Image from 'next/image';
 
 const Skills = () => {
   return (
-    <div className="flex justify-end" style={{ marginTop: '50px' }}>
-      <div className="mt-11 mb-11 grid grid-cols-4 gap-6 rounded-lg shadow md:flex-row dark:bg-black">
+    <div className="flex justify-end" style={{ marginTop: '50px'}}>
+      <div className="mt-11 mb-11 grid grid-cols-4 gap-6 dark:bg-transparent">
         <div className="animate-pulse" style={{ animationDelay: '0.0s', marginTop: '-2px' }}>
-          <div style={{ width: '60px', height: '60px' }}>
+          <div style={{ width: '60px', height: '60px'}}>
             <Image
               src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg"
               alt="figma"
