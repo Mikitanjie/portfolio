@@ -31,6 +31,7 @@ const Header = () => {
                 Get in touch
               </a>
             </div>
+
           </div>
         </div>
         <div className="hidden md:block">

@@ -1,14 +1,34 @@
-import React from 'react';
+'use client'
+
+import React, { useState } from 'react';
 import Image from 'next/image';
 
-const About = () => {
+
+  const About = () => {
+    const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  const images = [
+    "/ProjectP.jpg",
+    "/ProjectB.jpg",
+    "/ProjectA.jpg",
+    "/ProfilePic.png"
+  ];
+
+  const nextImage = () => {
+    setActiveImageIndex((activeImageIndex + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setActiveImageIndex((activeImageIndex - 1 + images.length) % images.length);
+  };
+
   return (
-    <div id="About" className="flex mb-24 ml-11 font-lg text-medium text-emerald-600"style={{ marginBottom: '120px'}}>
+    <div id="About" className="flex mb-24 ml-11 font-lg text-medium text-emerald-600" style={{ marginBottom: '120px' }}>
       <div className="w-1/2">
-          <br />
-          <br />
-          <br />
-          <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <h1>About Me</h1>
         <div className="mt-12 mr-11 font-lg text-lg text-white">
           <p>
@@ -35,16 +55,12 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="w-1/2 flex justify-end items-center">
-        <Image
-          className="mr-11 mt-11 w-96 h-96 grayscale hover:grayscale-0 transition-[filter]"
-          src="/ProfilePic.png"
-          alt="Picture of the author"
-          width={600}
-          height={600}
-        />
+      <div id="carousel" style={{ marginTop: '50px' }}>
+          <Image src={images[activeImageIndex]} alt="Picture of the author" width={600} height={800} />
+        <button id="prevBtn" onClick={prevImage}>Prev</button>
+        <button id="nextBtn" onClick={nextImage}>Next</button>
       </div>
-      </div>
+    </div>
   );
 };
 
