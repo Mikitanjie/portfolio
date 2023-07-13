@@ -8,10 +8,9 @@ import Image from 'next/image';
     const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   const images = [
-    "/ProjectP.jpg",
     "/ProjectB.jpg",
-    "/ProjectA.jpg",
-    "/ProfilePic.png"
+    "/ProjectP.jpg",
+    "/ProjectA.jpg"
   ];
 
   const nextImage = () => {
@@ -25,7 +24,6 @@ import Image from 'next/image';
   return (
     <div id="About" className="flex mb-24 ml-11 font-lg text-medium text-emerald-600" style={{ marginBottom: '120px' }}>
       <div className="w-1/2">
-        <br />
         <br />
         <br />
         <br />
@@ -55,10 +53,14 @@ import Image from 'next/image';
           </p>
         </div>
       </div>
-      <div id="carousel" style={{ marginTop: '50px' }}>
-          <Image src={images[activeImageIndex]} alt="Picture of the author" width={600} height={800} />
-        <button id="prevBtn" onClick={prevImage}>Prev</button>
-        <button id="nextBtn" onClick={nextImage}>Next</button>
+      <div id="carousel" style={{marginLeft: '160px', marginTop: '100px'}}>
+        <div>
+          <Image className="h-full w-full object-cover grayscale hover:grayscale-0 transition-[filter]" src={images[activeImageIndex]} alt="Picture of the author" width={600} height={800} />
+        </div>
+        <div>
+          <button  type="button" className="inline-flex justify-center rounded-md bg-black px-4 py-2 text-gary-500 shadow-sm ring-1 ring-inset ring-emerald-400 hover:bg-emerald-700 focus:outline-offset-0"  id="prevBtn" onClick={prevImage}>Prev</button>
+          <button type="button" className="inline-flex justify-center rounded-md bg-black px-4 py-2 text-gary-500 shadow-sm ring-1 ring-inset ring-emerald-400 hover:bg-emerald-700	 focus:outline-offset-0"  id="nextBtn" onClick={nextImage}style={{ marginLeft: '365px'}}>Next</button>
+        </div>
       </div>
     </div>
   );

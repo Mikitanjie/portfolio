@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 const Languages = () => {
   return (
-    <div style={{ display: 'flex', marginBottom: '100px', marginTop:'-250px' }}>
-      <div style={{ marginRight: '25px', textAlign: 'center' }}>
-        <div style={{ width: '60px', height: '60px' }}>
+    <div style={{ display: 'flex', marginBottom: '715px', marginTop:'-250px', marginLeft: '40px' }}>
+      <div className="animate-pulse" style={{animationDelay: '0.2s', marginRight: '25px', textAlign: 'center' }}>
+        <div style={{width: '60px', height: '60px' }}>
           <Image
             src="https://cdn-icons-png.flaticon.com/128/321/321256.png"
             alt="Portuguese"
@@ -14,7 +14,7 @@ const Languages = () => {
         </div>
         <span>Portuguese</span>
       </div>
-      <div style={{ marginRight: '50px', textAlign: 'center' }}>
+      <div className="animate-pulse" style={{animationDelay: '0.4s', marginRight: '50px', textAlign: 'center' }}>
         <div style={{ width: '60px', height: '60px' }}>
           <Image
             src="https://cdn-icons-png.flaticon.com/128/321/321240.png"
@@ -25,7 +25,7 @@ const Languages = () => {
         </div>
         <span>Italian</span>
       </div>
-      <div style={{ marginRight: '50px', textAlign: 'center' }}>
+      <div className="animate-pulse" style={{animationDelay: '0.6s', marginRight: '50px', textAlign: 'center' }}>
         <div style={{ width: '60px', height: '60px' }}>
           <Image
             src="https://cdn-icons-png.flaticon.com/128/321/321233.png"
@@ -36,7 +36,7 @@ const Languages = () => {
         </div>
         <span>German</span>
       </div>
-      <div style={{ marginRight: '50px', textAlign: 'center' }}>
+      <div className="animate-pulse" style={{animationDelay: '0.8s', marginRight: '50px', textAlign: 'center' }}>
         <div style={{ width: '60px', height: '60px' }}>
           <Image
             src="https://cdn-icons-png.flaticon.com/128/321/321260.png"
@@ -47,7 +47,7 @@ const Languages = () => {
         </div>
         <span>Spanish</span>
       </div>
-      <div style={{ textAlign: 'center' }}>
+      <div className="animate-pulse" style={{animationDelay: '1.0s', textAlign: 'center' }}>
         <div style={{ width: '60px', height: '60px' }}>
           <Image
             src="https://cdn-icons-png.flaticon.com/128/321/321269.png"

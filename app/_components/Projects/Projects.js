@@ -5,9 +5,9 @@ import Link from "next/link";
 
 const Projects = () => {
   return (
-    <div id="Projects" className="mt-24 mb-24" style={{ marginBottom: '160px'}}>
+    <div id="Projects" className="mt-22" style={{ marginBottom: '100px'}}>
       <section>
-        <br/>
+      <br/>
         <header className="bg-emerald-600 space-y-4 p-4 sm:px-8 sm:py-6 lg:p-4 xl:px-8 xl:py-6"style={{ marginTop: '250px' }}>
           <div className="flex items-center justify-between">
 
@@ -41,6 +41,9 @@ const Projects = () => {
           </li>
           <li className="flex"></li>
         </ul>
+        <br/>
+        <br/>
+        <br/>
       </section>
     </div>
   );
