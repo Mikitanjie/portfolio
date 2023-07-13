@@ -36,5 +36,53 @@ body {
 }
 
 .nav {
-  animation: carousel 35s linear infinite;
+  animation: carousel 45s linear infinite;
+}
+
+
+
+/* :root[data-theme='light'] {
+  --bg: #ffffff;
+  --bg-accent: #f0f0f0;
+  --text-color: #000000;
+  --btn-bg: #007bff;
+  --btn-text: #ffffff;
+}
+
+Dark theme
+:root[data-theme='dark'] {
+  --bg: #333333;
+  --bg-accent: #444444;
+  --text-color: #f0f0f0;
+  --btn-bg: #007bff;
+  --btn-text: #ffffff;
+} */
+
+#carousel {
+  position: relative;
+  width: 500px;
+  height: 300px;
+}
+
+.carousel-image {
+  position: absolute;
+  width: auto;
+  height: auto;
+  display: none;
+}
+
+.carousel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.carousel-image.active {
+  display: block;
+}
+
+.Img {
+  width: auto;
+  height: auto;
 }
