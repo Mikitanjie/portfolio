@@ -5,7 +5,7 @@ import { MdEmail } from 'react-icons/md';
 
 const Footer = () => {
   return (
-    <footer id="Contacts" className="bg-white dark:bg-gray-900" style={{ marginTop: '200px' }}>
+    <footer id="Contacts" className=" dark:bg-gray-900" style={{ marginTop: '200px' }}>
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
@@ -15,7 +15,7 @@ const Footer = () => {
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-              <h2 className="mb-7 text-sm font-semibold text-gray-900 uppercase dark:text-white">Email</h2>
+              <h2 className="mb-7 text-sm font-semibold uppercase dark:text-white">Email</h2>
               <ul className="dark:text-gray-100 font-medium">
                 <li className="mb-4">
                   <a href="" className="hover:underline"></a>
@@ -28,8 +28,8 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-7 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow me</h2>
-              <div className="flex gap-4">
+              <h2 className="mb-7 text-sm font-semibold uppercase dark:text-gray-100">Follow me</h2>
+              <div className="flex gap-4 dark:text-gray-100">
                 <Link href="https://github.com/Mikitanjie" target="_blank" passHref>
                   <AiFillGithub size="3rem" className=" mr-3 hover:underline" />
                 </Link>
@@ -39,7 +39,7 @@ const Footer = () => {
               </div>
             </div>
             <div>
-              <h2 className="mb-7 text-sm font-semibold text-gray-900 uppercase dark:text-white">Call Me</h2>
+              <h2 className="mb-7 text-sm font-semibold uppercase dark:text-white">Call Me</h2>
               <ul className="dark:text-gray-100 font-medium">
                 <li className="mb-4">
                   <Link href="tel:+393534440733" passHref>

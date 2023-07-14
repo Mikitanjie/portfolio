@@ -1,18 +1,18 @@
 import React, { useContext } from 'react';
-
+import { FaMoon, FaSun  } from 'react-icons/fa';
 import Link from 'next/link';
 import { ThemeContext } from '../../_components/ThemeContext/ThemeContext';
 
 
 const Header = () => {
-  const { toggleTheme } = useContext(ThemeContext);
+  const {theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <nav className="nav sticky top-0 left-0 right-0 z-50" style={{ backgroundImage: `url(https://e0.pxfuel.com/wallpapers/170/477/desktop-wallpaper-matrix-miscellanea-miscellaneous-numbers-binary-code.jpg)`, background: 'cover', backgroundPosition: '152%' }}>
+    <nav className="nav fixed top-0 left-0 right-0 z-50" style={{ backgroundImage: `url(https://e0.pxfuel.com/wallpapers/170/477/desktop-wallpaper-matrix-miscellanea-miscellaneous-numbers-binary-code.jpg)`, background: 'cover', backgroundPosition: '152%' }}>
       <div className="flex justify-between h-16 ">
         <div className="flex items-center">
           <div className="flex-shrink-0">
-            <span className="text-white font-semibold text-lg ml-11"></span>
+            {/* <span className="text-white font-semibold text-lg ml-11"></span> */}
           </div>
           <div className="hidden md:block">
             <div className="ml-1 flex items-baseline space-x-4">
@@ -36,9 +36,9 @@ const Header = () => {
               </a>
             </div>
           </div>
-          <div   className="text-white hover:text-emerald-600 px-3 py-2 text-md font-bold" style={{ marginLeft: '730px'}}>
+          <div   className="text-white hover:text-emerald-600 px-3 py-2 text-md font-bold" style={{ marginLeft: '874px'}}>
           <button onClick={toggleTheme}>
-            Switch Theme
+            {theme === 'light' ? <FaMoon /> : <FaSun />}
           </button>
           </div>
         </div>
