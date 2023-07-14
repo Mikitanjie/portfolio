@@ -13,7 +13,12 @@ export function ThemeProvider({ children }) {
   // On mount, we check if the user has a preference in localStorage
   useEffect(() => {
     const localTheme = window.localStorage.getItem('theme');
-    localTheme && setTheme(localTheme);
+    if (localTheme) {
+      setTheme(localTheme);
+      document.documentElement.setAttribute('data-theme', localTheme);
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
   }, []);
 
   const toggleTheme = () => {

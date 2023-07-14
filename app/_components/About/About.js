@@ -1,11 +1,14 @@
 'use client'
 
-import React, { useState } from 'react';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import React, { useState, useContext } from 'react';
 import Image from 'next/image';
+import { ThemeContext } from '../../_components/ThemeContext/ThemeContext';
 
 
   const About = () => {
     const [activeImageIndex, setActiveImageIndex] = useState(0);
+    const { theme } = useContext(ThemeContext);
 
   const images = [
     "/ProjectB.jpg",
@@ -22,7 +25,7 @@ import Image from 'next/image';
   };
 
   return (
-    <div id="About" className="flex mb-24 ml-11 font-lg text-medium text-emerald-600 " style={{ marginBottom: '120px' }}>
+    <div id="About" className={`flex mb-24 ml-11 font-lg text-medium ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`} style={{ marginBottom: '120px' }}>
       <div className="w-1/2">
         <br />
         <br />
@@ -58,9 +61,13 @@ import Image from 'next/image';
           <Image className="h-auto w-auto object-cover grayscale hover:grayscale-0 transition-[filter]" src={images[activeImageIndex]} alt="Picture of the author" width={600} height={800} />
         </div>
         <div>
-          <button  type="button" className="inline-flex justify-center rounded-md bg-black px-4 py-2 text-gary-500 shadow-sm ring-1 ring-inset ring-emerald-400 hover:bg-emerald-700 focus:outline-offset-0"  id="prevBtn" onClick={prevImage}>Prev</button>
-          <button type="button" className="inline-flex justify-center rounded-md bg-black px-4 py-2 text-gary-500 shadow-sm ring-1 ring-inset ring-emerald-400 hover:bg-emerald-700	 focus:outline-offset-0"  id="nextBtn" onClick={nextImage}style={{ marginLeft: '365px'}}>Next</button>
-        </div>
+        <button type="button" className={`inline-flex justify-center rounded-md bg-black px-4 py-2 ${theme === 'light' ? 'text-white' : 'text-white'} shadow-sm ring-1 ring-inset ring-emerald-600 hover:bg-emerald-600 focus:outline-offset-0`} id="prevBtn" onClick={prevImage}>
+          <FaArrowLeft />
+        </button>
+        <button type="button" className={`inline-flex justify-center rounded-md bg-black px-4 py-2 ${theme === 'light' ? 'text-white' : 'text-white'} shadow-sm ring-1 ring-inset ring-emerald-600 hover:bg-emerald-600 focus:outline-offset-0`} id="nextBtn" onClick={nextImage} style={{ marginLeft: '404px' }}>
+          <FaArrowRight />
+        </button>
+      </div>
       </div>
     </div>
   );
