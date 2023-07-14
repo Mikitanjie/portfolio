@@ -55,7 +55,7 @@ import Image from 'next/image';
       </div>
       <div id="carousel" style={{marginLeft: '160px', marginTop: '100px'}}>
         <div>
-          <Image className="h-full w-full object-cover grayscale hover:grayscale-0 transition-[filter]" src={images[activeImageIndex]} alt="Picture of the author" width={600} height={800} />
+          <Image className="h-auto w-auto object-cover grayscale hover:grayscale-0 transition-[filter]" src={images[activeImageIndex]} alt="Picture of the author" width={600} height={800} />
         </div>
         <div>
           <button  type="button" className="inline-flex justify-center rounded-md bg-black px-4 py-2 text-gary-500 shadow-sm ring-1 ring-inset ring-emerald-400 hover:bg-emerald-700 focus:outline-offset-0"  id="prevBtn" onClick={prevImage}>Prev</button>

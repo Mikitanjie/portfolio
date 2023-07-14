@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import Image from 'next/image';
+
 import Link from 'next/link';
 import { ThemeContext } from '../../_components/ThemeContext/ThemeContext';
 
@@ -12,33 +12,34 @@ const Header = () => {
       <div className="flex justify-between h-16 ">
         <div className="flex items-center">
           <div className="flex-shrink-0">
-          <button onClick={toggleTheme}>
-            Switch Theme
-          </button>
             <span className="text-white font-semibold text-lg ml-11"></span>
           </div>
           <div className="hidden md:block">
             <div className="ml-1 flex items-baseline space-x-4">
-              <Link className="text-white-300 hover:text-emerald-600 px-4 py-2 text-md font-bold" href="/">
+              <Link className="text-white hover:text-emerald-600 px-4 py-2 text-md font-bold" href="/">
                 Home
               </Link>
-              <Link className="text-white-300 hover:text-emerald-600 px-3 py-2 text-md font-bold" href="#About">
+              <Link className="text-white hover:text-emerald-600 px-3 py-2 text-md font-bold" href="#About">
                 About Me
               </Link>
-              <Link className="text-white-300 hover:text-emerald-600 px-3 py-2 text-md font-bold" href="#Projects">
+              <Link className="text-white hover:text-emerald-600 px-3 py-2 text-md font-bold" href="#Projects">
                 Projects
               </Link>
-              <Link className="text-white-300 hover:text-emerald-600 px-3 py-2 text-md font-bold" href="#Skills">
+              <Link className="text-white hover:text-emerald-600 px-3 py-2 text-md font-bold" href="#Skills">
                 Skills
               </Link>
               <a
                 href="#Contacts"
-                className="text-white-300 hover:text-emerald-600 px-3 py-2 text-md font-bold"
+                className="text-white hover:text-emerald-600 px-3 py-2 text-md font-bold"
               >
                 Get in touch
               </a>
             </div>
-
+          </div>
+          <div   className="text-white hover:text-emerald-600 px-3 py-2 text-md font-bold" style={{ marginLeft: '730px'}}>
+          <button onClick={toggleTheme}>
+            Switch Theme
+          </button>
           </div>
         </div>
         <div className="hidden md:block">

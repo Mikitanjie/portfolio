@@ -14,7 +14,7 @@ const Hero = () => {
       </div>
       <div className="absolute right-0 bottom-0 flex justify-end items-center z-0">
         <Image
-          className="relative left-[-90px] w-64 h-64 rounded-full scale-150 border-2 border-emerald-600 "
+          className="relative left-[-90px] rounded-full scale-150 border-2 border-emerald-600 "
           src="/ProfilePic.png"
           alt="Picture of the author"
           width={300}
