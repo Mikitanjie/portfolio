@@ -57,7 +57,7 @@ import { ThemeContext } from '../../_components/ThemeContext/ThemeContext';
         </div>
       </div>
       <div id="carousel" style={{marginLeft: '160px', marginTop: '100px'}}>
-        <div>
+        <div className=" border-4 border-emerald-600 ">
           <Image className="h-auto w-auto object-cover grayscale hover:grayscale-0 transition-[filter]" src={images[activeImageIndex]} alt="Picture of the author" width={600} height={800} />
         </div>
         <div>
