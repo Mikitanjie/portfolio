@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <div className="text-center text-5xl font-extrabold pt-20 relative">
+      <div className="hover:scale-110 text-center text-5xl font-extrabold pt-20 relative">
         <span
           className="bg-clip-text text-emerald-600"
           style={{
@@ -38,12 +38,12 @@ export default function Home() {
         <Hero />
         <Projects />
         <About />
-        <div id="Skills" className="text-center text-5xl font-extrabold pt-40 relative" style={{ marginBottom: '200px'}}>
+        <div id="Skills" className="hover:scale-110 text-center text-5xl font-extrabold pt-40 relative" style={{ marginBottom: '200px'}}>
         <span
           className="bg-clip-text text-emerald-600"
           style={{
-            animation: 'lightingEffect 2s linear infinite',
-            filter: 'drop-shadow(0 0 10px green)',
+            animation: 'lightingEffect 2s linear ',
+            filter: 'drop-shadow(0 0 20px green)',
           }}
         >Skills & Languages</span>
       </div>

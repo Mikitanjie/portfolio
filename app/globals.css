@@ -4,11 +4,13 @@
 
 
 :root {
-  --color-background-light: #01810e4c;
-  --color-text-light: #ffffff;
+  --color-background-light: rgb(144,195,158);
+  --color-text-light: rgb(255, 255, 255)
+  ;
 
-  --color-background-dark: #000000;
-  --color-text-dark: #ffffff;
+  --color-background-dark: rgb(0, 0, 0);
+  --color-text-dark: rgb(255, 255, 255)
+  ;
 }
 
 [data-theme="light"] {
@@ -65,3 +67,4 @@
   width: auto;
   height: auto;
 }
+
