@@ -4,7 +4,7 @@
 
 
 :root {
-  --color-background-light: rgb(144,195,158);
+  --color-background-light: rgba(153, 230, 136, 0.714);
   --color-text-light: rgb(255, 255, 255)
   ;
 
@@ -67,4 +67,3 @@
   width: auto;
   height: auto;
 }
-
