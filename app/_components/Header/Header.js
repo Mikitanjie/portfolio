@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ThemeContext } from '../../_components/ThemeContext/ThemeContext';
+
 
 const Header = () => {
+  const { toggleTheme } = useContext(ThemeContext);
+
   return (
     <nav className="nav sticky top-0 left-0 right-0 z-50" style={{ backgroundImage: `url(https://e0.pxfuel.com/wallpapers/170/477/desktop-wallpaper-matrix-miscellanea-miscellaneous-numbers-binary-code.jpg)`, background: 'cover', backgroundPosition: '152%' }}>
       <div className="flex justify-between h-16 ">
         <div className="flex items-center">
           <div className="flex-shrink-0">
+          <button onClick={toggleTheme}>
+            Switch Theme
+          </button>
             <span className="text-white font-semibold text-lg ml-11"></span>
           </div>
           <div className="hidden md:block">

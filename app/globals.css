@@ -2,29 +2,26 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --color-background-light: #cacaca80;
+  --color-text-light: #ffffff;
+
+  --color-background-dark: #000000;
+  --color-text-dark: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+[data-theme="light"] {
+  background-color: var(--color-background-light);
+  color: var(--color-text-light);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+[data-theme="dark"] {
+  background-color: var(--color-background-dark);
+  color: var(--color-text-dark);
 }
+
+
 
 @keyframes carousel {
   0% {
@@ -40,23 +37,6 @@ body {
 }
 
 
-
-/* :root[data-theme='light'] {
-  --bg: #ffffff;
-  --bg-accent: #f0f0f0;
-  --text-color: #000000;
-  --btn-bg: #007bff;
-  --btn-text: #ffffff;
-}
-
-Dark theme
-:root[data-theme='dark'] {
-  --bg: #333333;
-  --bg-accent: #444444;
-  --text-color: #f0f0f0;
-  --btn-bg: #007bff;
-  --btn-text: #ffffff;
-} */
 
 #carousel {
   position: relative;
@@ -86,4 +66,3 @@ Dark theme
   width: auto;
   height: auto;
 }
-

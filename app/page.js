@@ -1,4 +1,7 @@
-import React from 'react';
+'use client'
+
+import React, { useContext } from 'react';
+import { ThemeContext } from './_components/ThemeContext/ThemeContext';
 import Image from 'next/image';
 import Hero from './_components/Hero/Hero';
 import Header from './_components/Header/Header';
@@ -10,8 +13,17 @@ import Footer from './_components/Footer/Footer';
 import Languages from './_components/Languages/Languages';
 
 export default function Home() {
+  // Get the theme from the context
+  const { toggleTheme } = useContext(ThemeContext);
+
+  // Call this function when you want to switch themes
+  const onSomeEvent = () => {
+    toggleTheme();
+  };
+
+
   return (
-    <div className="bg-emerald-505">
+    <div>
       <Header />
       <div className="text-center text-5xl font-extrabold pt-20 relative">
         <span
