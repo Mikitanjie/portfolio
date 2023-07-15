@@ -2,7 +2,7 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-
+/* --color-background-light: rgb(144, 238, 210); */
 :root {
   --color-background-light: rgba(153, 230, 136, 0.714);
   --color-text-light: rgb(255, 255, 255)
@@ -66,4 +66,23 @@
 .Img {
   width: auto;
   height: auto;
+}
+
+.underline-on-hover {
+  position: relative;
+}
+
+.underline-on-hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 4px; /* Adjust this to change the thickness of the underline */
+  background: currentColor;
+  transition: width 0.3s linear;
+}
+
+.underline-on-hover:hover::after {
+  width: 100%;
 }
