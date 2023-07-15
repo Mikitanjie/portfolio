@@ -27,7 +27,7 @@ export default function Home() {
       <Header />
       <div className="hover:scale-110 text-center text-5xl font-extrabold pt-20 relative">
         <span
-          className="bg-clip-text text-emerald-600"
+          className="bg-clip-text text-emerald-600 underline-on-hover"
           style={{
             animation: 'lightingEffect 2s linear infinite',
             filter: 'drop-shadow(0 0 20px green)',
@@ -40,7 +40,7 @@ export default function Home() {
         <About />
         <div id="Skills" className="hover:scale-110 text-center text-5xl font-extrabold pt-40 relative" style={{ marginBottom: '200px'}}>
         <span
-          className="bg-clip-text text-emerald-600"
+          className="bg-clip-text text-emerald-600 underline-on-hover"
           style={{
             animation: 'lightingEffect 2s linear ',
             filter: 'drop-shadow(0 0 20px green)',
