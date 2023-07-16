@@ -5,40 +5,38 @@ import { ThemeContext } from '../../_components/ThemeContext/ThemeContext';
 const handleClick = (event, elementId) => {
   event.preventDefault();
 
-    // Special case for 'Home' button
-    if (elementId === 'Home') {
-      window.scrollTo({
-        top: 10,
-        behavior: 'smooth'
-      });
-      return;
-    }
-        // Special case for 'Home' button
-        if (elementId === 'Projects') {
-          window.scrollTo({
-            top: 890,
-            behavior: 'smooth'
-          });
-          return;
-        }
-            // Special case for 'Home' button
-    if (elementId === 'Skills') {
-      window.scrollTo({
-        top: 2761,
-        behavior: 'smooth'
-      });
-      return;
-    }
-        // Special case for 'Home' button
-        if (elementId === 'About') {
-          window.scrollTo({
-            top: 1909,
-            behavior: 'smooth'
-          });
-          return;
-        }
-
-
+      // Special case for 'Home' button
+      if (elementId === 'Home') {
+        window.scrollTo({
+          top: 60,
+          behavior: 'smooth'
+        });
+        return;
+      }
+      // Special case for 'Home' button
+      if (elementId === 'Projects') {
+        window.scrollTo({
+          top: 940,
+          behavior: 'smooth'
+        });
+        return;
+      }
+      // Special case for 'Home' button
+      if (elementId === 'About') {
+        window.scrollTo({
+          top: 1800,
+          behavior: 'smooth'
+        });
+        return;
+      }
+          // Special case for 'Home' button
+      if (elementId === 'Skills') {
+        window.scrollTo({
+          top: 3000,
+          behavior: 'smooth'
+        });
+        return;
+      }
 
 
   const element = document.getElementById(elementId);
@@ -52,8 +50,6 @@ const handleClick = (event, elementId) => {
 
 const Header = () => {
   const {theme, toggleTheme } = useContext(ThemeContext);
-
-  // Rest of your code ...
 
   return (
     <nav className="nav fixed top-0 left-0 right-0 z-50" style={{ backgroundImage: `url(https://e0.pxfuel.com/wallpapers/170/477/desktop-wallpaper-matrix-miscellanea-miscellaneous-numbers-binary-code.jpg)`, background: 'cover', backgroundPosition: '152%' }}>

@@ -1,7 +1,11 @@
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState,useContext } from 'react';
+import { ThemeContext } from '../../_components/ThemeContext/ThemeContext';
+
 
 const Languages = () => {
+  const { theme } = useContext(ThemeContext);
+
   const [popupMessage, setPopupMessage] = useState("");
 
   const handleClick = (message) => {
@@ -32,7 +36,7 @@ const Languages = () => {
             height={60}
           />
         </div>
-        <span>Portuguese</span>
+        <span className={theme === 'light' ? 'text-black' : 'text-emerald-600'}>Portuguese</span>
       </div>
 
       {/* Italian */}
@@ -46,7 +50,7 @@ const Languages = () => {
             height={60}
           />
         </div>
-        <span>Italian</span>
+        <span className={theme === 'light' ? 'text-black' : 'text-emerald-600'}>Italian</span>
       </div>
 
       {/* German */}
@@ -60,7 +64,7 @@ const Languages = () => {
             height={60}
           />
         </div>
-        <span>German</span>
+        <span className={theme === 'light' ? 'text-black' : 'text-emerald-600'}>German</span>
       </div>
 
       {/* Spanish */}
@@ -74,7 +78,7 @@ const Languages = () => {
             height={60}
           />
         </div>
-        <span>Spanish</span>
+        <span className={theme === 'light' ? 'text-black' : 'text-emerald-600'}>Spanish</span>
       </div>
 
       {/* English */}
@@ -88,7 +92,7 @@ const Languages = () => {
             height={60}
           />
         </div>
-        <span>English</span>
+        <span className={theme === 'light' ? 'text-black' : 'text-emerald-600'}>English</span>
       </div>
     </div>
   );

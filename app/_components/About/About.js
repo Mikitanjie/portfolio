@@ -25,13 +25,12 @@ import { ThemeContext } from '../../_components/ThemeContext/ThemeContext';
   };
 
   return (
-    <div id="About" className={`flex  ml-11 font-lg text-medium ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`} style={{ marginBottom: '90px' }}>
+    <div id="About" className={`flex ml-11 font-lg text-medium ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`} style={{ marginBottom: '90px' }}>
       <div className="w-1/2">
         <br />
         <br />
         <br />
-        <h1>About Me</h1>
-        <div className="mt-12 mr-11 font-lg text-lg">
+        <div className="mt-24 mr-11 font-lg text-lg">
           <p>
             I am a passionate technologist with a background in various industries and countries around Europe.
             I have always been fascinated by technology and the possibilities it opens up.

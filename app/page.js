@@ -27,7 +27,7 @@ export default function Home() {
     <div>
       <Particles />
       <Header />
-      <div className="hover:scale-110 text-center text-5xl font-extrabold pt-20 relative" style={{ marginTop: '82px'}}>
+      <div className="hover:scale-110 text-center text-5xl font-extrabold pt-20 relative" style={{ marginTop: '72px'}}>
         <span
           className="bg-clip-text text-emerald-600 underline-on-hover"
           style={{
@@ -48,8 +48,17 @@ export default function Home() {
         >Projects</span>
       </div>
         <Projects />
+        <div className="hover:scale-110 text-center text-5xl font-extrabold relative" style={{ marginTop: '100px', marginBottom: '-100px'}}>
+        <span
+          className="bg-clip-text text-emerald-600 underline-on-hover"
+          style={{
+            animation: 'lightingEffect 2s linear infinite',
+            filter: 'drop-shadow(0 0 20px green)',
+          }}
+        >About me</span>
+      </div>
         <About />
-        <div id="Skills" className="hover:scale-110 text-center text-5xl font-extrabold pt-40 relative" style={{ marginBottom: '200px'}}>
+        <div id="Skills" className="hover:scale-110 text-center text-5xl font-extrabold pt-40 relative" style={{marginTop: '300px', marginBottom: '200px'}}>
         <span
           className="bg-clip-text text-emerald-600 underline-on-hover"
           style={{

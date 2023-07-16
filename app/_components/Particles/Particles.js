@@ -15,13 +15,13 @@ export default function Particles() {
 
     let particles = [];
 
-    for (let i = 0; i < 24; i++) {
+    for (let i = 0; i < 25; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         speedX: Math.random() * 1 - 1,
         speedY: Math.random() * 1 - 1,
-        size: Math.random() * 0 + 1,
+        size: Math.random() * 1 + 1,
       });
     }
 
