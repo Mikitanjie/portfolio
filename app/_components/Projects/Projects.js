@@ -5,16 +5,13 @@ import Link from "next/link";
 
 const Projects = () => {
   return (
-    <div id="Projects" className="mt-22" style={{ marginBottom: '100px'}}>
+    <div id="Projects" style={{ marginBottom: '100px', marginTop: '50px'}}>
       <section>
       <br/>
-        <header className="bg-emerald-600 space-y-4 p-4 sm:px-8 sm:py-6 lg:p-4 xl:px-8 xl:py-6"style={{ marginTop: '250px' }}>
-          <div className="flex items-center justify-between">
-
-            <h2 className="font-semibold text-slate-900">Projects</h2>
-          </div>
-        </header>
-        <ul className="bg-emerald-700 p-4 sm:px-8 sm:pt-6 sm:pb-8 lg:p-4 xl:px-8 xl:pt-6 xl:pb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-4 gap-4 text-sm leading-6">
+      <br/>
+      <br/>
+      <br/>
+        <ul className="transparent p-4 sm:px-8 sm:pt-6 sm:pb-8 lg:p-4 xl:px-8 xl:pt-6 xl:pb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-4 gap-4 text-sm leading-6">
           <li className="  project in projects">
             <div>
               <h3 className="text-lg font-semibold">Travelpal</h3>

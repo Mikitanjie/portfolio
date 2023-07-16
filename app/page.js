@@ -11,6 +11,7 @@ import Button from './_components/Button/Button';
 import Skills from './_components/Skills/Skills';
 import Footer from './_components/Footer/Footer';
 import Languages from './_components/Languages/Languages';
+import Particles from './_components/Particles/Particles';
 
 export default function Home() {
   // Get the theme from the context
@@ -24,8 +25,9 @@ export default function Home() {
 
   return (
     <div>
+      <Particles />
       <Header />
-      <div className="hover:scale-110 text-center text-5xl font-extrabold pt-20 relative">
+      <div className="hover:scale-110 text-center text-5xl font-extrabold pt-20 relative" style={{ marginTop: '82px'}}>
         <span
           className="bg-clip-text text-emerald-600 underline-on-hover"
           style={{
@@ -36,6 +38,15 @@ export default function Home() {
       </div>
       <div className="pt-40">
         <Hero />
+        <div className="hover:scale-110 text-center text-5xl font-extrabold relative" style={{ marginTop: '200px'}}>
+        <span
+          className="bg-clip-text text-emerald-600 underline-on-hover"
+          style={{
+            animation: 'lightingEffect 2s linear infinite',
+            filter: 'drop-shadow(0 0 20px green)',
+          }}
+        >Projects</span>
+      </div>
         <Projects />
         <About />
         <div id="Skills" className="hover:scale-110 text-center text-5xl font-extrabold pt-40 relative" style={{ marginBottom: '200px'}}>
@@ -51,7 +62,6 @@ export default function Home() {
         <Languages />
         <Footer />
       </div>
-
     </div>
   );
 }
