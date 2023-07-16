@@ -25,7 +25,7 @@ import { ThemeContext } from '../../_components/ThemeContext/ThemeContext';
   };
 
   return (
-    <div id="About" className={`flex mb-24 ml-11 font-lg text-medium ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`} style={{ marginBottom: '120px' }}>
+    <div id="About" className={`flex  ml-11 font-lg text-medium ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`} style={{ marginBottom: '90px' }}>
       <div className="w-1/2">
         <br />
         <br />
