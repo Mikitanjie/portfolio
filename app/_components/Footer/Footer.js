@@ -17,12 +17,9 @@ const Footer = () => {
               <h2 className="mb-7 text-sm font-semibold uppercase dark:text-white">Email</h2>
               <ul className="dark:text-gray-100 font-medium">
                 <li className="mb-4">
-                  <a href="" className="hover:underline"></a>
-                </li>
-                <li>
-                  <Link href="mailto: cataniamike16gmail.com" passHref>
+                  <a href="mailto:cataniamike16@gmail.com">
                     <MdEmail size="3rem" className="hover:underline" />
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -41,12 +38,9 @@ const Footer = () => {
               <h2 className="mb-7 text-sm font-semibold uppercase dark:text-white">Call Me</h2>
               <ul className="dark:text-gray-100 font-medium">
                 <li className="mb-4">
-                  <Link href="tel:+393534440733" passHref>
+                  <a href="tel:+393534440733">
                     <AiFillPhone size="3rem" />
-                  </Link>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline"></a>
+                  </a>
                 </li>
               </ul>
             </div>
