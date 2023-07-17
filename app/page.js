@@ -52,6 +52,21 @@ export default function Home() {
           Projects</span>
       </div>
         <Projects />
+        <div id="Skills" className="flex justify-end text-center text-5xl font-extrabold pt-40 relative" style={{marginTop: '-500px', marginBottom: '400px', marginRight: '30px'}}>
+        <span
+          className="bg-clip-text underline-on-hover"
+          style={{
+            color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)', // Use the RGB value for 'emerald-600' color in Tailwind CSS
+            animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
+            filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
+          }}
+        >
+          More Projects coming sono
+          <span className="dot1">.</span>
+          <span className="dot2">.</span>
+          <span className="dot3">.</span>
+          </span>
+      </div>
         <div className="hover:scale-110 text-center text-5xl font-extrabold relative" style={{ marginTop: '250px', marginBottom: '-45px'}}>
         <span
           className="bg-clip-text underline-on-hover"
