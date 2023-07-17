@@ -8,7 +8,7 @@ const handleClick = (event, elementId) => {
       // Special case for 'Home' button
       if (elementId === 'Home') {
         window.scrollTo({
-          top: 60,
+          top: 0,
           behavior: 'smooth'
         });
         return;
@@ -16,7 +16,7 @@ const handleClick = (event, elementId) => {
       // Special case for 'Home' button
       if (elementId === 'Projects') {
         window.scrollTo({
-          top: 940,
+          top: 930,
           behavior: 'smooth'
         });
         return;
@@ -24,7 +24,7 @@ const handleClick = (event, elementId) => {
       // Special case for 'Home' button
       if (elementId === 'About') {
         window.scrollTo({
-          top: 1800,
+          top: 2122,
           behavior: 'smooth'
         });
         return;
@@ -32,7 +32,7 @@ const handleClick = (event, elementId) => {
           // Special case for 'Home' button
       if (elementId === 'Skills') {
         window.scrollTo({
-          top: 3000,
+          top: 3320,
           behavior: 'smooth'
         });
         return;
@@ -62,11 +62,11 @@ const Header = () => {
               <a onClick={(event) => handleClick(event, 'Home')} className="text-white hover:text-emerald-600 px-4 py-2 text-md font-bold" href="#Home">
                 Home
               </a>
-              <a onClick={(event) => handleClick(event, 'About')} className="text-white hover:text-emerald-600 px-3 py-2 text-md font-bold" href="#About">
-                About Me
-              </a>
               <a onClick={(event) => handleClick(event, 'Projects')} className="text-white hover:text-emerald-600 px-3 py-2 text-md font-bold" href="#Projects">
                 Projects
+              </a>
+              <a onClick={(event) => handleClick(event, 'About')} className="text-white hover:text-emerald-600 px-3 py-2 text-md font-bold" href="#About">
+                About Me
               </a>
               <a onClick={(event) => handleClick(event, 'Skills')} className="text-white hover:text-emerald-600 px-3 py-2 text-md font-bold" href="#Skills">
                 Skills

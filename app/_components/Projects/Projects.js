@@ -7,7 +7,7 @@ const Projects = () => {
   const { theme } = useContext(ThemeContext); // get the current theme
 
   return (
-    <div id="Projects" style={{ marginBottom: '100px', marginTop: '50px'}}>
+    <div id="Projects" style={{ marginBottom: '350px', marginTop: '50px'}}>
       <section>
       <br/>
       <br/>
