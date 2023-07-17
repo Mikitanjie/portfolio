@@ -15,7 +15,7 @@ import Particles from './_components/Particles/Particles';
 
 export default function Home() {
   // Get the theme from the context
-  const { toggleTheme } = useContext(ThemeContext);
+  const { theme,toggleTheme } = useContext(ThemeContext);
 
   // Call this function when you want to switch themes
   const onSomeEvent = () => {
@@ -27,45 +27,53 @@ export default function Home() {
     <div>
       <Particles />
       <Header />
-      <div className="hover:scale-110 text-center text-5xl font-extrabold pt-20 relative" style={{ marginTop: '72px'}}>
-        <span
-          className="bg-clip-text text-emerald-600 underline-on-hover"
+      <div className="hover:scale-110 text-center text-5xl font-extrabold pt-20 relative" style={{ marginTop: '15px', marginBottom: '110px'}}>
+      <span
+          className="bg-clip-text underline-on-hover"
           style={{
-            animation: 'lightingEffect 2s linear infinite',
-            filter: 'drop-shadow(0 0 20px green)',
+            color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)', // Use the RGB value for 'emerald-600' color in Tailwind CSS
+            animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
+            filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
           }}
-        >Welcome to my portfolio</span>
+        >
+          Welcome to my portfolio</span>
       </div>
       <div className="pt-40">
         <Hero />
-        <div className="hover:scale-110 text-center text-5xl font-extrabold relative" style={{ marginTop: '200px'}}>
+        <div className="hover:scale-110 text-center text-5xl font-extrabold relative" style={{ marginTop: '200px', marginBottom: '110px'}}>
         <span
-          className="bg-clip-text text-emerald-600 underline-on-hover"
+          className="bg-clip-text underline-on-hover"
           style={{
-            animation: 'lightingEffect 2s linear infinite',
-            filter: 'drop-shadow(0 0 20px green)',
+            color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)', // Use the RGB value for 'emerald-600' color in Tailwind CSS
+            animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
+            filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
           }}
-        >Projects</span>
+        >
+          Projects</span>
       </div>
         <Projects />
-        <div className="hover:scale-110 text-center text-5xl font-extrabold relative" style={{ marginTop: '100px', marginBottom: '-100px'}}>
+        <div className="hover:scale-110 text-center text-5xl font-extrabold relative" style={{ marginTop: '250px', marginBottom: '-45px'}}>
         <span
-          className="bg-clip-text text-emerald-600 underline-on-hover"
+          className="bg-clip-text underline-on-hover"
           style={{
-            animation: 'lightingEffect 2s linear infinite',
-            filter: 'drop-shadow(0 0 20px green)',
+            color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)', // Use the RGB value for 'emerald-600' color in Tailwind CSS
+            animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
+            filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
           }}
-        >About me</span>
+        >
+          About me</span>
       </div>
         <About />
         <div id="Skills" className="hover:scale-110 text-center text-5xl font-extrabold pt-40 relative" style={{marginTop: '300px', marginBottom: '200px'}}>
         <span
-          className="bg-clip-text text-emerald-600 underline-on-hover"
+          className="bg-clip-text underline-on-hover"
           style={{
-            animation: 'lightingEffect 2s linear ',
-            filter: 'drop-shadow(0 0 20px green)',
+            color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)', // Use the RGB value for 'emerald-600' color in Tailwind CSS
+            animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
+            filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
           }}
-        >Skills & Languages</span>
+        >
+          Skills & Languages</span>
       </div>
         <Skills />
         <Languages />

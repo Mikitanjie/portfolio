@@ -30,7 +30,7 @@ import { ThemeContext } from '../../_components/ThemeContext/ThemeContext';
         <br />
         <br />
         <br />
-        <div className="mt-24 mr-11 font-lg text-lg">
+        <div className="w-[600px] mt-24 mr-11 font-lg text-lg">
           <p>
             I am a passionate technologist with a background in various industries and countries around Europe.
             I have always been fascinated by technology and the possibilities it opens up.
@@ -50,23 +50,22 @@ import { ThemeContext } from '../../_components/ThemeContext/ThemeContext';
           </p>
           <br />
           <p>
-            If you are looking for a talented and passionate web developer, I encourage you to contact me.
             Please feel free to contact me if you have any questions or would like to discuss my qualifications further.
           </p>
         </div>
       </div>
-      <div id="carousel" style={{marginLeft: '160px', marginTop: '100px'}}>
-        <div className=" border-4 border-emerald-600 ">
-          <Image className="h-auto w-auto object-cover grayscale hover:grayscale-0 transition-[filter]" src={images[activeImageIndex]} alt="Picture of the author" width={600} height={800} />
+      <div id="carousel" className="hover:grayscale-0" style={{position: 'relative', marginLeft: '160px', marginTop: '100px'}}>
+          <div className=" border-4 border-emerald-600 ">
+            <Image className="object-cover" src={images[activeImageIndex]} alt="Picture of the author" width={600} height={800} />
+          </div>
+          <div>
+          <button type="button" className="hover:scale-150 absolute top-0 left-0 inline-flex justify-center bg-transparent px-4 py-2 text-emerald-600 focus:outline-offset-0" id="prevBtn" onClick={prevImage}>
+            <FaArrowLeft />
+          </button>
+          <button type="button" className="hover:scale-150 absolute top-0 right-0 inline-flex justify-center bg-transparent px-4 py-2 text-emerald-600 focus:outline-offset-0" id="nextBtn" onClick={nextImage}>
+            <FaArrowRight />
+          </button>
         </div>
-        <div>
-        <button type="button" className={`inline-flex justify-center rounded-md bg-black px-4 py-2 ${theme === 'light' ? 'text-white' : 'text-white'} shadow-sm ring-1 ring-inset ring-emerald-600 hover:bg-emerald-600 focus:outline-offset-0`} id="prevBtn" onClick={prevImage}>
-          <FaArrowLeft />
-        </button>
-        <button type="button" className={`inline-flex justify-center rounded-md bg-black px-4 py-2 ${theme === 'light' ? 'text-white' : 'text-white'} shadow-sm ring-1 ring-inset ring-emerald-600 hover:bg-emerald-600 focus:outline-offset-0`} id="nextBtn" onClick={nextImage} style={{ marginLeft: '404px' }}>
-          <FaArrowRight />
-        </button>
-      </div>
       </div>
     </div>
   );
