@@ -33,6 +33,20 @@
   }
 }
 
+
+.dot1 {
+  animation: pulse 1.5s infinite 0.2s;
+}
+
+.dot2 {
+  animation: pulse 1.5s infinite 0.4s;
+}
+
+.dot3 {
+  animation: pulse 1.5s infinite 0.6s;
+}
+
+
 .nav {
   animation: carousel 45s linear infinite;
 }
@@ -105,4 +119,8 @@
 
 .project-hover:hover h3 {
   text-decoration: underline;
+}
+
+.icon-dark {
+  filter: invert(1);
 }

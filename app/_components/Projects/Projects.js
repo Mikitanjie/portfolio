@@ -31,15 +31,35 @@ const Projects = () => {
                 />
               </Link>
               </div>
-              <div>
-              <p className={theme === 'light' ? 'text-black' : 'text-emerald-600'} style={{ fontSize: '17px', marginTop: '5x' }}>Web app creation:</p>
-              <br />
-              <p className={theme === 'light' ? 'text-black' : 'text-emerald-600'} style={{ fontSize: '15px', marginTop: '-5px' }}>Idea, pitch, implementation and shipped to production in 2 weeks.</p>
-              <br />
-              <p className={theme === 'light' ? 'text-black' : 'text-emerald-600'} style={{ fontSize: '15px', marginTop: '-5px' }}>Worked in a team of 4 people across different geographies.</p>
-              </div>
             </div>
           </li>
+          <li className="  project description" style={{ marginTop: '45px', marginLeft: '70px' }}>
+              <div>
+              <p className={theme === 'light' ? 'text-black' : 'text-emerald-600'} style={{ fontSize: '30px', marginTop: '5x' }}>Web app creation:</p>
+              <br />
+              <p className={theme === 'light' ? 'text-black' : 'text-emerald-600'} style={{ fontSize: '20px', marginTop: '-5px' }}>Idea, pitch, implementation and shipped to production in 2 weeks.</p>
+              <br />
+              <p className={theme === 'light' ? 'text-black' : 'text-emerald-600'} style={{ fontSize: '20px', marginTop: '-5px' }}>Worked in a team of 4 people across different geographies.</p>
+              </div>
+            </li>
+            <li className="  project description" style={{ marginTop: '45px', marginLeft: '70px' }}>
+              <div>
+              <p className={theme === 'light' ? 'text-black' : 'text-emerald-600'} style={{ fontSize: '30px', marginTop: '5x' }}>Used tools :</p>
+              <br />
+              <p className={theme === 'light' ? 'text-black' : 'text-emerald-600'} style={{ fontSize: '20px', marginTop: '-5px' }}>Idea, pitch, implementation and shipped to production in 2 weeks.</p>
+              <br />
+              <p className={theme === 'light' ? 'text-black' : 'text-emerald-600'} style={{ fontSize: '20px', marginTop: '-5px' }}>Worked in a team of 4 people across different geographies.</p>
+              </div>
+            </li>
+            <li className="  project description" style={{ marginTop: '45px', marginLeft: '70px' }}>
+              <div>
+              <p className={theme === 'light' ? 'text-black' : 'text-emerald-600'} style={{ fontSize: '30px', marginTop: '5x' }}>Lessons learned :</p>
+              <br />
+              <p className={theme === 'light' ? 'text-black' : 'text-emerald-600'} style={{ fontSize: '20px', marginTop: '-5px' }}>Idea, pitch, implementation and shipped to production in 2 weeks.</p>
+              <br />
+              <p className={theme === 'light' ? 'text-black' : 'text-emerald-600'} style={{ fontSize: '20px', marginTop: '-5px' }}>Worked in a team of 4 people across different geographies.</p>
+              </div>
+            </li>
           <li className="flex"></li>
         </ul>
         <br/>

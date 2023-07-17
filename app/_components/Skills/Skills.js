@@ -1,7 +1,14 @@
-import React from 'react';
+'use client'
+
+import { React, useContext } from 'react';
 import Image from 'next/image';
+import { ThemeContext } from '../ThemeContext/ThemeContext';
+
 
 const Skills = () => {
+  const { theme } = useContext(ThemeContext);
+
+
   return (
     <div className="flex justify-end" style={{ marginTop: '10px'}}>
       <div className="mb-11 grid grid-cols-4 gap-9 dark:bg-transparent">
@@ -187,6 +194,19 @@ const Skills = () => {
           </a>
           </div>
         </div>
+          <div className="animate-pulse hover:animate-none" style={{ animationDelay: '2.6s', marginTop: '-19px' }}>
+            <div style={{ width: '60px', height: '60px' }}>
+              <a href="https://nextjs.org/docs/getting-started/react-essentials/" target="_blank" rel="noreferrer">
+                <Image
+                  className={`transition-transform duration-200 hover:scale-150 ${theme === 'dark' ? 'icon-dark' : ''}`}
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg"
+                  alt="PostgreSQL"
+                  width={60}
+                  height={60}
+                />
+              </a>
+            </div>
+          </div>
       </div>
     </div>
   );
