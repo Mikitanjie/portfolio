@@ -33,3 +33,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+EMAIL_USER=cataniamike16@gmail.com
+EMAIL_PASSWORD=123Decoccolanji4

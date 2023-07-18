@@ -12,6 +12,8 @@ import Skills from './_components/Skills/Skills';
 import Footer from './_components/Footer/Footer';
 import Languages from './_components/Languages/Languages';
 import Particles from './_components/Particles/Particles';
+import ContactForm from './_components/Contact/ContactForm';
+
 
 export default function Home() {
   // Get the theme from the context
@@ -27,7 +29,7 @@ export default function Home() {
     <div>
       <Particles />
       <Header />
-      <div className="hover:scale-110 text-center text-5xl font-extrabold pt-20 relative" style={{ marginTop: '15px', marginBottom: '110px'}}>
+      <div className="text-center text-5xl font-extrabold pt-20 relative" style={{ marginTop: '15px', marginBottom: '110px'}}>
       <span
           className="bg-clip-text underline-on-hover"
           style={{
@@ -36,11 +38,11 @@ export default function Home() {
             filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
           }}
         >
-          Welcome to my portfolio</span>
+          Welcome to my portfolio!</span>
       </div>
       <div className="pt-40">
         <Hero />
-        <div className="hover:scale-110 text-center text-5xl font-extrabold relative" style={{ marginTop: '200px', marginBottom: '110px'}}>
+        <div className="text-center text-5xl font-extrabold relative" style={{ marginTop: '200px', marginBottom: '110px'}}>
         <span
           className="bg-clip-text underline-on-hover"
           style={{
@@ -61,13 +63,13 @@ export default function Home() {
             filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
           }}
         >
-          More Projects coming sono
+          More Projects coming soon
           <span className="dot1">.</span>
           <span className="dot2">.</span>
           <span className="dot3">.</span>
           </span>
       </div>
-        <div className="hover:scale-110 text-center text-5xl font-extrabold relative" style={{ marginTop: '250px', marginBottom: '-45px'}}>
+        <div className="text-center text-5xl font-extrabold relative" style={{ marginTop: '250px', marginBottom: '-45px'}}>
         <span
           className="bg-clip-text underline-on-hover"
           style={{
@@ -79,7 +81,7 @@ export default function Home() {
           About me</span>
       </div>
         <About />
-        <div id="Skills" className="hover:scale-110 text-center text-5xl font-extrabold pt-40 relative" style={{marginTop: '300px', marginBottom: '200px'}}>
+        <div id="Skills" className="text-center text-5xl font-extrabold pt-40 relative" style={{marginTop: '300px', marginBottom: '200px'}}>
         <span
           className="bg-clip-text underline-on-hover"
           style={{
@@ -92,6 +94,9 @@ export default function Home() {
       </div>
         <Skills />
         <Languages />
+        <div>
+        {/* <ContactForm /> */}
+        </div>
         <Footer />
       </div>
     </div>
