@@ -17,22 +17,20 @@ const Languages = () => {
   };
 
   return (
-    <div style={{ position: 'relative', display: 'flex', marginBottom: '715px', marginTop:'-250px', marginLeft: '40px' }}>
+    <div style={{ position: 'relative', display: 'flex', marginBottom: '715px', marginTop:'-135px', marginLeft: '90px' }}>
     {popupMessage &&
       <div style={{
         position: 'absolute',
-        top: '-150%', // Position at 50% from the top
-        left: '50%', // Position at 50% from the left
+        top: '-200%', // Position at 50% from the top
+        left: '19%', // Position at 50% from the left
         transform: 'translate(-50%, -50%)', // This will center the popup
-        background: theme === 'light' ? 'rgb(0, 0, 0)' : 'rgb(255, 255, 255)', // black background for light theme, white for dark theme
-        padding: '10px',
-        borderRadius: '5px',
-        color: theme === 'light' ? 'white' : 'black', // white text for light theme, black for dark theme
+        background: theme === 'light' ? 'transparent' : 'transparent', // black background for light theme, white for dark theme
+        color: theme === 'light' ? 'black' : 'rgb(5, 150, 105)', // white text for light theme, black for dark theme
         width: '300px', // Set a fixed width for the popup
         textAlign: 'center', // Center the text
       }}>
         <button onClick={handlePopupClose} style={{ float: 'right', color: theme === 'light' ? 'white' : 'black' }}>X</button>
-        <p>{popupMessage}</p>
+        <p style={{ fontSize: '40x' }}>{popupMessage}</p>
       </div>
       }
 

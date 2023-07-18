@@ -10,7 +10,7 @@ const Skills = () => {
 
 
   return (
-    <div className="flex justify-end" style={{ marginTop: '10px'}}>
+    <div className="flex justify-end" style={{ marginTop: '10px', marginRight: '90px'}}>
       <div className="mb-11 grid grid-cols-4 gap-9 dark:bg-transparent">
         <div className="animate-pulse hover:animate-none" style={{ animationDelay: '0.0s', marginTop: '-2px' }}>
           <div style={{ width: '60px', height: '60px'}}>
@@ -143,13 +143,13 @@ const Skills = () => {
           </div>
         </div>
         <div className="animate-pulse hover:animate-none" style={{ animationDelay: '2.0s' }}>
-          <div style={{ width: '99px', height: '60px', marginTop: '-20px' }}>
+          <div style={{ width: '60px', height: '60px'}}>
           <a href="https://webpack.js.org/" target="_blank" rel="noreferrer">
             <Image
               className="transition-transform duration-200 hover:scale-150"
-              src="https://raw.githubusercontent.com/devicons/devicon/d00d0969292a6569d45b06d3f350f463a0107b0d/icons/webpack/webpack-original-wordmark.svg"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg"
               alt="Webpack"
-              width={99}
+              width={60}
               height={60}
             />
           </a>
@@ -169,13 +169,13 @@ const Skills = () => {
           </div>
         </div>
         <div className="mb-1 animate-pulse hover:animate-none" style={{ animationDelay: '2.4s', marginTop: '-30px' }}>
-          <div style={{ width: '99px', height: '60px' }}>
+          <div style={{ width: '60px', height: '60px', marginTop: '12px' }}>
           <a href="https://nodejs.org/en/docs" target="_blank" rel="noreferrer">
             <Image
               className="transition-transform duration-200 hover:scale-150"
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
               alt="NodeJS"
-              width={99}
+              width={60}
               height={60}
             />
           </a>

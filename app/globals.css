@@ -124,3 +124,18 @@
 .icon-dark {
   filter: invert(1);
 }
+
+.image-container {
+  width: 350px;
+  height: 350px;
+}
+
+.responsive-image {
+  width: 100%;
+  border-radius: 35%;  /* To make the image circular */
+  border: 2px solid #10B981;
+  width: 350px;  /* Set these according to your needs */
+  height: 350px; /* Set these according to your needs */
+  margin-Bottom: 0px;
+  margin-right: -1080px;
+}

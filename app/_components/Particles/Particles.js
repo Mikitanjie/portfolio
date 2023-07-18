@@ -15,21 +15,25 @@ export default function Particles() {
 
     let particles = [];
 
-    for (let i = 0; i < 25; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        speedX: Math.random() * 1 - 1,
-        speedY: Math.random() * 1 - 1,
-        size: Math.random() * 1 + 1,
-      });
+    const createParticles = () => {
+      particles = [];
+      for (let i = 0; i < 25; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          speedX: Math.random() * 1 - 1,
+          speedY: Math.random() * 1 - 1,
+          size: Math.random() * 1 + 1,
+        });
+      }
     }
 
-    function update() {
+    createParticles();
+
+    function drawParticles() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       for (let i = 0; i < particles.length; i++) {
-        console.log('Updating particle', i);
         let p = particles[i];
 
         p.x += p.speedX;
@@ -49,12 +53,17 @@ export default function Particles() {
         if (p.y > canvas.height) p.y = 0;
       }
 
-      requestAnimationFrame(update);
+      requestAnimationFrame(drawParticles);
     }
 
     // Start the animation loop
-    update();
+    drawParticles();
 
+    // Set an interval to recreate the particles every 2 minutes
+    const intervalId = setInterval(createParticles, 2 * 60 * 1000); // 2 minutes in milliseconds
+
+    // Clear the interval when the component unmounts
+    return () => clearInterval(intervalId);
   }, [theme]);
 
   return <canvas ref={canvasRef} id="canvas" />;

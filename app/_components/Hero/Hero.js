@@ -12,13 +12,14 @@ const Hero = () => {
           <Button text="Click Here" />
         </div>
       </div>
-      <div className="absolute right-0 bottom-0 flex justify-end items-center z-0">
+      <div className="absolute bottom-0 flex justify-end items-center z-0 image-container">
         <Image
-          className="relative left-[-90px] rounded-full scale-150 border-2 border-emerald-600 "
+          className="responsive-image"
           src="/ProfilePic.png"
           alt="Picture of the author"
-          width={300}
-          height={150}
+          width={350}  /* Set these according to your needs */
+          height={350}
+          priority={true}
         />
       </div>
     </div>
