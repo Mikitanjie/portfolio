@@ -12,7 +12,6 @@ import Skills from './_components/Skills/Skills';
 import Footer from './_components/Footer/Footer';
 import Languages from './_components/Languages/Languages';
 import Particles from './_components/Particles/Particles';
-import ContactForm from './_components/Contact/ContactForm';
 
 
 export default function Home() {
@@ -94,9 +93,6 @@ export default function Home() {
       </div>
         <Skills />
         <Languages />
-        <div>
-        {/* <ContactForm /> */}
-        </div>
         <Footer />
       </div>
     </div>

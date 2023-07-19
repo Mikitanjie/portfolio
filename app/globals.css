@@ -139,3 +139,12 @@
   margin-Bottom: 0px;
   margin-right: -1080px;
 }
+
+@keyframes pop {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

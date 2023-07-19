@@ -1,10 +1,18 @@
-import Link from 'next/link';
+import { useContext } from 'react';
+import { ThemeContext } from '../ThemeContext/ThemeContext';
 
 const Button = () => {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <button type="button" className="inline-flex justify-center rounded-lg bg-black px-4 py-2 shadow-sm ring-1 ring-inset ring-emerald-600 hover:bg-emerald-700 focus:outline-offset-0">
-      <a href="mailto:cataniamike16@gmail.com" className="text-green-400">
-        Contact me
+    <button
+      type="button"
+      className="underline-on-hover text-emerald-600 inline-flex justify-center px-4 py-2 focus:outline-offset-0 transform transition-transform duration-150 active:scale-90">
+      <a
+        href="mailto:cataniamike16@gmail.com"
+        className={` ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`}
+      >
+        Send me a message
       </a>
     </button>
   );

@@ -16,7 +16,7 @@ const Skills = () => {
           <div style={{ width: '60px', height: '60px'}}>
           <a href="https://www.figma.com/" target="_blank" rel="noreferrer">
             <Image
-              className="transition-transform duration-200 hover:scale-150"
+              className="transition-transform duration-200 hover:scale-150 active:scale-50"
               src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg"
               alt="Figma"
               width={60}
@@ -29,7 +29,7 @@ const Skills = () => {
           <div style={{ width: '60px', height: '60px' }}>
           <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
             <Image
-              className="transition-transform duration-200 hover:scale-150"
+              className="transition-transform duration-200 hover:scale-150 active:scale-50"
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
               alt="JavaScript"
               width={60}
@@ -42,7 +42,7 @@ const Skills = () => {
           <div style={{ width: '60px', height: '60px' }}>
           <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
             <Image
-              className="transition-transform duration-200 hover:scale-150"
+              className="transition-transform duration-200 hover:scale-150 active:scale-50"
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
               alt="HTML5"
               width={60}
@@ -55,7 +55,7 @@ const Skills = () => {
           <div style={{ width: '60px', height: '60px' }}>
           <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">
             <Image
-              className="transition-transform duration-200 hover:scale-150"
+              className="transition-transform duration-200 hover:scale-150 active:scale-50"
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
               alt="CSS3"
               width={60}
@@ -68,7 +68,7 @@ const Skills = () => {
           <div style={{ width: '60px', height: '60px' }}>
           <a href="https://www.ruby-lang.org/en/" target="_blank" rel="noreferrer">
             <Image
-              className="transition-transform duration-200 hover:scale-150"
+              className="transition-transform duration-200 hover:scale-150 active:scale-50"
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg"
               alt="Ruby"
               width={60}
@@ -81,7 +81,7 @@ const Skills = () => {
           <div style={{ width: '60px', height: '60px' }}>
           <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank" rel="noreferrer">
             <Image
-              className="transition-transform duration-200 hover:scale-150"
+              className="transition-transform duration-200 hover:scale-150 active:scale-50"
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
               alt="Bootstrap"
               width={60}
@@ -94,7 +94,7 @@ const Skills = () => {
           <div style={{ width: '60px', height: '60px' }}>
           <a href="https://rubyonrails.org/" target="_blank" rel="noreferrer">
             <Image
-              className="transition-transform duration-200 hover:scale-150"
+              className="transition-transform duration-200 hover:scale-150 active:scale-50"
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg"
               alt="Rails"
               width={60}
@@ -107,7 +107,7 @@ const Skills = () => {
           <div style={{ width: '60px', height: '60px' }}>
           <a href="https://www.heroku.com/what" target="_blank" rel="noreferrer">
             <Image
-              className="transition-transform duration-200 hover:scale-150"
+              className="transition-transform duration-200 hover:scale-150 active:scale-50"
               src="https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg"
               alt="Heroku"
               width={60}
@@ -120,7 +120,7 @@ const Skills = () => {
           <div style={{ width: '60px', height: '60px' }}>
           <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
             <Image
-              className="transition-transform duration-200 hover:scale-150"
+              className="transition-transform duration-200 hover:scale-150 active:scale-50"
               src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
               alt="Git"
               width={60}
@@ -133,7 +133,7 @@ const Skills = () => {
           <div style={{ width: '60px', height: '60px' }}>
           <a href="https://tailwindcss.com/docs/installation" target="_blank" rel="noreferrer">
             <Image
-              className="transition-transform duration-200 hover:scale-150"
+              className="transition-transform duration-200 hover:scale-150 active:scale-50"
               src="https://img.icons8.com/?size=96&amp;id=CIAZz2CYc6Kc&amp;format=png"
               alt="TaillwindCSS"
               width={60}
@@ -146,7 +146,7 @@ const Skills = () => {
           <div style={{ width: '60px', height: '60px'}}>
           <a href="https://webpack.js.org/" target="_blank" rel="noreferrer">
             <Image
-              className="transition-transform duration-200 hover:scale-150"
+              className="transition-transform duration-200 hover:scale-150 active:scale-50"
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg"
               alt="Webpack"
               width={60}
@@ -159,7 +159,7 @@ const Skills = () => {
           <div style={{ width: '60px', height: '60px' }}>
           <a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer">
             <Image
-              className="transition-transform duration-200 hover:scale-150"
+              className="transition-transform duration-200 hover:scale-150 active:scale-50"
               src="https://pics.freeicons.io/uploads/icons/png/14178750871552037061-512.png"
               alt="VSCode"
               width={60}
@@ -168,7 +168,7 @@ const Skills = () => {
           </a>
           </div>
         </div>
-        <div className="mb-1 animate-pulse hover:animate-none" style={{ animationDelay: '2.4s', marginTop: '-30px' }}>
+        <div className="mb-1 animate-pulse hover:animate-none" style={{ animationDelay: '2.4s', marginTop: '-30px',zIndex: 1}}>
           <div style={{ width: '60px', height: '60px', marginTop: '12px' }}>
           <a href="https://nodejs.org/en/docs" target="_blank" rel="noreferrer">
             <Image
@@ -181,7 +181,7 @@ const Skills = () => {
           </a>
           </div>
         </div>
-        <div className="animate-pulse hover:animate-none" style={{ animationDelay: '2.6s', marginTop: '-19px' }}>
+        <div className="animate-pulse hover:animate-none" style={{ animationDelay: '2.6s', marginTop: '-19px',zIndex: 1 }}>
           <div style={{ width: '60px', height: '60px' }}>
           <a href="https://www.postgresql.org/" target="_blank" rel="noreferrer">
             <Image
@@ -194,13 +194,13 @@ const Skills = () => {
           </a>
           </div>
         </div>
-          <div className="animate-pulse hover:animate-none" style={{ animationDelay: '2.6s', marginTop: '-19px' }}>
+          <div className="animate-pulse hover:animate-none" style={{ animationDelay: '2.6s', marginTop: '-19px',zIndex: 1 }}>
             <div style={{ width: '60px', height: '60px' }}>
               <a href="https://nextjs.org/docs/getting-started/react-essentials/" target="_blank" rel="noreferrer">
                 <Image
                   className={`transition-transform duration-200 hover:scale-150 ${theme === 'dark' ? 'icon-dark' : ''}`}
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg"
-                  alt="PostgreSQL"
+                  alt="Next.js"
                   width={60}
                   height={60}
                 />

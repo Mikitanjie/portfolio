@@ -22,7 +22,7 @@ const Projects = () => {
               </h3>
               <Link href="http://www.mytravelpal.xyz/" target="_blank" passHref>
                 <Image
-                  className="hover:scale-110 mt-7 mb-7 object-cover"
+                  className="hover:scale-110 mt-7 mb-7 object-cover active:scale-90"
                   style=""
                   src="/Projectpic.png"
                   alt="Picture of the author"
