@@ -1,18 +1,36 @@
 import Image from "next/image";
 import Button from "../Button/Button";
+import { useContext } from 'react';
+import { ThemeContext } from '../../_components/ThemeContext/ThemeContext';
 
 const Hero = () => {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <div className="relative h-46 gridcontent-center" style={{ marginTop: '150px', marginBottom: '350px'}}>
+    <div className="relative h-46 gridcontent-center" style={{ marginTop: '110px', marginBottom: '350px'}}>
       <div className="col-span-2 relative z-10">
-        <h1 className="font-semibold mb-2 mt-12 ml-11 text-3xl text-emerald-600">Hi, I&apos;m Michael</h1>
+        <h1
+          className="font-semibold mb-2 mt-12 ml-11 text-6xl"
+          style={{
+            color: theme === 'light' ? 'black' : 'rgb(5, 150, 105)',
+          }}
+        >
+          Hi, I&apos;m Michael
+        </h1>
         <br />
-        <h1 className="animate- font-semibold text-5xl mb-4 ml-11 pr-12 text-emerald-600">Enthusiastic Web Developer</h1>
-        <div className="ml-11">
+        <h1
+          className="animate- font-semibold text-6xl mb-4 ml-10 pr-12"
+          style={{
+            color: theme === 'light' ? 'black' : 'rgb(5, 150, 105)',
+          }}
+        >
+          Enthusiastic Web Developer
+        </h1>
+        <div className="ml-7">
           <Button text="Click Here" />
         </div>
       </div>
-      <div className="absolute bottom-0 flex justify-end items-center z-0 image-container">
+      <div className="absolute bottom-3 flex justify-end items-center z-0 image-container">
         <Image
           className="responsive-image"
           src="/ProfilePic.png"

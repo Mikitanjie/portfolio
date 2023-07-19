@@ -59,13 +59,23 @@ import { ThemeContext } from '../../_components/ThemeContext/ThemeContext';
             <Image className="object-cover" src={images[activeImageIndex]} alt="Picture of the author" width={600} height={800} />
           </div>
           <div>
-          <button type="button" className="hover:scale-150 absolute top-0 left-0 inline-flex justify-center bg-transparent px-4 py-2 text-emerald-600 focus:outline-offset-0" id="prevBtn" onClick={prevImage}>
-            <FaArrowLeft />
-          </button>
-          <button type="button" className="hover:scale-150 absolute top-0 right-0 inline-flex justify-center bg-transparent px-4 py-2 text-emerald-600 focus:outline-offset-0" id="nextBtn" onClick={nextImage}>
-            <FaArrowRight />
-          </button>
-        </div>
+            <button
+              type="button"
+              className="hover:scale-150 active:scale-90 absolute top-0 left-0 inline-flex justify-center bg-transparent px-4 py-2 text-emerald-600 focus:outline-offset-0"
+              id="prevBtn"
+              onClick={prevImage}
+            >
+              <FaArrowLeft />
+            </button>
+            <button
+              type="button"
+              className="hover:scale-150 active:scale-90 absolute top-0 right-0 inline-flex justify-center bg-transparent px-4 py-2 text-emerald-600 focus:outline-offset-0"
+              id="nextBtn"
+              onClick={nextImage}
+            >
+              <FaArrowRight />
+            </button>
+          </div>
       </div>
     </div>
   );
