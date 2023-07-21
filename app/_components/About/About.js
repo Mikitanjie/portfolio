@@ -1,14 +1,11 @@
-'use client'
-
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import React, { useState, useContext } from 'react';
 import Image from 'next/image';
 import { ThemeContext } from '../../_components/ThemeContext/ThemeContext';
 
-
-  const About = () => {
-    const [activeImageIndex, setActiveImageIndex] = useState(0);
-    const { theme } = useContext(ThemeContext);
+const About = () => {
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const { theme } = useContext(ThemeContext);
 
   const images = [
     "/ProjectB.jpg",
@@ -54,28 +51,26 @@ import { ThemeContext } from '../../_components/ThemeContext/ThemeContext';
           </p>
         </div>
       </div>
-      <div id="carousel" className="hover:grayscale-0" style={{position: 'relative', marginLeft: '160px', marginTop: '100px'}}>
-          <div className=" border-4 border-emerald-600 ">
-            <Image className="object-cover" src={images[activeImageIndex]} alt="Picture of the author" width={600} height={800} />
-          </div>
-          <div>
-            <button
-              type="button"
-              className="hover:scale-150 active:scale-90 absolute top-0 left-0 inline-flex justify-center bg-transparent px-4 py-2 text-emerald-600 focus:outline-offset-0"
-              id="prevBtn"
-              onClick={prevImage}
-            >
-              <FaArrowLeft />
-            </button>
-            <button
-              type="button"
-              className="hover:scale-150 active:scale-90 absolute top-0 right-0 inline-flex justify-center bg-transparent px-4 py-2 text-emerald-600 focus:outline-offset-0"
-              id="nextBtn"
-              onClick={nextImage}
-            >
-              <FaArrowRight />
-            </button>
-          </div>
+      <div id="carousel" style={{position: 'relative', marginLeft: '160px', marginTop: '100px'}}>
+        <div className="group border-2 border-emerald-600">
+          <Image className="object-cover hover-effect group-hover:grayscale-0" src={images[activeImageIndex]} alt="Picture of the author" width={600} height={800} />
+          <button
+            type="button"
+            className="hover:scale-150 active:scale-90 absolute top-0 left-0 inline-flex justify-center bg-transparent px-4 py-2 text-emerald-600 focus:outline-offset-0"
+            id="prevBtn"
+            onClick={prevImage}
+          >
+            <FaArrowLeft size={23} />
+          </button>
+          <button
+            type="button"
+            className="hover:scale-150 active:scale-90 absolute top-0 right-0 inline-flex justify-center bg-transparent px-4 py-2 text-emerald-600 focus:outline-offset-0"
+            id="nextBtn"
+            onClick={nextImage}
+          >
+            <FaArrowRight size={23} />
+          </button>
+        </div>
       </div>
     </div>
   );

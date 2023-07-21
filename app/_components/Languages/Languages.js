@@ -89,7 +89,7 @@ const Languages = () => {
 
       {/* Spanish */}
       <div className="animate-pulse hover:animate-none" style={{animationDelay: '0.8s', marginRight: '50px', textAlign: 'center' }}>
-        <div style={{width: '60px', height: '60px' }} onClick={() => handleClick("Ola,Mi nombre es Michael")}>
+        <div style={{width: '60px', height: '60px' }} onClick={() => handleClick("Hola, Mi nombre es Michael")}>
           <Image
             className="active:scale-90 transition-transform duration-200 hover:scale-150"
             src="https://cdn-icons-png.flaticon.com/128/321/321260.png"
