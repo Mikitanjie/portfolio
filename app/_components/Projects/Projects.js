@@ -36,22 +36,22 @@ const Projects = () => {
           <li className="  project description" style={{ marginTop: '39px', marginLeft: '40px' }}>
               <div>
               <br />
-              <p className={theme === 'light' ? 'text-black' : 'text-emerald-600'} style={{ fontSize: '30px', marginTop: '-18px' }}>What is Travelpal?</p>
+              <p className= {`lighting-effect ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`} style={{ fontSize: '30px', marginTop: '-18px' }}>What is Travelpal?</p>
               <br />
-              <p className={theme === 'light' ? 'text-black' : 'text-emerald-600'} style={{ fontSize: '20px', marginTop: '-15px' }}>Travelpal is a social platform that simplifies travel planning and social connection, providing a comprehensive solution for users to plan a trip with their buddie. </p>
+              <p className={`lighting-effect ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`} style={{ fontSize: '20px', marginTop: '-15px' }}>Travelpal is a social platform that simplifies travel planning and social connection, providing a comprehensive solution for users to plan a trip with new or previous buddies. </p>
               </div>
             </li>
             <li className="  project description" style={{ marginTop: '45px', marginLeft: '40px' }}>
               <div>
-              <p className={theme === 'light' ? 'text-black' : 'text-emerald-600'} style={{ fontSize: '30px', marginTop: '-18x' }}>We did it!</p>
+              <p className={`lighting-effect ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`} style={{ fontSize: '30px', marginTop: '-18x' }}>We did it!</p>
               <br />
-              <p className={theme === 'light' ? 'text-black' : 'text-emerald-600'} style={{ fontSize: '20px', marginTop: '-15px' }}>Idea, pitch, implementation and shipped to production in 2 weeks.Worked in a team of 4 people across different geographies.</p>              </div>
+              <p className={`lighting-effect ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`} style={{ fontSize: '20px', marginTop: '-15px' }}>Idea, pitch, implementation and shipped to production in 2 weeks.Worked in a remote team of 4 people, across different geographies.</p>              </div>
             </li>
             <li className="  project description" style={{ marginTop: '45px', marginLeft: '40px' }}>
               <div>
-              <p className={theme === 'light' ? 'text-black' : 'text-emerald-600'} style={{ fontSize: '30px'}}>Lessons learned...</p>
+              <p className={`lighting-effect ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`} style={{ fontSize: '30px'}}>Lessons learned...</p>
               <br />
-              <p className={theme === 'light' ? 'text-black' : 'text-emerald-600'} style={{ fontSize: '20px', marginTop: '-15px' }}>This project has taught me a lot of things, web development at first and new techs then, each version allowing me to learn more technologies.</p>
+              <p className={`lighting-effect ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`} style={{ fontSize: '20px', marginTop: '-15px' }}>This project has taught me a lot to work efficiently as team although remotely, front and backend development and new code. It also taught me a lot about myself.</p>
               </div>
             </li>
           <li className="flex"></li>
