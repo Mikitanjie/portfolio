@@ -4,7 +4,7 @@
 
 /* --color-background-light: rgb(144, 238, 210); */
 :root {
-  --color-background-light: rgba(153, 230, 136, 0.39);
+  --color-background-light: rgba(138, 206, 172, 0.72);
   --color-text-light: rgb(255, 255, 255)
   ;
 
@@ -125,7 +125,6 @@
 }
 
 
-
 @keyframes pop {
   0% {
     transform: translate(-50%, -50%) scale(0);
@@ -133,4 +132,13 @@
   100% {
     transform: translate(-50%, -50%) scale(1);
   }
+}
+
+.hover-no-shadow:hover {
+  text-shadow: none !important;
+}
+
+.lighting-effect:hover {
+  animation: lightingEffect 2s linear infinite;
+  text-shadow: 0 0 40px rgb(14, 255, 9);
 }
