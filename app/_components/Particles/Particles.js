@@ -23,7 +23,7 @@ export default function Particles() {
           y: Math.random() * canvas.height,
           speedX: Math.random() * 1 - 1,
           speedY: Math.random() * 1 - 1,
-          size: Math.random() * 1 + 1,
+          size: Math.random() * 2 + 1,
         });
       }
     }

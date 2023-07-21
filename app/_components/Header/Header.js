@@ -8,7 +8,7 @@ const handleClick = (event, elementId) => {
       // Special case for 'Home' button
       if (elementId === 'Home') {
         window.scrollTo({
-          top: 0,
+          top: 40,
           behavior: 'smooth'
         });
         return;
@@ -16,7 +16,7 @@ const handleClick = (event, elementId) => {
       // Special case for 'Home' button
       if (elementId === 'Projects') {
         window.scrollTo({
-          top: 985,
+          top: 1025,
           behavior: 'smooth'
         });
         return;
@@ -24,7 +24,7 @@ const handleClick = (event, elementId) => {
       // Special case for 'Home' button
       if (elementId === 'About') {
         window.scrollTo({
-          top: 2120,
+          top: 2160,
           behavior: 'smooth'
         });
         return;
@@ -32,7 +32,7 @@ const handleClick = (event, elementId) => {
           // Special case for 'Home' button
       if (elementId === 'Skills') {
         window.scrollTo({
-          top: 3340,
+          top: 3320,
           behavior: 'smooth'
         });
         return;
@@ -52,7 +52,7 @@ const Header = () => {
   const {theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <nav className="nav fixed top-0 left-0 right-0 z-50" style={{ backgroundImage: `url(https://e0.pxfuel.com/wallpapers/170/477/desktop-wallpaper-matrix-miscellanea-miscellaneous-numbers-binary-code.jpg)`, background: 'cover', backgroundPosition: '152%'}}>
+    <nav className="nav fixed top-0 left-0 right-0 z-50" style={{height: '55px', backgroundImage: `url(https://e0.pxfuel.com/wallpapers/170/477/desktop-wallpaper-matrix-miscellanea-miscellaneous-numbers-binary-code.jpg)`, background: 'cover', backgroundPosition: '152%'}}>
       <div className="flex justify-between h-16 "style={{ marginLeft: '31px'}}>
         <div className="flex items-center">
           <div className="flex-shrink-0">

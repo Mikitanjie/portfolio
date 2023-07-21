@@ -27,27 +27,25 @@ const About = () => {
         <br />
         <br />
         <br />
-        <div className="lighting-effect w-[600px] mt-24 mr-11 font-lg text-lg">
+        <div className="w-[600px] mt-24 mr-11 font-lg text-lg">
           <p>
-            I am a passionate technologist with a background in various industries and countries around Europe.
-            I have always been fascinated by technology and the possibilities it opens up.
+            Hello, my name is <span>Michael Catania</span> and I am  based in <span>Austria</span>.
           </p>
           <br />
           <p>
-            After many years of working in different industries, I decided to pursue my dream of becoming a web developer.
-            I recently completed LeWagon web development bootcamp, and I am now ready to take on a new challenge in tech.
+            I started working at an early age and mostly learnt things by doing. I always thought programming was something too abstract and complicated for me so never digged deep into it.
           </p>
           <br />
           <p>
-            I am a quick learner and I am always eager to take on new challenges. I am also a team player and I enjoy working with others to achieve common goals. I am confident that I have the skills and experience necessary to be successful in a web development career.
+            This was the case until 2020 when due to lockdown I found myself playing video games a lot - yes probably too much! It was then when I wondered if I could one day also create my own videogame and finally understand the magic world of web and app development.
           </p>
           <br />
           <p>
-            I am excited to start my new journey as a web developer. I am looking forward to working on challenging projects and learning new things. I am also looking forward to meeting new people and collaborating with them on exciting projects.
+          I started exploring tutorials on the web, developing skills and learning how to code. Recently, I have completed Le Wagon&apos;s intensive Full Stack Web Development course and I&apos;m now looking for a full-time role to help a company solve challenges, achieve their goals and keep learning!
           </p>
           <br />
           <p>
-            Please feel free to contact me if you have any questions or would like to discuss my qualifications further.
+            Please feel free to contact me if you have any questions or would like to discuss any of my qualifications further.
           </p>
         </div>
       </div>
