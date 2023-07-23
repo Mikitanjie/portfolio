@@ -43,16 +43,6 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            <div>
-              <h2 className="mb-7 text-sm font-semibold uppercase dark:text-white">Call Me</h2>
-              <ul className="dark:text-gray-100 hover:text-emerald-600 font-medium">
-                <li className="active:scale-50">
-                  <a href="tel:+393534440733">
-                    <AiFillPhone size="3rem" />
-                  </a>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
         <hr className="animate-pulse sm:mx-auto dark:border-emerald-600 lg:my-8" />
