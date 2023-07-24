@@ -37,7 +37,7 @@ const Footer = () => {
         </div>
         <hr className="animate-pulse sm:mx-auto dark:border-emerald-600 lg:my-8" />
         <div className="flex justify-center items-center">
-          <span className="text-sm text-emerald-600">© 2023 Michael Catania</span>
+          <span className="text-sm text-emerald-600"> Michael Catania © 2023 | Made with React, Next.js and Tailwind   </span>
         </div>
       </div>
     </footer>

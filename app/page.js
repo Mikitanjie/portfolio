@@ -12,6 +12,9 @@ import Skills from './_components/Skills/Skills';
 import Footer from './_components/Footer/Footer';
 import Languages from './_components/Languages/Languages';
 import Particles from './_components/Particles/Particles';
+import Tools from './_components/Tools/Tools';
+import Libraries from './_components/Libraries/Libraries';
+
 
 
 export default function Home() {
@@ -89,9 +92,44 @@ export default function Home() {
             filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
           }}
         >
-          Skills & Languages</span>
+         Programming & Markup Languages</span>
+      </div>
+        <Tools />
+        <div id="Skills" className="text-center text-5xl font-semibold pt-40 relative" style={{marginTop: '300px', marginBottom: '200px'}}>
+        <span
+          className="bg-clip-text underline-on-hover"
+          style={{
+            color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)', // Use the RGB value for 'emerald-600' color in Tailwind CSS
+            animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
+            filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
+          }}
+        >
+         Tools</span>
       </div>
         <Skills />
+        <div id="Skills" className="text-center text-5xl font-semibold pt-40 relative" style={{marginTop: '300px', marginBottom: '200px'}}>
+        <span
+          className="bg-clip-text underline-on-hover"
+          style={{
+            color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)', // Use the RGB value for 'emerald-600' color in Tailwind CSS
+            animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
+            filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
+          }}
+        >
+          Libraries</span>
+      </div>
+        <Libraries />
+        <div id="Skills" className="text-center text-5xl font-semibold pt-40 relative" style={{marginTop: '-70px', marginBottom: '200px'}}>
+        <span
+          className="bg-clip-text underline-on-hover"
+          style={{
+            color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)', // Use the RGB value for 'emerald-600' color in Tailwind CSS
+            animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
+            filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
+          }}
+        >
+          Languages</span>
+      </div>
         <Languages />
         <Footer />
       </div>

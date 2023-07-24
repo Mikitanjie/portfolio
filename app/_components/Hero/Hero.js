@@ -27,8 +27,10 @@ const Hero = () => {
           Frontend Web Developer
         </h1>
         <div className="ml-11">
-          <Button text="Click Here" />
-        </div>
+        <Button text="Send me a message" href="mailto:cataniamike16@gmail.com"/>
+        <Button text="Connect on LinkedIn" href="https://www.linkedin.com/in/mc16/" />
+        <Button text="Follow me on Github" href="https://github.com/Mikitanjie" />
+      </div>
       </div>
       <div className="absolute bottom-3 flex justify-end items-center z-0 image-container">
         <Image
