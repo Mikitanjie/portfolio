@@ -14,7 +14,7 @@ const Libraries = () => {
             <a href="https:getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank" rel="noreferrer">
               <Image
                 className="transition-transform duration-200 hover:scale-150 active:scale-50"
-                src="https:raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
                 alt="Bootstrap"
                 width={100}
                 height={100}
@@ -28,7 +28,7 @@ const Libraries = () => {
             <a href="https:rubyonrails.org/" target="_blank" rel="noreferrer">
               <Image
                 className="transition-transform duration-200 hover:scale-150 active:scale-50"
-                src="https:raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-original-wordmark.svg"
                 alt="Rails"
                 width={100}
                 height={100}
@@ -56,7 +56,7 @@ const Libraries = () => {
             <a href="https:nodejs.org/en/docs" target="_blank" rel="noreferrer">
               <Image
                 className="transition-transform duration-200 hover:scale-150"
-                src="https:raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"
                 alt="NodeJS"
                 width={100}
                 height={100}
@@ -70,7 +70,7 @@ const Libraries = () => {
             <a href="https:nextjs.org/docs/getting-started/react-essentials/" target="_blank" rel="noreferrer">
               <Image
                 className={`transition-transform duration-200 hover:scale-150 ${theme === 'dark' ? 'icon-dark' : ''}`}
-                src="https:cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg"
                 alt="Next.js"
                 width={100}
                 height={100}
