@@ -65,6 +65,7 @@
 
 .carousel-image.active {
   display: block;
+
 }
 
 .Img {
@@ -112,6 +113,7 @@
 .image-container {
   width: 350px;
   height: 350px;
+
 }
 
 .responsive-image {
@@ -142,3 +144,9 @@
   animation: lightingEffect 2s linear infinite;
   text-shadow: 0 0 40px rgb(14, 255, 9);
 }
+
+.projects {
+  margin-left: 15px;
+}
+
+

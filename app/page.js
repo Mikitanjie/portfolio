@@ -28,7 +28,7 @@ export default function Home() {
     <div>
       <Particles />
       <Header />
-      <div className="text-center text-5xl font-extrabold pt-20 relative" style={{ marginTop: '15px', marginBottom: '110px'}}>
+      <div className="text-center text-5xl font-semibold pt-20 relative" style={{ marginTop: '15px', marginBottom: '110px'}}>
       <span
           className="bg-clip-text underline-on-hover"
           style={{
@@ -41,7 +41,7 @@ export default function Home() {
       </div>
       <div className="pt-40">
         <Hero />
-        <div className="text-center text-5xl font-extrabold relative" style={{ marginTop: '200px', marginBottom: '110px'}}>
+        <div className="text-center text-5xl font-semibold relative" style={{ marginTop: '200px', marginBottom: '110px'}}>
         <span
           className="bg-clip-text underline-on-hover"
           style={{
@@ -53,7 +53,7 @@ export default function Home() {
           Projects</span>
       </div>
         <Projects />
-        <div id="Skills" className="flex justify-end text-center text-5xl font-extrabold pt-40 relative" style={{marginTop: '-500px', marginBottom: '400px', marginRight: '30px'}}>
+        <div id="Skills" className="flex justify-end text-center text-5xl font-semibold pt-40 relative" style={{marginTop: '-500px', marginBottom: '400px', marginRight: '40px'}}>
         <span
           className="bg-clip-text underline-on-hover"
           style={{
@@ -68,7 +68,7 @@ export default function Home() {
           <span className="dot3">.</span>
           </span>
       </div>
-        <div className="text-center text-5xl font-extrabold relative" style={{ marginTop: '250px', marginBottom: '-45px'}}>
+        <div className="text-center text-5xl font-semibold relative" style={{ marginTop: '250px', marginBottom: '-45px'}}>
         <span
           className="bg-clip-text underline-on-hover"
           style={{
@@ -80,7 +80,7 @@ export default function Home() {
           About me</span>
       </div>
         <About />
-        <div id="Skills" className="text-center text-5xl font-extrabold pt-40 relative" style={{marginTop: '300px', marginBottom: '200px'}}>
+        <div id="Skills" className="text-center text-5xl font-semibold pt-40 relative" style={{marginTop: '300px', marginBottom: '200px'}}>
         <span
           className="bg-clip-text underline-on-hover"
           style={{

@@ -19,14 +19,14 @@ const Hero = () => {
         </h1>
         <br />
         <h1
-          className="animate- font-semibold text-6xl mb-4 ml-10 pr-12"
+          className="animate- font-semibold text-6xl mb-4 ml-11 pr-12"
           style={{
             color: theme === 'light' ? 'black' : 'rgb(5, 150, 105)',
           }}
         >
           Frontend Web Developer
         </h1>
-        <div className="ml-7">
+        <div className="ml-11">
           <Button text="Click Here" />
         </div>
       </div>

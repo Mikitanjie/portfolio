@@ -33,7 +33,7 @@ const Projects = () => {
               </div>
             </div>
           </li>
-          <li className="  project description" style={{ marginTop: '39px', marginLeft: '40px' }}>
+          <li className="project description" style={{ marginTop: '39px', marginLeft: '29px' }}>
               <div>
               <br />
               <p className= {`lighting-effect ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`} style={{ fontSize: '30px', marginTop: '-18px' }}>What is Travelpal?</p>
@@ -41,13 +41,13 @@ const Projects = () => {
               <p className={`lighting-effect ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`} style={{ fontSize: '20px', marginTop: '-15px' }}>Travelpal is a social platform that simplifies travel planning and social connection, providing a comprehensive solution for users to plan a trip with new or previous buddies. </p>
               </div>
             </li>
-            <li className="  project description" style={{ marginTop: '45px', marginLeft: '40px' }}>
+            <li className="  project description" style={{ marginTop: '45px', marginLeft: '29px' }}>
               <div>
               <p className={`lighting-effect ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`} style={{ fontSize: '30px', marginTop: '-18x' }}>We did it!</p>
               <br />
               <p className={`lighting-effect ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`} style={{ fontSize: '20px', marginTop: '-15px' }}>Idea, pitch, implementation and shipped to production in 2 weeks.Worked in a remote team of 4 people, across different geographies.</p>              </div>
             </li>
-            <li className="  project description" style={{ marginTop: '45px', marginLeft: '40px' }}>
+            <li className="  project description" style={{ marginTop: '45px', marginLeft: '29px' }}>
               <div>
               <p className={`lighting-effect ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`} style={{ fontSize: '30px'}}>Lessons learned...</p>
               <br />

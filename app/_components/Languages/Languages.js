@@ -17,7 +17,7 @@ const Languages = () => {
   };
 
   return (
-    <div  style={{ position: 'relative', display: 'flex', marginBottom: '420px', marginTop:'-135px', marginLeft: '90px'}}>
+    <div  style={{ position: 'relative', display: 'flex', marginBottom: '420px', marginTop:'-135px', marginLeft: '48px'}}>
     {popupMessage &&
       <div style={{
         position: 'absolute',

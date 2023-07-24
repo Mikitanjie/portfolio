@@ -10,7 +10,7 @@ const Skills = () => {
 
 
   return (
-    <div className="flex justify-end" style={{ marginTop: '10px', marginRight: '90px'}}>
+    <div className="flex justify-end" style={{ marginTop: '10px', marginRight: '42px'}}>
       <div className="mb-11 grid grid-cols-4 gap-9 dark:bg-transparent">
         <div className="animate-pulse hover:animate-none" style={{ animationDelay: '0.0s', marginTop: '-2px' }}>
           <div style={{ width: '60px', height: '60px'}}>

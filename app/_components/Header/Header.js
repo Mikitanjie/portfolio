@@ -59,27 +59,27 @@ const Header = () => {
           </div>
           <div className="hidden md:block">
             <div className="ml-1 flex items-baseline space-x-4">
-              <a onClick={(event) => handleClick(event, 'Home')} className="text-white hover:text-emerald-600 active:scale-90 px-4 py-2 text-md font-bold" href="#Home"style={{ fontSize: '20px' }}>
+              <a onClick={(event) => handleClick(event, 'Home')} className="text-white hover:text-emerald-600 active:scale-90 px-4 py-2 text-md font-semibold" href="#Home"style={{ fontSize: '20px' }}>
                 Home
               </a>
-              <a onClick={(event) => handleClick(event, 'Projects')} className="text-white hover:text-emerald-600 active:scale-90 px-3 py-2 text-md font-bold" href="#Projects"style={{ fontSize: '20px' }}>
+              <a onClick={(event) => handleClick(event, 'Projects')} className="text-white hover:text-emerald-600 active:scale-90 px-3 py-2 text-md font-semibold" href="#Projects"style={{ fontSize: '20px' }}>
                 Projects
               </a>
-              <a onClick={(event) => handleClick(event, 'About')} className="text-white hover:text-emerald-600 active:scale-90 px-3 py-2 text-md font-bold" href="#About"style={{ fontSize: '20px' }}>
+              <a onClick={(event) => handleClick(event, 'About')} className="text-white hover:text-emerald-600 active:scale-90 px-3 py-2 text-md font-semibold" href="#About"style={{ fontSize: '20px' }}>
                 About
               </a>
-              <a onClick={(event) => handleClick(event, 'Skills')} className="text-white hover:text-emerald-600 active:scale-90 px-3 py-2 text-md font-bold" href="#Skills"style={{ fontSize: '20px' }}>
+              <a onClick={(event) => handleClick(event, 'Skills')} className="text-white hover:text-emerald-600 active:scale-90 px-3 py-2 text-md font-semibold" href="#Skills"style={{ fontSize: '20px' }}>
                 Skills
               </a>
               <a
                 onClick={(event) => handleClick(event, 'Contacts')}
                 href="#Contacts"
-                className="text-white hover:text-emerald-600 active:scale-90 px-3 py-2 text-md font-bold"style={{ fontSize: '20px' }}>
+                className="text-white hover:text-emerald-600 active:scale-90 px-3 py-2 text-md font-semibold"style={{ fontSize: '20px' }}>
                 Contact
               </a>
             </div>
           </div>
-          <div className="text-white hover:text-emerald-600 active:scale-150 px-3 py-2 text-lg font-bold" style={{ marginLeft: '800px', fontSize: '23px' }}>
+          <div className="text-white hover:text-emerald-600 active:scale-150 px-3 py-2 text-lg font-semibold" style={{ marginLeft: '800px', fontSize: '23px' }}>
             <button onClick={toggleTheme}>
               {theme === 'light' ? <FaMoon /> : <FaSun />}
             </button>
