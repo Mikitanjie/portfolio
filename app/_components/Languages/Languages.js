@@ -35,12 +35,12 @@ const Languages = () => {
   }, []);
 
   return (
-    <div style={{ position: 'relative', display: 'flex', marginBottom: '420px', marginTop: '-135px', marginLeft: '480px'}}>
+    <div style={{ position: 'relative', display: 'flex', marginBottom: '420px', marginTop: '-135px', marginLeft: '380px'}}>
       {popupMessage &&
         <div style={{
           position: 'absolute',
           top: '300%',
-          left: '19%',
+          left: '33%',
           transform: 'translate(-50%, -50%)',
           background: theme === 'light' ? 'transparent' : 'transparent',
           color: theme === 'light' ? 'black' : 'rgb(5, 150, 105)',
@@ -65,73 +65,73 @@ const Languages = () => {
 
 
       {/* Portuguese */}
-      <div className="animate-pulse hover:animate-none" style={{animationDelay: '0.2s', marginRight: '25px', textAlign: 'center' }}>
-        <div style={{width: '60px', height: '60px' }} onClick={() => handleClick("I speak Portuguese as my Mother-language!")}>
+      <div className="animate-pulse hover:animate-none" style={{animationDelay: '0.2s', marginRight: '50px', textAlign: 'center' }}>
+        <div style={{width: '100px', height: '100px' }} onClick={() => handleClick("I speak Portuguese as my Mother-language!")}>
           <Image
             className="active:scale-90 transition-transform duration-200 hover:scale-150"
             src="https://cdn-icons-png.flaticon.com/128/321/321256.png"
             alt="Portuguese"
-            width={60}
-            height={60}
+            width={100}
+            height={100}
           />
         </div>
-        <span className={theme === 'light' ? 'text-black' : 'text-emerald-600'}>Portuguese</span>
+        <span className={theme === 'light' ? 'text-black' : 'text-emerald-1000'}>Portuguese</span>
       </div>
 
       {/* Italian */}
       <div className="animate-pulse hover:animate-none" style={{animationDelay: '0.4s', marginRight: '50px', textAlign: 'center' }}>
-        <div style={{width: '60px', height: '60px' }} onClick={() => handleClick("Italian comes from my Father and also my GF!")}>
+        <div style={{width: '100px', height: '100px' }} onClick={() => handleClick("Italian comes from my Father and also my GF!")}>
           <Image
             className="active:scale-90 transition-transform duration-200 hover:scale-150"
             src="https://cdn-icons-png.flaticon.com/128/321/321240.png"
             alt="Italian"
-            width={60}
-            height={60}
+            width={100}
+            height={100}
           />
         </div>
-        <span className={theme === 'light' ? 'text-black' : 'text-emerald-600'}>Italian</span>
+        <span className={theme === 'light' ? 'text-black' : 'text-emerald-1000'}>Italian</span>
       </div>
 
       {/* German */}
       <div className="animate-pulse hover:animate-none" style={{animationDelay: '0.6s', marginRight: '50px', textAlign: 'center' }}>
-        <div style={{width: '60px', height: '60px' }} onClick={() => handleClick("I was born in Germany and lived there a few years!")}>
+        <div style={{width: '100px', height: '100px' }} onClick={() => handleClick("I was born in Germany and lived there a few years!")}>
           <Image
             className="active:scale-90 transition-transform duration-200 hover:scale-150"
             src="https://cdn-icons-png.flaticon.com/128/321/321233.png"
             alt="German"
-            width={60}
-            height={60}
+            width={100}
+            height={100}
           />
         </div>
-        <span className={theme === 'light' ? 'text-black' : 'text-emerald-600'}>German</span>
+        <span className={theme === 'light' ? 'text-black' : 'text-emerald-1000'}>German</span>
       </div>
 
       {/* Spanish */}
       <div className="animate-pulse hover:animate-none" style={{animationDelay: '0.8s', marginRight: '50px', textAlign: 'center' }}>
-        <div style={{width: '60px', height: '60px' }} onClick={() => handleClick("I learned Spanish as we are very close neighbors and also with friends")}>
+        <div style={{width: '100px', height: '100px' }} onClick={() => handleClick("I learned Spanish as we are very close neighbors and also with friends")}>
           <Image
             className="active:scale-90 transition-transform duration-200 hover:scale-150"
             src="https://cdn-icons-png.flaticon.com/128/321/321260.png"
             alt="Spanish"
-            width={60}
-            height={60}
+            width={100}
+            height={100}
           />
         </div>
-        <span className={theme === 'light' ? 'text-black' : 'text-emerald-600'}>Spanish</span>
+        <span className={theme === 'light' ? 'text-black' : 'text-emerald-1000'}>Spanish</span>
       </div>
 
       {/* English */}
       <div className="animate-pulse hover:animate-none" style={{animationDelay: '1.0s', textAlign: 'center' }}>
-        <div style={{width: '60px', height: '60px' }} onClick={() => handleClick("while living in UK for 3 years I could improve my English quite alot :)")}>
+        <div style={{width: '100px', height: '100px' }} onClick={() => handleClick("while living in UK for 3 years I could improve my English quite alot :)")}>
           <Image
             className="active:scale-90 transition-transform duration-200 hover:scale-150"
             src="https://cdn-icons-png.flaticon.com/128/321/321269.png"
             alt="English"
-            width={60}
-            height={60}
+            width={100}
+            height={100}
           />
         </div>
-        <span className={theme === 'light' ? 'text-black' : 'text-emerald-600'}>English</span>
+        <span className={theme === 'light' ? 'text-black' : 'text-emerald-1000'}>English</span>
       </div>
     </div>
   );

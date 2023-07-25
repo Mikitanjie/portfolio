@@ -149,4 +149,7 @@
   margin-left: 15px;
 }
 
+body {
+  overflow-x: hidden;
+}
 
