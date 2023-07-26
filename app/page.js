@@ -71,7 +71,7 @@ export default function Home() {
           <span className="dot3">.</span>
           </span>
       </div>
-        <div className="text-center text-5xl font-semibold" style={{ marginTop: '250px', marginBottom: '125px'}}>
+        <div className="text-center text-5xl font-semibold" style={{ marginTop: '250px', marginBottom: '25px'}}>
         <span
           className="bg-clip-text underline-on-hover"
           style={{
@@ -83,7 +83,7 @@ export default function Home() {
           About me</span>
       </div>
         <About />
-        <div id="Skills" className="text-center text-5xl font-semibold pt-40" style={{ marginBottom: '200px'}}>
+        <div id="Skills" className="text-center text-5xl font-semibold pt-40" style={{ marginBottom: '220px'}}>
         <span
           className="bg-clip-text underline-on-hover"
           style={{

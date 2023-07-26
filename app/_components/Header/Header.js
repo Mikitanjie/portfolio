@@ -32,7 +32,7 @@ const handleClick = (event, elementId) => {
           // Special case for 'Home' button
       if (elementId === 'Skills') {
         window.scrollTo({
-          top: 3220,
+          top: 3205,
           behavior: 'smooth'
         });
         return;
