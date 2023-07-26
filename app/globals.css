@@ -46,10 +46,10 @@
   animation: pulse 1.5s infinite 0.6s;
 }
 
-
 .nav {
   animation: carousel 45s linear infinite;
 }
+
 
 .hover-effect {
   filter: grayscale(100%);
@@ -58,8 +58,6 @@
 
 #carousel {
   position: relative;
-  width: 500px;
-  height: 600px;
 }
 
 
@@ -120,10 +118,34 @@
   width: 100%;
   border-radius: 35%;  /* To make the image circular */
   border: 2px solid #10B981;
-  width: 350px;  /* Set these according to your needs */
-  height: 350px; /* Set these according to your needs */
+  width: 350px;
+  height: 350px;
   margin-Bottom: 0px;
-  margin-right: -1080px;
+
+}
+
+.prjt-image {
+  border: 2px solid #10B981;
+  width: auto;
+  height: auto;
+}
+
+.prjt-dsc {
+  width: auto;
+  height: auto;
+}
+
+.my-container {
+  margin: 1px;
+  padding: 1px;
+  border: 1px;
+}
+
+.promarg {
+  margin-left: 0px;
+  margin-right: 25px;
+  padding: 0px;
+  border: 1px;
 }
 
 
@@ -145,11 +167,12 @@
   text-shadow: 0 0 40px rgb(14, 255, 9);
 }
 
-.projects {
-  margin-left: 15px;
-}
-
 body {
   overflow-x: hidden;
 }
 
+@media (min-width: 1440px) {
+  .container {
+    margin: 0 10%;
+  }
+}

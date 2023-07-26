@@ -6,7 +6,7 @@ const Libraries = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div className="" style={{ marginTop: '-120px', marginLeft:'400px', marginRight:'-15px', marginBottom: '-20px',}}>
+    <div className="flex justify-center items-center" style={{ marginTop: '-120px', marginLeft:'400px', marginRight:'-15px', marginBottom: '-20px',}}>
       <div className="grid grid-cols-8 gap-9 dark:bg-transparent">
         {/* Bootstrap */}
         <div className="animate-pulse hover:animate-none" style={{ animationDelay: '1.0s', marginTop: '-1px', zIndex: 1   }}>

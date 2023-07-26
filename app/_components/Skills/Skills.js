@@ -6,7 +6,7 @@ const Skills = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div className="" style={{ marginTop: '-140px', marginBottom: '-420px', marginLeft:'400px'}}>
+    <div className="flex justify-center items-center" style={{ marginTop: '-140px', marginBottom: '-420px', marginLeft:'400px'}}>
       <div className="grid grid-cols-8 gap-9 dark:bg-transparent">
         {/* Figma */}
         <div className="animate-pulse hover:animate-none" style={{ animationDelay: '0.0s', marginTop: '-2px', marginLeft:'-15px', zIndex: 1   }}>

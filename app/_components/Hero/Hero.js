@@ -7,8 +7,8 @@ const Hero = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div className="relative h-46 gridcontent-center" style={{ marginTop: '110px', marginBottom: '350px'}}>
-      <div className="col-span-2 relative z-10">
+    <div className="relative h-46 gridcontent-center  w-full flex md:flex-row flex-col-reverse items-center">
+      <div className="col-span-2 relative z-10 w-full md:w-1/2 mr-4">
         <h1
           className="font-semibold mb-2 mt-12 ml-11 text-6xl"
           style={{
@@ -32,7 +32,7 @@ const Hero = () => {
         <Button text="Follow me on Github" href="https://github.com/Mikitanjie" />
       </div>
       </div>
-      <div className="absolute bottom-3 flex justify-end items-center z-0 image-container">
+      <div className="flex justify-end items-center w-full md:w-1/2 ml-10 md:mr-11">
         <Image
           className="responsive-image"
           src="/ProfilePic.png"

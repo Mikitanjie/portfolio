@@ -23,11 +23,11 @@ const About = () => {
 
   return (
     <div id="About" className={`flex ml-12 font-semibold text-medium ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`} style={{ marginBottom: '90px' }}>
-      <div className="w-1/2" style={{marginTop: '-50px'}}>
+      <div className="w-1/2" style={{ width: '100%', marginTop: '-50px'}}>
         <br />
         <br />
         <br />
-        <div className="w-[600px] mt-24 mr-11 font-semibold text-lg">
+        <div className="w-[600px] mt-24 text-lg">
           <p>
             Hello, my name is <span>Michael Catania</span> and I am  based in <span>Austria</span>.
           </p>
@@ -49,7 +49,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div id="carousel" style={{position: 'relative', marginLeft: '168px', marginTop: '100px'}}>
+      <div id="carousel" style={{position: 'relative', marginTop: '100px', marginRight: '45px'}}>
         <div className="group border-2 border-emerald-600">
           <Image id='img' className="object-cover hover-effect group-hover:grayscale-0" src={images[activeImageIndex]} alt="Picture of the author" width={600} height={800} />
           <button

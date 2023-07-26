@@ -6,8 +6,8 @@ const Tools = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div className="" style={{ marginTop: '-140px',marginBottom: '-420px', marginLeft:'400px', marginRight:'-350px'}}>
-      <div className="grid grid-cols-8 gap-9 dark:bg-transparent">
+    <div className="flex justify-center items-center" style={{ marginTop: '-140px', marginBottom: '-420px', marginLeft:'400px'}}>
+      <div className="grid grid-cols-7 gap-9 dark:bg-transparent">
         {/* JavaScript */}
         <div className="animate-pulse hover:animate-none" style={{ animationDelay: '0.2s', marginTop: '-3px', zIndex: 1  }}>
           <div style={{ width: '100px', height: '100px' }}>

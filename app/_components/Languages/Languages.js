@@ -10,22 +10,19 @@ const Languages = () => {
   const handleClick = (message) => {
     setPopupMessage(message);
 
-    // Clear any existing timeouts to ensure we don't have multiple timeouts running at once
     if (popupTimeout.current) {
       clearTimeout(popupTimeout.current);
     }
 
-    // Set a new timeout
     popupTimeout.current = setTimeout(() => {
       setPopupMessage("");
-    }, 4000); // 5000 milliseconds = 5 seconds
+    }, 6000);
   };
 
   const handlePopupClose = () => {
     setPopupMessage("");
   };
 
-  // Clear the timeout when the component unmounts to prevent memory leaks
   useEffect(() => {
     return () => {
       if (popupTimeout.current) {
@@ -35,12 +32,12 @@ const Languages = () => {
   }, []);
 
   return (
-    <div style={{ position: 'relative', display: 'flex', marginBottom: '420px', marginTop: '-135px', marginLeft: '380px'}}>
+    <div className="flex justify-center items-center" style={{ position: 'relative', display: 'flex', marginBottom: '420px'}}>
       {popupMessage &&
         <div style={{
           position: 'absolute',
           top: '300%',
-          left: '33%',
+          left: '50%',
           transform: 'translate(-50%, -50%)',
           background: theme === 'light' ? 'transparent' : 'transparent',
           color: theme === 'light' ? 'black' : 'rgb(5, 150, 105)',
@@ -62,7 +59,6 @@ const Languages = () => {
           <p style={{ fontSize: '40px'}}>{popupMessage}</p>
         </div>
       }
-
 
       {/* Portuguese */}
       <div className="animate-pulse hover:animate-none" style={{animationDelay: '0.2s', marginRight: '50px', textAlign: 'center' }}>

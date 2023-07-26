@@ -31,7 +31,7 @@ export default function Home() {
     <div>
       <Particles />
       <Header />
-      <div className="text-center text-5xl font-semibold pt-20 relative" style={{ marginTop: '15px', marginBottom: '110px'}}>
+      <div className="text-center text-5xl font-semibold pt-20 relative" style={{ marginTop: '5px', marginBottom: '320px'}}>
       <span
           className="bg-clip-text underline-on-hover"
           style={{
@@ -42,9 +42,9 @@ export default function Home() {
         >
           Welcome to my portfolio!</span>
       </div>
-      <div className="pt-40">
+      <div className="my-container">
         <Hero />
-        <div className="text-center text-5xl font-semibold relative" style={{ marginTop: '200px', marginBottom: '110px'}}>
+        <div className="text-center text-5xl font-semibold relative" style={{ marginTop: '300px', marginBottom: '230px'}}>
         <span
           className="bg-clip-text underline-on-hover"
           style={{
@@ -56,7 +56,7 @@ export default function Home() {
           Projects</span>
       </div>
         <Projects />
-        <div id="Skills" className="flex justify-end text-center text-5xl font-semibold pt-40 relative" style={{marginTop: '-500px', marginBottom: '400px', marginRight: '40px'}}>
+        <div id="Skills" className="flex justify-end text-center font-semibold text-4xl pt-40 relative" style={{marginBottom: '200px', marginRight: '42px'}}>
         <span
           className="bg-clip-text underline-on-hover"
           style={{
@@ -71,11 +71,11 @@ export default function Home() {
           <span className="dot3">.</span>
           </span>
       </div>
-        <div className="text-center text-5xl font-semibold relative" style={{ marginTop: '250px', marginBottom: '-45px'}}>
+        <div className="text-center text-5xl font-semibold" style={{ marginTop: '250px', marginBottom: '125px'}}>
         <span
           className="bg-clip-text underline-on-hover"
           style={{
-            color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)', // Use the RGB value for 'emerald-600' color in Tailwind CSS
+            color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)',
             animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
             filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
           }}
@@ -83,11 +83,11 @@ export default function Home() {
           About me</span>
       </div>
         <About />
-        <div id="Skills" className="text-center text-5xl font-semibold pt-40 relative" style={{marginTop: '300px', marginBottom: '200px'}}>
+        <div id="Skills" className="text-center text-5xl font-semibold pt-40" style={{ marginBottom: '200px'}}>
         <span
           className="bg-clip-text underline-on-hover"
           style={{
-            color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)', // Use the RGB value for 'emerald-600' color in Tailwind CSS
+            color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)',
             animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
             filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
           }}
@@ -95,11 +95,11 @@ export default function Home() {
          Programming & Markup Languages</span>
       </div>
         <Tools />
-        <div id="Skills" className="text-center text-5xl font-semibold pt-40 relative" style={{marginTop: '300px', marginBottom: '200px'}}>
+        <div id="Skills" className="text-center text-5xl font-semibold pt-40" style={{marginTop: '300px', marginBottom: '200px'}}>
         <span
           className="bg-clip-text underline-on-hover"
           style={{
-            color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)', // Use the RGB value for 'emerald-600' color in Tailwind CSS
+            color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)',
             animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
             filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
           }}
@@ -107,11 +107,11 @@ export default function Home() {
          Tools</span>
       </div>
         <Skills />
-        <div id="Skills" className="text-center text-5xl font-semibold pt-40 relative" style={{marginTop: '300px', marginBottom: '200px'}}>
+        <div id="Skills" className="text-center text-5xl font-semibold pt-40" style={{marginTop: '300px', marginBottom: '170px'}}>
         <span
           className="bg-clip-text underline-on-hover"
           style={{
-            color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)', // Use the RGB value for 'emerald-600' color in Tailwind CSS
+            color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)',
             animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
             filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
           }}
@@ -119,7 +119,7 @@ export default function Home() {
           Libraries</span>
       </div>
         <Libraries />
-        <div id="Skills" className="text-center text-5xl font-semibold pt-40 relative" style={{marginTop: '-70px', marginBottom: '200px'}}>
+        <div id="Skills" className="text-center text-5xl font-semibold pt-40" style={{marginTop: '-70px', marginBottom: '50px'}}>
         <span
           className="bg-clip-text underline-on-hover"
           style={{
