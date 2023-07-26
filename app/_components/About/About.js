@@ -29,11 +29,13 @@ const About = () => {
         <br />
         <div className="w-[600px] mt-24 text-lg">
           <p>
-            Hello, my name is <span>Michael Catania</span> and I am  based in <span>Austria</span>.
+            Hello, my name is Michael Catania, I'm a passionate introvert who believes that it is never too late to learn something from scratch.
+
           </p>
           <br />
           <p>
-            I started working at an early age and mostly learnt things by doing. I always thought programming was something too abstract and complicated for me so never digged deep into it.
+          Born in southern Germany from a Portuguese mother and Italian father, I have lived in few countries around Europe.
+          I started working at an early age and mostly learnt things by doing. I always thought programming was something too abstract and complicated for me so never digged deep into it.
           </p>
           <br />
           <p>

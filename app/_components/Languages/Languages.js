@@ -62,7 +62,7 @@ const Languages = () => {
 
       {/* Portuguese */}
       <div className="animate-pulse hover:animate-none" style={{animationDelay: '0.2s', marginRight: '50px', textAlign: 'center' }}>
-        <div style={{width: '100px', height: '100px' }} onClick={() => handleClick("I speak Portuguese as my Mother-language!")}>
+        <div style={{width: '100px', height: '100px' }} onClick={() => handleClick("This is my mother-tongue!")}>
           <Image
             className="active:scale-90 transition-transform duration-200 hover:scale-150"
             src="https://cdn-icons-png.flaticon.com/128/321/321256.png"
@@ -76,7 +76,7 @@ const Languages = () => {
 
       {/* Italian */}
       <div className="animate-pulse hover:animate-none" style={{animationDelay: '0.4s', marginRight: '50px', textAlign: 'center' }}>
-        <div style={{width: '100px', height: '100px' }} onClick={() => handleClick("Italian comes from my Father and also my GF!")}>
+        <div style={{width: '100px', height: '100px' }} onClick={() => handleClick("This is my everyday language at home, my girlfriend is Italian!")}>
           <Image
             className="active:scale-90 transition-transform duration-200 hover:scale-150"
             src="https://cdn-icons-png.flaticon.com/128/321/321240.png"
@@ -90,7 +90,7 @@ const Languages = () => {
 
       {/* German */}
       <div className="animate-pulse hover:animate-none" style={{animationDelay: '0.6s', marginRight: '50px', textAlign: 'center' }}>
-        <div style={{width: '100px', height: '100px' }} onClick={() => handleClick("I was born in Germany and lived there a few years!")}>
+        <div style={{width: '100px', height: '100px' }} onClick={() => handleClick("This is the first foreign language I learnt!")}>
           <Image
             className="active:scale-90 transition-transform duration-200 hover:scale-150"
             src="https://cdn-icons-png.flaticon.com/128/321/321233.png"
@@ -104,7 +104,7 @@ const Languages = () => {
 
       {/* Spanish */}
       <div className="animate-pulse hover:animate-none" style={{animationDelay: '0.8s', marginRight: '50px', textAlign: 'center' }}>
-        <div style={{width: '100px', height: '100px' }} onClick={() => handleClick("I learned Spanish as we are very close neighbors and also with friends")}>
+        <div style={{width: '100px', height: '100px' }} onClick={() => handleClick("This I have learnt as I lived close to the Spanish border!")}>
           <Image
             className="active:scale-90 transition-transform duration-200 hover:scale-150"
             src="https://cdn-icons-png.flaticon.com/128/321/321260.png"
@@ -118,7 +118,7 @@ const Languages = () => {
 
       {/* English */}
       <div className="animate-pulse hover:animate-none" style={{animationDelay: '1.0s', textAlign: 'center' }}>
-        <div style={{width: '100px', height: '100px' }} onClick={() => handleClick("while living in UK for 3 years I could improve my English quite alot :)")}>
+        <div style={{width: '100px', height: '100px' }} onClick={() => handleClick("This is the language I learnt in school and improved by living in the UK!")}>
           <Image
             className="active:scale-90 transition-transform duration-200 hover:scale-150"
             src="https://cdn-icons-png.flaticon.com/128/321/321269.png"
