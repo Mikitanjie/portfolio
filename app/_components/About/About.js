@@ -29,7 +29,7 @@ const About = () => {
         <br />
         <div className="w-[600px] mt-24 text-lg">
           <p>
-            Hello, my name is Michael Catania, I'm a passionate introvert who believes that it is never too late to learn something from scratch.
+            Hello, my name is Michael Catania, I&apos;m a passionate introvert who believes that it is never too late to learn something from scratch.
 
           </p>
           <br />
