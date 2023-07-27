@@ -15,7 +15,7 @@ const Projects = () => {
                 className="prjt-image hover:scale-110 mt-7 mb-7 object-cover active:scale-90"
                 style=""
                 src="/Projectpic.png"
-                alt="Picture of the author"
+                alt="Project image"
                 width={500}
                 height={500}
               />

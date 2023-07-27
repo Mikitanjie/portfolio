@@ -14,6 +14,7 @@ import Languages from './_components/Languages/Languages';
 import Particles from './_components/Particles/Particles';
 import Tools from './_components/Tools/Tools';
 import Libraries from './_components/Libraries/Libraries';
+import ContactForm from './_components/ContactForm/ContactForm';
 
 
 
@@ -131,6 +132,7 @@ export default function Home() {
           Languages</span>
       </div>
         <Languages />
+        <ContactForm />
         <Footer />
       </div>
     </div>
