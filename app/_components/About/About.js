@@ -53,7 +53,12 @@ const About = () => {
       </div>
       <div id="carousel" style={{position: 'relative', marginTop: '100px', marginRight: '45px'}}>
         <div className="group border-2 border-emerald-600">
-          <Image id='img' className="object-cover hover-effect group-hover:grayscale-0" src={images[activeImageIndex]} alt="Picture of the author" width={600} height={800} />
+          <Image id='img' className="object-cover hover-effect group-hover:grayscale-0 custom-width"
+            src={images[activeImageIndex]}
+            alt="Picture of the author"
+            layout="responsive"
+            width={600}
+            height={800} />
           <button
             type="button"
             className="hover:scale-150 active:scale-90 absolute top-0 left-0 inline-flex justify-center bg-transparent px-4 py-2 text-emerald-600 focus:outline-offset-0"

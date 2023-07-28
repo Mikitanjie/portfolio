@@ -216,3 +216,15 @@ body {
 .submit-button:active {
   transform: scale(0.7);
 }
+
+.custom-width {
+  width: 100%;
+  max-width: 600px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .custom-width {
+    width: 100%;
+  }
+}

@@ -64,14 +64,14 @@ const Languages = () => {
       <div className="animate-pulse hover:animate-none" style={{animationDelay: '0.2s', marginRight: '50px', textAlign: 'center' }}>
         <div style={{width: '100px', height: '100px' }} onClick={() => handleClick("This is my mother-tongue!")}>
           <Image
-            className="active:scale-90 transition-transform duration-200 hover:scale-150"
+            className=" active:scale-90 transition-transform duration-200 hover:scale-150"
             src="https://cdn-icons-png.flaticon.com/128/321/321256.png"
             alt="Portuguese"
             width={100}
             height={100}
           />
         </div>
-        <span className={theme === 'light' ? 'text-black' : 'text-emerald-1000'}>Portuguese</span>
+        <span className={theme === 'light' ? 'text-black' : 'text-emerald-600'}>Portuguese</span>
       </div>
 
       {/* Italian */}
@@ -85,7 +85,7 @@ const Languages = () => {
             height={100}
           />
         </div>
-        <span className={theme === 'light' ? 'text-black' : 'text-emerald-1000'}>Italian</span>
+        <span className={theme === 'light' ? 'text-black' : 'text-emerald-600'}>Italian</span>
       </div>
 
       {/* German */}
@@ -99,7 +99,7 @@ const Languages = () => {
             height={100}
           />
         </div>
-        <span className={theme === 'light' ? 'text-black' : 'text-emerald-1000'}>German</span>
+        <span className={theme === 'light' ? 'text-black' : 'text-emerald-600'}>German</span>
       </div>
 
       {/* Spanish */}
@@ -113,7 +113,7 @@ const Languages = () => {
             height={100}
           />
         </div>
-        <span className={theme === 'light' ? 'text-black' : 'text-emerald-1000'}>Spanish</span>
+        <span className={theme === 'light' ? 'text-black' : 'text-emerald-600'}>Spanish</span>
       </div>
 
       {/* English */}
@@ -127,7 +127,7 @@ const Languages = () => {
             height={100}
           />
         </div>
-        <span className={theme === 'light' ? 'text-black' : 'text-emerald-1000'}>English</span>
+        <span className={theme === 'light' ? 'text-black' : 'text-emerald-600'}>English</span>
       </div>
     </div>
   );
