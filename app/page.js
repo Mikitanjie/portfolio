@@ -34,7 +34,7 @@ export default function Home() {
       <Header />
       <div className="text-center text-5xl font-semibold pt-20 relative" style={{ marginTop: '5px', marginBottom: '320px'}}>
       <span
-          className="bg-clip-text underline-on-hover"
+          className="bg-clip-text"
           style={{
             color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)', // Use the RGB value for 'emerald-600' color in Tailwind CSS
             animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
@@ -47,7 +47,7 @@ export default function Home() {
         <Hero />
         <div className="text-center text-5xl font-semibold relative" style={{ marginTop: '300px', marginBottom: '230px'}}>
         <span
-          className="bg-clip-text underline-on-hover"
+          className="bg-clip-text"
           style={{
             color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)', // Use the RGB value for 'emerald-600' color in Tailwind CSS
             animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
@@ -59,7 +59,7 @@ export default function Home() {
         <Projects />
         <div id="Skills" className="flex justify-end text-center font-semibold text-4xl pt-40 relative" style={{marginBottom: '200px', marginRight: '42px'}}>
         <span
-          className="bg-clip-text underline-on-hover"
+          className="bg-clip-text"
           style={{
             color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)', // Use the RGB value for 'emerald-600' color in Tailwind CSS
             animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
@@ -74,7 +74,7 @@ export default function Home() {
       </div>
         <div className="text-center text-5xl font-semibold" style={{ marginTop: '250px', marginBottom: '25px'}}>
         <span
-          className="bg-clip-text underline-on-hover"
+          className="bg-clip-text"
           style={{
             color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)',
             animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
@@ -86,7 +86,7 @@ export default function Home() {
         <About />
         <div id="Skills" className="text-center text-5xl font-semibold pt-40" style={{ marginBottom: '220px'}}>
         <span
-          className="bg-clip-text underline-on-hover"
+          className="bg-clip-text"
           style={{
             color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)',
             animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
@@ -98,7 +98,7 @@ export default function Home() {
         <Tools />
         <div id="Skills" className="text-center text-5xl font-semibold pt-40" style={{marginTop: '300px', marginBottom: '200px'}}>
         <span
-          className="bg-clip-text underline-on-hover"
+          className="bg-clip-text "
           style={{
             color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)',
             animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
@@ -110,7 +110,7 @@ export default function Home() {
         <Skills />
         <div id="Skills" className="text-center text-5xl font-semibold pt-40" style={{marginTop: '300px', marginBottom: '170px'}}>
         <span
-          className="bg-clip-text underline-on-hover"
+          className="bg-clip-text"
           style={{
             color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)',
             animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
@@ -122,7 +122,7 @@ export default function Home() {
         <Libraries />
         <div id="Skills" className="text-center text-5xl font-semibold pt-40" style={{marginTop: '-70px', marginBottom: '50px'}}>
         <span
-          className="bg-clip-text underline-on-hover"
+          className="bg-clip-text"
           style={{
             color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)', // Use the RGB value for 'emerald-600' color in Tailwind CSS
             animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
