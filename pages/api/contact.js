@@ -22,8 +22,14 @@ export default async function handler(req, res) {
 
     transporter.sendMail(mailOptions, (err, data) => {
       if (err) {
+        // Log the error with your logging system
+        // console.error(err);
+        yourLoggingSystem.log(err);
+
         res.status(500).send({
-          message: 'Something went wrong. Try again later',
+          // Send a generic error message back to the client
+          // error: err.message,
+          message: 'Something went wrong. Please try again later',
         });
       } else {
         res.send({
@@ -31,6 +37,7 @@ export default async function handler(req, res) {
         });
       }
     });
+
   } else {
     // Handle any other HTTP method
     res.status(405).json({ message: 'Method Not Allowed' });
