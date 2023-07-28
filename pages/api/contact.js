@@ -5,14 +5,13 @@ export default async function handler(req, res) {
     let { name, email, message } = req.body;
 
     let transporter = nodemailer.createTransport({
-      host: 'smtp.office365.com',
-      port: 587,
-      secure: false, // true for 465, false for other ports
+      service: 'Outlook365',
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.APP_PASSWORD,
       },
     });
+
 
 
     let mailOptions = {
