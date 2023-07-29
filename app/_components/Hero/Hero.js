@@ -1,7 +1,9 @@
 import Image from "next/image";
+import Link from 'next/link';
 import Button from "../Button/Button";
 import { useContext } from 'react';
 import { ThemeContext } from '../../_components/ThemeContext/ThemeContext';
+
 
 const Hero = () => {
   const { theme } = useContext(ThemeContext);
@@ -27,7 +29,13 @@ const Hero = () => {
           Frontend Web Developer
         </h1>
         <div className="ml-11">
-        <Button text="Send me a message" href="mailto:cataniamike16@gmail.com"/>
+        <a
+          href="/resume.pdf"
+          download
+          className={`underline-on-hover text-emerald-600 inline-flex justify-center px-4 py-2 lighting-effect active:scale-90 ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`}
+        >
+            Download my CV
+          </a>
         <Button text="Connect on LinkedIn" href="https://www.linkedin.com/in/mc16/" />
         <Button text="Follow me on Github" href="https://github.com/Mikitanjie" />
       </div>
