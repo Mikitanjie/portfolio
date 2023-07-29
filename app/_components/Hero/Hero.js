@@ -32,7 +32,7 @@ const Hero = () => {
         <a
           href="/resume.pdf"
           download
-          className={`underline-on-hover text-emerald-600 inline-flex justify-center px-4 py-2 lighting-effect active:scale-90 ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`}
+          className={`underline-on-hover inline-flex justify-center px-1 py-2 lighting-effect active:scale-90 text-fontStyle ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`}
         >
             Download my CV
           </a>
@@ -45,7 +45,7 @@ const Hero = () => {
           className="responsive-image"
           src="/ProfilePic.png"
           alt="Picture of the author"
-          width={350}  /* Set these according to your needs */
+          width={350}
           height={350}
           priority={true}
         />

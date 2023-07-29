@@ -2,7 +2,7 @@ import { useState } from 'react';
 import '../../globals.css';
 
 function ContactForm() {
-  const [status, setStatus] = useState(''); // to display success or error message
+  const [status, setStatus] = useState('');
 
   const handleSubmit = async (event) => {
     event.preventDefault();
