@@ -51,13 +51,14 @@ const Libraries = () => {
           </div>
         </div>
         {/* NodeJS */}
-        <div className="mb-1 animate-pulse hover:animate-none" style={{ animationDelay: '2.4s', marginTop: '-30px', zIndex: 1 }}>
-          <div style={{ width: '100px', height: '100px', marginTop: '12px' }}>
-            <a href="https:nodejs.org/en/docs" target="_blank" rel="noreferrer">
+        {/* React */}
+        <div className="animate-pulse hover:animate-none" style={{ animationDelay: '2.0s', marginTop: '-1px', zIndex: 1  }}>
+          <div style={{ width: '100px', height: '100px' }}>
+            <a href="https:reactjs.org/docs/getting-started.html" target="_blank" rel="noreferrer">
               <Image
-                className="transition-transform duration-200 hover:scale-150"
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"
-                alt="NodeJS"
+                className="transition-transform duration-200 hover:scale-150 active:scale-50"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
+                alt="React"
                 width={100}
                 height={100}
               />

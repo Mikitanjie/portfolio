@@ -8,7 +8,7 @@ export const ThemeContext = createContext();
 // Create a provider for the theme context
 export function ThemeProvider({ children }) {
   // Use state to keep track of the current theme
-  const [theme, setTheme] = useState('light'); // Default theme is light
+  const [theme, setTheme] = useState('dark'); // Default theme is light
 
   // On mount, we check if the user has a preference in localStorage
   useEffect(() => {
@@ -17,7 +17,7 @@ export function ThemeProvider({ children }) {
       setTheme(localTheme);
       document.documentElement.setAttribute('data-theme', localTheme);
     } else {
-      document.documentElement.setAttribute('data-theme', 'light');
+      document.documentElement.setAttribute('data-theme', 'dark');
     }
   }, []);
 

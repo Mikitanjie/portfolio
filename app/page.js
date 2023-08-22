@@ -105,7 +105,8 @@ export default function Home() {
             filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
           }}
         >
-         Tools</span>
+         DevOps & Deployment
+        </span>
       </div>
         <Skills />
         <div id="Skills" className="text-center text-5xl font-semibold pt-40" style={{marginTop: '300px', marginBottom: '170px'}}>
@@ -117,7 +118,7 @@ export default function Home() {
             filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
           }}
         >
-          Libraries</span>
+          Frameworks & other</span>
       </div>
         <Libraries />
         <div id="Skills" className="text-center text-5xl font-semibold pt-40" style={{marginTop: '-70px', marginBottom: '50px'}}>
@@ -132,6 +133,17 @@ export default function Home() {
           Languages</span>
       </div>
         <Languages />
+        <div id="Skills" className="text-center text-5xl font-semibold pt-40" style={{marginTop: '-70px', marginBottom: '50px'}}>
+        <span
+          className="bg-clip-text"
+          style={{
+            color: theme === 'light' ? 'black' : 'rgb(52, 211, 153)', // Use the RGB value for 'emerald-600' color in Tailwind CSS
+            animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
+            filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
+          }}
+        >
+          Feel free to send me a message!</span>
+      </div>
         <ContactForm />
         <Footer />
       </div>
