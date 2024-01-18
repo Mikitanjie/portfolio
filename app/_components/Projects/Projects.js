@@ -10,7 +10,7 @@ const Projects = () => {
 
     <div className={`flex ml-12 font-semibold text-medium ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`} >
       <div className="order-1 flex justify md:w-1/2 lg:w-1/2">
-      <Link href="http://www.mytravelpal.xyz/" target="_blank" passHref>
+      <Link href="https://www.travelpal.rest/" target="_blank" passHref>
               <Image
                 className="prjt-image mt-6 mb-7 object-cover active:scale-75"
                 style=""
