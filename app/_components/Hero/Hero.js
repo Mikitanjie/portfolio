@@ -30,7 +30,7 @@ const Hero = () => {
         </h1>
         <div className="ml-11">
         <a
-          href="/resume.pdf"
+          href="https://drive.google.com/file/d/19OVRHSNT06WA-wk2nBhM_Tun83uNDKYR/view?usp=drive_link"
           download
           className={`underline-on-hover inline-flex justify-center px-1 py-2 lighting-effect active:scale-90 text-fontStyle ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`}
         >
