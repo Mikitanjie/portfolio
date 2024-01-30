@@ -43,8 +43,8 @@ const Projects = () => {
               <Image
                 className="prjt-image mt-6 mb-7 object-cover active:scale-75"
                 style=""
-                src="/DVPasti.png"
-                alt="DVPasti image"
+                src="/vitopasti.png"
+                alt="project image"
                 width={500}
                 height={500}
               />
