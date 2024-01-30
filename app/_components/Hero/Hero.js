@@ -32,7 +32,7 @@ const Hero = () => {
         <a
           href="/resume.pdf"
           download
-          className={`underline-on-hover inline-flex justify-center px-1 py-2 lighting-effect active:scale-90 text-fontStyle ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`}
+          className={`underline-on-hover inline-flex justify-center px-1 py-2 lighting-effect active:scale-90 text-fontStyle ${theme === 'light' ? 'text-black' : 'text-white'}`}
         >
             Download my CV
           </a>

@@ -22,7 +22,7 @@ const About = () => {
   };
 
   return (
-    <div id="About" className={`flex ml-12 font-semibold text-medium ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`} style={{ marginBottom: '90px' }}>
+    <div id="About" className={`flex ml-12 font-semibold text-medium ${theme === 'light' ? 'text-black' : 'text-white'}`} style={{ marginBottom: '90px' }}>
       <div className="w-1/2" style={{ width: '100%', marginTop: '-50px'}}>
         <br />
         <br />
