@@ -27,7 +27,7 @@ const About = () => {
         <br />
         <br />
         <br />
-        <div className="w-[600px] mt-24 text-lg">
+        <div className="w-[600px] mt-14 text-lg">
           <p>
             Hello, my name is Michael Catania, I&apos;m a passionate introvert who believes that it is never too late to learn something from scratch.
 
