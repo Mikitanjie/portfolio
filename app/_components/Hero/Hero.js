@@ -26,7 +26,7 @@ const Hero = () => {
             color: theme === 'light' ? 'black' : 'rgb(5, 150, 105)',
           }}
         >
-          Frontend Web Developer
+          Web Developer
         </h1>
         <div className="ml-11">
         <a

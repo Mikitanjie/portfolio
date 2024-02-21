@@ -41,7 +41,7 @@ export default function Home() {
             filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
           }}
         >
-          Welcome to my portfolio!</span>
+          Happy to see you here!</span>
       </div>
       <div className="my-container">
         <Hero />

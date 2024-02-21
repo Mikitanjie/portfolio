@@ -24,7 +24,7 @@ const handleClick = (event, elementId) => {
       // Special case for 'Home' button
       if (elementId === 'About') {
         window.scrollTo({
-          top: 2140,
+          top: 2640,
           behavior: 'smooth'
         });
         return;
@@ -32,7 +32,7 @@ const handleClick = (event, elementId) => {
           // Special case for 'Home' button
       if (elementId === 'Skills') {
         window.scrollTo({
-          top: 3205,
+          top: 3655,
           behavior: 'smooth'
         });
         return;
