@@ -81,7 +81,6 @@ const Header = () => {
               {theme === 'light' ? <FaMoon /> : <FaSun />}
             </button>
           </div>
-
         <div className="hidden md:block">
           <div className="ml-4 flex items-center md:ml-6">
             <div className="ml-3 relative"></div>

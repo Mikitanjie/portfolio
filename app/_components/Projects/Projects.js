@@ -23,7 +23,7 @@ const Projects = () => {
       </div>
       <div className="order-2 mt-1 md:w-1/2 lg:w-3/4">
       <p
-        className={`${theme === 'light' ? 'text-black' : ''}`}
+        className={`${theme === 'light' ? 'text-[#4a79fa]' : ''}`}
         style={{
           fontSize: '40px',
           color: theme === 'dark' ? '#01a123' : undefined
@@ -58,7 +58,7 @@ const Projects = () => {
       </div>
       <div className="order-2 md:w-1/2 lg:w-3/4">
       <p
-        className={`${theme === 'light' ? 'text-black' : ''}`}
+        className={`${theme === 'light' ? 'text-[#4a79fa]' : ''}`}
         style={{
           fontSize: '40px',
           color: theme === 'dark' ? '#01a123' : undefined
