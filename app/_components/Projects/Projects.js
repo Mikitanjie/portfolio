@@ -22,8 +22,14 @@ const Projects = () => {
             </Link>
       </div>
       <div className="order-2 mt-1 md:w-1/2 lg:w-3/4">
-        <p className={`lighting-effect ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`} style={{ fontSize: '40px'}}>Travelpal</p>
-
+      <p
+        className={`${theme === 'light' ? 'text-black' : ''}`}
+        style={{
+          fontSize: '40px',
+          color: theme === 'dark' ? '#01a123' : undefined
+        }}>
+        Travelpal
+      </p>
         <p className={`${theme === 'light' ? 'text-black' : 'text-white'}`} style={{ fontSize: '19px' }}>Travelpal is a social platform that simplifies travel planning and social connection, providing a comprehensive solution for users to plan a trip with new or previous buddies. </p>
         <br/>
 
@@ -51,8 +57,14 @@ const Projects = () => {
             </Link>
       </div>
       <div className="order-2 md:w-1/2 lg:w-3/4">
-        <p className={`lighting-effect ${theme === 'light' ? 'text-black' : 'text-emerald-600'}`} style={{ fontSize: '40px'}}>DonVito-Antipasti</p>
-
+      <p
+        className={`${theme === 'light' ? 'text-black' : ''}`}
+        style={{
+          fontSize: '40px',
+          color: theme === 'dark' ? '#01a123' : undefined
+        }}>
+        DonVito-Antipasti
+      </p>
         <p className={`${theme === 'light' ? 'text-black' : 'text-white'}`} style={{ fontSize: '19px' }}>A solo journey from concept to production in just two days, DonVito Antipasti is a testament to streamlined, efficient web development. Crafting this simple yet elegant page for a celebrated Salzburg antipasti shop, I managed all aspects of development and deployment with ease. </p>
         <br/>
 

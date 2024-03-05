@@ -52,30 +52,34 @@ const About = () => {
         </div>
       </div>
       <div id="carousel" style={{position: 'relative', marginTop: '100px', marginRight: '45px'}}>
-        <div className="group border-2 border-emerald-600">
-          <Image id='img' className="object-cover hover-effect group-hover:grayscale-0 custom-width"
-            src={images[activeImageIndex]}
-            alt="Picture of the author"
-            layout="responsive"
-            width={600}
-            height={800} />
-          <button
-            type="button"
-            className="hover:scale-150 active:scale-90 absolute top-0 left-0 inline-flex justify-center bg-transparent px-4 py-2 text-emerald-600 focus:outline-offset-0"
-            id="prevBtn"
-            onClick={prevImage}
-          >
-            <FaArrowLeft size={23} />
-          </button>
-          <button
-            type="button"
-            className="hover:scale-150 active:scale-90 absolute top-0 right-0 inline-flex justify-center bg-transparent px-4 py-2 text-emerald-600 focus:outline-offset-0"
-            id="nextBtn"
-            onClick={nextImage}
-          >
-            <FaArrowRight size={23} />
-          </button>
-        </div>
+      <div className="group border-2" style={{ borderColor: '#01a123' }}>
+        <Image
+          id='img'
+          className="object-cover hover-effect group-hover:grayscale-0 custom-width"
+          src={images[activeImageIndex]}
+          alt="Picture of the author"
+          width={600}
+          height={800}
+        />
+        <button
+          type="button"
+          className="hover:scale-150 active:scale-90 absolute top-0 left-0 inline-flex justify-center bg-transparent px-4 py-2 focus:outline-offset-0"
+          id="prevBtn"
+          onClick={prevImage}
+          style={{ color: '#01a123' }}
+        >
+          <FaArrowLeft size={23} />
+        </button>
+        <button
+          type="button"
+          className="hover:scale-150 active:scale-90 absolute top-0 right-0 inline-flex justify-center bg-transparent px-4 py-2 focus:outline-offset-0"
+          id="nextBtn"
+          onClick={nextImage}
+          style={{ color: '#01a123' }}
+        >
+          <FaArrowRight size={23} />
+        </button>
+      </div>
       </div>
     </div>
   );

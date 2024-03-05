@@ -9,30 +9,20 @@ const Hero = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div className="relative h-46 gridcontent-center  w-full flex md:flex-row flex-col-reverse items-center">
+    <div className="relative h-46 gridcontent-center w-full flex md:flex-row flex-col-reverse items-center">
       <div className="col-span-2 relative z-10 w-full md:w-1/2 mr-4">
-        <h1
-          className="font-semibold mb-2 mt-12 ml-11 text-6xl"
-          style={{
-            color: theme === 'light' ? 'black' : 'rgb(5, 150, 105)',
-          }}
-        >
+      <h1 className="font-semibold mb-2 mt-12 ml-11 text-6xl animated-gradient-text">
           Hi, I&apos;m Michael
         </h1>
         <br />
-        <h1
-          className="animate- font-semibold text-6xl mb-4 ml-11 pr-12"
-          style={{
-            color: theme === 'light' ? 'black' : 'rgb(5, 150, 105)',
-          }}
-        >
+        <h1 className="font-semibold mb-2 mt-12 ml-11 text-6xl animated-gradient-text">
           Web Developer
         </h1>
         <div className="ml-11">
         <a
           href="/resume.pdf"
           download
-          className={`underline-on-hover inline-flex justify-center px-1 py-2 lighting-effect active:scale-90 text-fontStyle ${theme === 'light' ? 'text-black' : 'text-white'}`}
+          className={`underline-on-hover inline-flex justify-center px-1 py-2 active:scale-90 text-fontStyle ${theme === 'light' ? 'text-black' : 'text-white'}`}
         >
             Download my CV
           </a>

@@ -14,7 +14,7 @@ const Button = ({ text, href }) => {
           href={href}
           target="_blank"
           rel="noreferrer"
-          className={`lighting-effect ${theme === 'light' ? 'text-black' : 'text-white'}`}
+          className={`${theme === 'light' ? 'text-black' : 'text-white'}`}
         >
           {text}
         </a>

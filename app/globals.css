@@ -33,6 +33,43 @@
   }
 }
 
+@keyframes moveGradient {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+
+.animated-gradient-text {
+  background: linear-gradient(
+    to right ,
+    #4a79fa,    /* First color */
+    #01a123,    /* Second color */
+    #01a123,    /* Third color */
+    #01a123,    /* Fourth color */
+    #4a79fa,
+    #4a79fa,
+    #01a123,
+    #01a123,
+    #01a123,
+    #4a79fa,
+    #4a79fa,
+    #01a123,
+    #01a123,
+    #01a123,
+    #4a79fa     /* First color again to create a seamless transition */
+  );
+  background-size: 300% 100%; /* Make the gradient three times the width of the text */
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent; /* Fallback for WebKit browsers */
+  animation: moveGradient 15s linear infinite; /* Adjust the time as needed */
+  display: inline-block; /* Required for background-clip */
+}
 
 .dot1 {
   animation: pulse 1.5s infinite 0.2s;
@@ -81,8 +118,8 @@
   left: 0;
   bottom: 0;
   width: 0%;
-  height: 4px; /* Adjust this to change the thickness of the underline */
-  background: #059669; /* Emerald-600 */
+  height: 3px; /* thickness of the underline */
+  background: #01a123;
   transition: width 0.3s linear;
 }
 
@@ -112,8 +149,8 @@
 
 .responsive-image {
   width: 100%;
-  border-radius: 35%;  /* To make the image circular */
-  border: 2px solid #10B981;
+  border-radius: 35%;  /* image circular */
+  border: 3px solid #01a123;
   width: 350px;
   height: 350px;
   margin-Bottom: 0px;
@@ -121,7 +158,7 @@
 }
 
 .prjt-image {
-  border: 2px solid #10B981;
+  border: 2px solid #01a123;
   width: auto;
   height: auto;
 }
@@ -156,11 +193,6 @@
 
 .hover-no-shadow:hover {
   text-shadow: none !important;
-}
-
-.lighting-effect:hover {
-  animation: lightingEffect 2s linear infinite;
-  text-shadow: 0 0 40px rgb(14, 255, 9);
 }
 
 body {
