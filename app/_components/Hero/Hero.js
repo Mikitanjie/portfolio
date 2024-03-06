@@ -10,12 +10,12 @@ const Hero = () => {
 
   return (
     <div className="relative h-46 gridcontent-center w-full flex md:flex-row flex-col-reverse items-center">
-      <div className="col-span-2 relative z-10 w-full md:w-1/2 mr-4">
+      <div className="herodiv col-span-2 relative z-10 w-full md:w-1/2 mr-4">
       <h1 className="font-semibold mb-2 mt-12 ml-11 text-6xl animated-gradient-text">
           Hi, I&apos;m Michael
         </h1>
         <br />
-        <h1 className="font-semibold mb-2 mt-12 ml-11 text-6xl animated-gradient-text">
+        <h1 className="font-semibold mb-2 ml-11 text-6xl animated-gradient-text">
           Web Developer
         </h1>
         <div className="ml-11">
