@@ -55,7 +55,7 @@ const Header = () => {
       <nav className="nav fixed top-0 left-0 right-0 z-50 flex justify-between w-full px-2 md:px-4 lg:px-8"
         style={{height: '55px', backgroundImage: `url(https://e0.pxfuel.com/wallpapers/170/477/desktop-wallpaper-matrix-miscellanea-miscellaneous-numbers-binary-code.jpg)`, background: 'cover', backgroundPosition: '152%'}}>
         <div className="flex justify-between items-center w-full">
-          <div className="nav-links ml-1 flex items-baseline space-x-4">
+          <div className="nav-links ml-1 flex items-baseline z-20 space-x-4">
             <a onClick={(event) => handleClick(event, 'Home')} className="text-white hover:text-emerald-600 active:scale-90 px-4 py-2 text-md font-semibold" href="#Home"style={{ fontSize: '20px' }}>
               Home
             </a>

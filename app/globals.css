@@ -84,9 +84,20 @@
 }
 
 .nav {
-  animation: carousel 45s linear infinite;
+  animation: carousel 90s linear infinite;
 }
 
+.nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(1, 161, 35); /* Red tint as an example */
+  mix-blend-mode: multiply; /* Adjust the blend mode as needed */
+  pointer-events: none; /* Prevents the pseudo-element from capturing clicks */
+}
 
 .hover-effect {
   filter: grayscale(100%);
