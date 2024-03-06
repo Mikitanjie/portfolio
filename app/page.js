@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { ThemeContext } from './_components/ThemeContext/ThemeContext';
 import Image from 'next/image';
 import Hero from './_components/Hero/Hero';
@@ -27,6 +27,9 @@ export default function Home() {
     toggleTheme();
   };
 
+  useEffect(() => {
+    console.log("%c🧑🏼‍💻 Curious to know what else I can do? HIRE ME!", "color: green; font-size:16px;");
+  }, []);
 
   return (
     <div>
