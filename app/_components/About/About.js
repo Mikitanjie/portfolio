@@ -29,29 +29,27 @@ const About = () => {
         <br />
         <div className="w-[600px] mt-14 text-lg">
           <p>
-            Hello, my name is Michael Catania, I&apos;m a passionate introvert who believes that it is never too late to learn something from scratch.
-
+          Hello, my name is Michael Catania, I'm a passionate introvert who believes that it's never too late to learn something from scratch.
           </p>
           <br />
           <p>
-          Born in southern Germany from a Portuguese mother and Italian father, I have lived in few countries around Europe.
-          I started working at an early age and mostly learnt things by doing. I always thought programming was something too abstract and complicated for me so never digged deep into it.
+          Born in Southern Germany to a Portuguese mother and Italian father, I have lived in several European countries. I started working at an early age and mostly learned things by doing. I always thought programming was too abstract and complicated for me, so I never really got into it.
           </p>
           <br />
           <p>
-            This was the case until 2020 when due to lockdown I found myself playing video games a lot - yes probably too much! It was then when I wondered if I could one day also create my own videogame and finally understand the magic world of web and app development.
+          This was the case until 2020, when I found myself playing a lot of video games - probably too much! It was then that I wondered if I could one day make my own video game and finally understand the magic world of web and app development.
           </p>
           <br />
           <p>
-          I started exploring tutorials on the web, developing skills and learning how to code. Recently, I have completed Le Wagon&apos;s intensive Full Stack Web Development course and I&apos;m now looking for a full-time role to help a company solve challenges, achieve their goals and keep learning!
+          I started exploring tutorials on the web, developing skills and learning how to code. I recently completed Le Wagon's intensive Full Stack Web Development course and I'm now looking for a full-time role to help a company solve challenges, achieve their goals and keep learning!
           </p>
           <br />
           <p>
-            Please feel free to contact me if you have any questions or would like to discuss any of my qualifications further.
+          Please do not hesitate to contact me if you have any questions or would like to discuss my qualifications further.
           </p>
         </div>
       </div>
-      <div id="carousel" style={{position: 'relative', marginTop: '100px', marginRight: '45px'}}>
+      <div id="carousel" style={{position: 'relative', marginTop: '88px', marginRight: '45px'}}>
       <div className="group border-2" style={{ borderColor: '#01a123' }}>
         <Image
           id='img'

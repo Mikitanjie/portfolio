@@ -2,12 +2,10 @@
 
 import React, { useContext, useEffect } from 'react';
 import { ThemeContext } from './_components/ThemeContext/ThemeContext';
-import Image from 'next/image';
 import Hero from './_components/Hero/Hero';
 import Header from './_components/Header/Header';
 import Projects from './_components/Projects/Projects';
 import About from './_components/About/About';
-import Button from './_components/Button/Button';
 import Skills from './_components/Skills/Skills';
 import Footer from './_components/Footer/Footer';
 import Languages from './_components/Languages/Languages';
@@ -16,16 +14,10 @@ import Tools from './_components/Tools/Tools';
 import Libraries from './_components/Libraries/Libraries';
 import ContactForm from './_components/ContactForm/ContactForm';
 
-
-
+// This is the Home page component
 export default function Home() {
   // Get the theme from the context
   const { theme,toggleTheme } = useContext(ThemeContext);
-
-  // Call this function when you want to switch themes
-  const onSomeEvent = () => {
-    toggleTheme();
-  };
 
   useEffect(() => {
     console.log("%c🧑🏼‍💻 Curious to know what else I can do? HIRE ME!", "color: green; font-size:16px;");
