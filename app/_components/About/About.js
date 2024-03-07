@@ -29,7 +29,7 @@ const About = () => {
         <br />
         <div className="w-[600px] mt-14 text-lg">
           <p>
-          Hello, my name is Michael Catania, I'm a passionate introvert who believes that it's never too late to learn something from scratch.
+          Hello, my name is Michael Catania, I&apos;m a passionate introvert who believes that it&apos;s never too late to learn something from scratch.
           </p>
           <br />
           <p>
@@ -41,7 +41,7 @@ const About = () => {
           </p>
           <br />
           <p>
-          I started exploring tutorials on the web, developing skills and learning how to code. I recently completed Le Wagon's intensive Full Stack Web Development course and I'm now looking for a full-time role to help a company solve challenges, achieve their goals and keep learning!
+          I started exploring tutorials on the web, developing skills and learning how to code. I recently completed Le Wagon&apos;s intensive Full Stack Web Development course and I&apos;m now looking for a full-time role to help a company solve challenges, achieve their goals and keep learning!
           </p>
           <br />
           <p>
