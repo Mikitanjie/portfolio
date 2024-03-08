@@ -192,7 +192,6 @@
   border: 1px;
 }
 
-
 @keyframes pop {
   0% {
     transform: translate(-50%, -50%) scale(0);
@@ -208,12 +207,6 @@
 
 body {
   overflow-x: hidden;
-}
-
-@media (min-width: 1440px) {
-  .container {
-    margin: 0 10%;
-  }
 }
 
 /* ContactForm.css */
@@ -261,6 +254,15 @@ body {
   max-width: 600px;
 }
 
+.herodiv {
+ margin-top: 8%;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    margin: 0 10%;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .custom-width {
@@ -268,6 +270,17 @@ body {
   }
 }
 
-.herodiv {
- margin-top: 8%;
+/* For tablets */
+@media (max-width: 1024px) {
+  /* ... */
+}
+
+/* For landscape phones and smaller tablets */
+@media (max-width: 768px) {
+  /* ... */
+}
+
+/* For portrait phones */
+@media (max-width: 480px) {
+  /* ... */
 }
