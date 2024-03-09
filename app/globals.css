@@ -94,7 +94,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgb(1, 161, 35); /* Red tint as an example */
+  background: rgb(1, 161, 35); 
   mix-blend-mode: multiply; /* Adjust the blend mode as needed */
   pointer-events: none; /* Prevents the pseudo-element from capturing clicks */
 }
@@ -258,29 +258,41 @@ body {
  margin-top: 8%;
 }
 
-@media (min-width: 1440px) {
-  .container {
-    margin: 0 10%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .custom-width {
-    width: 100%;
-  }
-}
-
 /* For tablets */
 @media (max-width: 1024px) {
-  /* ... */
+  .image-container {
+    width: 300px; /* Smaller container size for tablet */
+    height: 300px;
+  }
+  .responsive-image {
+    width: 300px; /* Smaller image size for tablet */
+    height: 300px;
+  }
+  /* ... Other styles for tablet view ... */
 }
 
 /* For landscape phones and smaller tablets */
 @media (max-width: 768px) {
-  /* ... */
+  .image-container {
+    width: 250px; /* Even smaller container size for phones */
+    height: 250px;
+  }
+  .responsive-image {
+    width: 250px; /* Even smaller image size for phones */
+    height: 250px;
+  }
+  /* ... Other styles for phone landscape view ... */
 }
 
 /* For portrait phones */
 @media (max-width: 480px) {
-  /* ... */
+  .image-container {
+    width: 200px; /* Much smaller container size for small phones */
+    height: 200px;
+  }
+  .responsive-image {
+    width: 200px; /* Much smaller image size for small phones */
+    height: 200px;
+  }
+  /* ... Other styles for phone portrait view ... */
 }

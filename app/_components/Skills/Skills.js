@@ -9,7 +9,7 @@ const Skills = () => {
     <div className="flex justify-center items-center" style={{ marginTop: '-140px', marginBottom: '-420px', marginLeft:'400px'}}>
       <div className="grid grid-cols-8 gap-9 dark:bg-transparent">
         {/* Figma */}
-        <div className="animate-pulse hover:animate-none" style={{ animationDelay: '0.0s', marginTop: '-2px', marginLeft:'-15px', zIndex: 1   }}>
+        <div className="animate-pulse hover:animate-none" style={{ animationDelay: '0.0s', marginTop: '-2px', marginLeft:'-15px', zIndex: 1}}>
           <div style={{ width: '100px', height: '100px' }}>
             <a href="https://www.figma.com/" target="_blank" rel="noreferrer">
               <Image
@@ -23,7 +23,7 @@ const Skills = () => {
           </div>
         </div>
         {/* Heroku */}
-        <div className="animate-pulse hover:animate-none" style={{ animationDelay: '1.4s', marginTop: '0px', zIndex: 1   }}>
+        <div className="animate-pulse hover:animate-none" style={{ animationDelay: '1.4s', marginTop: '0px', zIndex: 1}}>
           <div style={{ width: '100px', height: '100px' }}>
             <a href="https://www.heroku.com/what" target="_blank" rel="noreferrer">
               <Image
@@ -37,7 +37,7 @@ const Skills = () => {
           </div>
         </div>
         {/* Git */}
-        <div className="animate-pulse hover:animate-none" style={{ animationDelay: '1.6s', marginTop: '-1px', zIndex: 1   }}>
+        <div className="animate-pulse hover:animate-none" style={{ animationDelay: '1.6s', marginTop: '-1px', zIndex: 1}}>
           <div style={{ width: '100px', height: '100px' }}>
             <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
               <Image
@@ -51,7 +51,7 @@ const Skills = () => {
           </div>
         </div>
         {/* Webpack */}
-        <div className="animate-pulse hover:animate-none" style={{ animationDelay: '2.0s', zIndex: 1  }}>
+        <div className="animate-pulse hover:animate-none" style={{ animationDelay: '2.0s', zIndex: 1}}>
           <div style={{ width: '100px', height: '100px' }}>
             <a href="https://webpack.js.org/" target="_blank" rel="noreferrer">
               <Image
@@ -65,7 +65,7 @@ const Skills = () => {
           </div>
         </div>
         {/* VSCode */}
-        <div className="mb-1 animate-pulse hover:animate-none" style={{ animationDelay: '2.2s', zIndex: 1  }}>
+        <div className="mb-1 animate-pulse hover:animate-none" style={{ animationDelay: '2.2s', zIndex: 1}}>
           <div style={{ width: '100px', height: '100px' }}>
             <a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer">
               <Image
