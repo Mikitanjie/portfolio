@@ -31,7 +31,7 @@ export default function Home() {
       <span
           className="bg-clip-text"
           style={{
-            color: theme === 'light' ? 'black' : 'rgb(1, 161, 35)', // Use the RGB value for 'emerald-600' color in Tailwind CSS
+            color: theme === 'light' ? 'black' : 'rgb(1, 161, 35)',
             animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
             filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
           }}
@@ -44,7 +44,7 @@ export default function Home() {
         <span
           className="bg-clip-text"
           style={{
-            color: theme === 'light' ? 'black' : 'rgb(1, 161, 35)', // Use the RGB value for 'emerald-600' color in Tailwind CSS
+            color: theme === 'light' ? 'black' : 'rgb(1, 161, 35)',
             animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
             filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
           }}
@@ -56,7 +56,7 @@ export default function Home() {
         <span
           className="bg-clip-text"
           style={{
-            color: theme === 'light' ? 'black' : 'rgb(1, 161, 35)', // Use the RGB value for 'emerald-600' color in Tailwind CSS
+            color: theme === 'light' ? 'black' : 'rgb(1, 161, 35)',
             animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
             filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
           }}
@@ -120,7 +120,7 @@ export default function Home() {
         <span
           className="bg-clip-text"
           style={{
-            color: theme === 'light' ? 'black' : 'rgb(1, 161, 35)', // Use the RGB value for 'emerald-600' color in Tailwind CSS
+            color: theme === 'light' ? 'black' : 'rgb(1, 161, 35)',
             animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
             filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
           }}
@@ -132,7 +132,7 @@ export default function Home() {
         <span
           className="bg-clip-text"
           style={{
-            color: theme === 'light' ? 'black' : 'rgb(1, 161, 35)', // Use the RGB value for 'emerald-600' color in Tailwind CSS
+            color: theme === 'light' ? 'black' : 'rgb(1, 161, 35)',
             animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
             filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
           }}

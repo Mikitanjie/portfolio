@@ -1,6 +1,5 @@
-import { AiFillGithub, AiFillLinkedin, AiFillPhone } from 'react-icons/ai';
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import Link from 'next/link';
-import { MdEmail } from 'react-icons/md';
 import { useContext } from 'react';
 import { ThemeContext } from '../ThemeContext/ThemeContext';
 
