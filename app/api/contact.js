@@ -12,8 +12,6 @@ export default async function handler(req, res) {
       },
     });
 
-
-
     let mailOptions = {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
