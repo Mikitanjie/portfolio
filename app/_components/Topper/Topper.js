@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { FaMoon, FaSun } from 'react-icons/fa';
-import { ThemeContext } from '../../_components/ThemeContext/ThemeContext';
+import { ThemeContext } from '../ThemeContext/ThemeContext';
 
 const handleClick = (event, elementId) => {
   event.preventDefault();
@@ -48,7 +48,7 @@ const handleClick = (event, elementId) => {
   });
 };
 
-const Header = () => {
+const Topper = () => {
   const {theme, toggleTheme } = useContext(ThemeContext);
 
   return (
@@ -90,4 +90,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Topper;

@@ -3,7 +3,7 @@
 import React, { useContext, useEffect } from 'react';
 import { ThemeContext } from './_components/ThemeContext/ThemeContext';
 import Hero from './_components/Hero/Hero';
-import Header from './_components/Header/Header';
+import Topper from './_components/Topper/Topper';
 import Projects from './_components/Projects/Projects';
 import About from './_components/About/About';
 import Skills from './_components/Skills/Skills';
@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <div>
       <Particles />
-      <Header />
+      <Topper />
       <div className="text-center text-5xl font-semibold pt-20 relative" style={{ marginTop: '5px', marginBottom: '320px'}}>
       <span
           className="bg-clip-text"
@@ -38,7 +38,6 @@ export default function Home() {
         >
           Happy to see you here!</span>
       </div>
-      <div className="my-container">
         <Hero />
         <div className="text-center text-5xl font-semibold relative" style={{ marginTop: '300px', marginBottom: '230px'}}>
         <span
@@ -52,7 +51,7 @@ export default function Home() {
           Projects</span>
       </div>
         <Projects />
-        <div id="Skills" className="flex justify-end text-center font-semibold text-4xl pt-40 relative" style={{marginBottom: '200px', marginRight: '42px'}}>
+        <div className="text-center flex justify-end font-semibold text-4xl pt-40 relative" style={{marginBottom: '200px', marginRight: '42px'}}>
         <span
           className="bg-clip-text"
           style={{
@@ -141,7 +140,6 @@ export default function Home() {
       </div>
         <ContactForm />
         <Footer />
-      </div>
     </div>
   );
 }

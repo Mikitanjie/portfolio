@@ -23,6 +23,53 @@
   color: var(--color-text-light);
 }
 
+@keyframes pop {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* For tablets */
+@media (max-width: 1024px) {
+  .image-container {
+    width: 300px; /* Smaller container size for tablet */
+    height: 300px;
+  }
+  .responsive-image {
+    width: 300px; /* Smaller image size for tablet */
+    height: 300px;
+  }
+  /* ... Other styles for tablet view ... */
+}
+
+/* For landscape phones and smaller tablets */
+@media (max-width: 768px) {
+  .image-container {
+    width: 250px; /* Even smaller container size for phones */
+    height: 250px;
+  }
+  .responsive-image {
+    width: 250px; /* Even smaller image size for phones */
+    height: 250px;
+  }
+  /* ... Other styles for phone landscape view ... */
+}
+
+/* For portrait phones */
+@media (max-width: 480px) {
+  .image-container {
+    width: 200px; /* Much smaller container size for small phones */
+    height: 200px;
+  }
+  .responsive-image {
+    width: 200px; /* Much smaller image size for small phones */
+    height: 200px;
+  }
+  /* ... Other styles for phone portrait view ... */
+}
 
 @keyframes carousel {
   0% {
@@ -67,7 +114,7 @@
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent; /* Fallback for WebKit browsers */
-  animation: moveGradient 15s linear infinite; /* Adjust the time as needed */
+  animation: moveGradient 14s linear infinite; /* Adjust the time as needed */
   display: inline-block; /* Required for background-clip */
 }
 
@@ -94,7 +141,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgb(1, 161, 35); 
+  background: rgb(1, 161, 35);
   mix-blend-mode: multiply; /* Adjust the blend mode as needed */
   pointer-events: none; /* Prevents the pseudo-element from capturing clicks */
 }
@@ -103,20 +150,12 @@
   filter: grayscale(100%);
 }
 
-
 #carousel {
   position: relative;
 }
 
-
 .carousel-image.active {
   display: block;
-
-}
-
-.Img {
-  width: auto;
-  height: auto;
 }
 
 .underline-on-hover {
@@ -141,10 +180,6 @@
 #canvas {
   background: transparent;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   z-index: -1;
 }
 
@@ -153,8 +188,8 @@
 }
 
 .image-container {
-  width: 350px;
-  height: 350px;
+  width: auto;
+  height: auto;
 
 }
 
@@ -162,10 +197,9 @@
   width: 100%;
   border-radius: 35%;  /* image circular */
   border: 3px solid #01a123;
-  width: 350px;
-  height: 350px;
+  width: auto;
+  height: auto;
   margin-Bottom: 0px;
-
 }
 
 .prjt-image {
@@ -190,15 +224,6 @@
   margin-right: 25px;
   padding: 0px;
   border: 1px;
-}
-
-@keyframes pop {
-  0% {
-    transform: translate(-50%, -50%) scale(0);
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-  }
 }
 
 .hover-no-shadow:hover {
@@ -256,43 +281,4 @@ body {
 
 .herodiv {
  margin-top: 8%;
-}
-
-/* For tablets */
-@media (max-width: 1024px) {
-  .image-container {
-    width: 300px; /* Smaller container size for tablet */
-    height: 300px;
-  }
-  .responsive-image {
-    width: 300px; /* Smaller image size for tablet */
-    height: 300px;
-  }
-  /* ... Other styles for tablet view ... */
-}
-
-/* For landscape phones and smaller tablets */
-@media (max-width: 768px) {
-  .image-container {
-    width: 250px; /* Even smaller container size for phones */
-    height: 250px;
-  }
-  .responsive-image {
-    width: 250px; /* Even smaller image size for phones */
-    height: 250px;
-  }
-  /* ... Other styles for phone landscape view ... */
-}
-
-/* For portrait phones */
-@media (max-width: 480px) {
-  .image-container {
-    width: 200px; /* Much smaller container size for small phones */
-    height: 200px;
-  }
-  .responsive-image {
-    width: 200px; /* Much smaller image size for small phones */
-    height: 200px;
-  }
-  /* ... Other styles for phone portrait view ... */
 }
