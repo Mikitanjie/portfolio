@@ -9,7 +9,7 @@ class MyDocument extends Document {
         </Head>
         <body>
           <Main />
-          <NextScript />
+          <NextScript disableAutomaticPrerendering={true} />
         </body>
       </Html>
     );
