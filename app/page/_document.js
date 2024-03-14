@@ -4,9 +4,12 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
+        <Head>
+          {/* other head elements */}
+        </Head>
         <body>
           <Main />
-          <NextScript disableAutomaticPrerendering={true} />
+          <NextScript />
         </body>
       </Html>
     );
