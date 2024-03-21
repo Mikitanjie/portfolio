@@ -10,7 +10,7 @@ function ContactForm() {
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData);
 
-    const response = await fetch('/api/contact', {
+    const response = await fetch('/src/api/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -19,9 +19,9 @@ function ContactForm() {
     });
 
     if (response.ok) {
-      setStatus('Thanks for contacting me. I will get back to you shortly.');
+      setStatus('Thanks for contacting me. I will get back to you shortly!');
     } else {
-      setStatus('Something went wrong. Please try again.');
+      setStatus('Something went wrong. Please try again!!!!!!!!');
     }
   };
 
