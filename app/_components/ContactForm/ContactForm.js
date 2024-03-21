@@ -21,7 +21,7 @@ function ContactForm() {
     if (response.ok) {
       setStatus('Thanks for contacting me. I will get back to you shortly!');
     } else {
-      setStatus('Something went wrong. Please try again!!!!!!!!');
+      setStatus('Sorry but something went wrong. Please try again later, Iam working on it to fix this!');
     }
   };
 
