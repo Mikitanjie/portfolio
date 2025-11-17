@@ -11,7 +11,7 @@ const Libraries = () => {
         {/* Bootstrap */}
         <div className="animate-pulse hover:animate-none" style={{ animationDelay: '1.0s', marginTop: '-1px', zIndex: 1   }}>
           <div style={{ width: '100px', height: '100px' }}>
-            <a href="https:getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank" rel="noreferrer">
+            <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank" rel="noreferrer">
               <Image
                 className="transition-transform duration-200 hover:scale-150 active:scale-50"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
@@ -25,7 +25,7 @@ const Libraries = () => {
         {/* Rails */}
         <div className="animate-pulse hover:animate-none" style={{ animationDelay: '1.2s', marginTop: '-1px', zIndex: 1  }}>
           <div style={{ width: '100px', height: '100px' }}>
-            <a href="https:rubyonrails.org/" target="_blank" rel="noreferrer">
+            <a href="https://rubyonrails.org/" target="_blank" rel="noreferrer">
               <Image
                 className="transition-transform duration-200 hover:scale-150 active:scale-50"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-original-wordmark.svg"
@@ -39,7 +39,7 @@ const Libraries = () => {
         {/* TaillwindCSS */}
         <div className="animate-pulse hover:animate-none" style={{ animationDelay: '1.8s', zIndex: 1  }}>
           <div style={{ width: '100px', height: '100px' }}>
-            <a href="https:tailwindcss.com/docs/installation" target="_blank" rel="noreferrer">
+            <a href="https://tailwindcss.com/docs/installation" target="_blank" rel="noreferrer">
               <Image
                 className="transition-transform duration-200 hover:scale-150 active:scale-50"
                 src="https://img.icons8.com/?size=96&id=CIAZz2CYc6Kc&format=png"
@@ -54,7 +54,7 @@ const Libraries = () => {
         {/* React */}
         <div className="animate-pulse hover:animate-none" style={{ animationDelay: '2.0s', marginTop: '-1px', zIndex: 1  }}>
           <div style={{ width: '100px', height: '100px' }}>
-            <a href="https:reactjs.org/docs/getting-started.html" target="_blank" rel="noreferrer">
+            <a href="https://reactjs.org/docs/getting-started.html" target="_blank" rel="noreferrer">
               <Image
                 className="transition-transform duration-200 hover:scale-150 active:scale-50"
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
@@ -68,7 +68,7 @@ const Libraries = () => {
         {/* Next.js */}
         <div className="animate-pulse hover:animate-none" style={{ animationDelay: '2.6s', marginTop: '-19px', zIndex: 1 }}>
           <div style={{ width: '100px', height: '100px' }}>
-            <a href="https:nextjs.org/docs/getting-started/react-essentials/" target="_blank" rel="noreferrer">
+            <a href="https://nextjs.org/docs/getting-started/react-essentials/" target="_blank" rel="noreferrer">
               <Image
                 className={`transition-transform duration-200 hover:scale-150 ${theme === 'dark' ? 'icon-dark' : ''}`}
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg"
