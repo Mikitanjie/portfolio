@@ -6,10 +6,10 @@ const Libraries = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div className="flex justify-center items-center" style={{ marginTop: '-120px', marginLeft:'400px', marginRight:'-15px', marginBottom: '-20px',}}>
+    <div className="flex justify-center items-center" style={{ marginTop: '-120px', marginLeft:'400px', marginRight:'-15px', marginBottom: '-20px' }}>
       <div className="grid grid-cols-8 gap-9 dark:bg-transparent">
-        {/* Bootstrap */}
-        <div className="animate-pulse hover:animate-none" style={{ animationDelay: '1.0s', marginTop: '-1px', zIndex: 1   }}>
+
+        <div className="animate-pulse hover:animate-none" style={{ animationDelay: '1.0s', marginTop: '-1px', zIndex: 1 }}>
           <div style={{ width: '100px', height: '100px' }}>
             <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank" rel="noreferrer">
               <Image
@@ -22,8 +22,8 @@ const Libraries = () => {
             </a>
           </div>
         </div>
-        {/* Rails */}
-        <div className="animate-pulse hover:animate-none" style={{ animationDelay: '1.2s', marginTop: '-1px', zIndex: 1  }}>
+
+        <div className="animate-pulse hover:animate-none" style={{ animationDelay: '1.2s', marginTop: '-1px', zIndex: 1 }}>
           <div style={{ width: '100px', height: '100px' }}>
             <a href="https://rubyonrails.org/" target="_blank" rel="noreferrer">
               <Image
@@ -36,23 +36,22 @@ const Libraries = () => {
             </a>
           </div>
         </div>
-        {/* TaillwindCSS */}
-        <div className="animate-pulse hover:animate-none" style={{ animationDelay: '1.8s', zIndex: 1  }}>
+
+        <div className="animate-pulse hover:animate-none" style={{ animationDelay: '1.8s', zIndex: 1 }}>
           <div style={{ width: '100px', height: '100px' }}>
             <a href="https://tailwindcss.com/docs/installation" target="_blank" rel="noreferrer">
               <Image
                 className="transition-transform duration-200 hover:scale-150 active:scale-50"
                 src="https://img.icons8.com/?size=96&id=CIAZz2CYc6Kc&format=png"
-                alt="TaillwindCSS"
+                alt="TailwindCSS"
                 width={100}
                 height={100}
               />
             </a>
           </div>
         </div>
-        {/* NodeJS */}
-        {/* React */}
-        <div className="animate-pulse hover:animate-none" style={{ animationDelay: '2.0s', marginTop: '-1px', zIndex: 1  }}>
+
+        <div className="animate-pulse hover:animate-none" style={{ animationDelay: '2.0s', marginTop: '-1px', zIndex: 1 }}>
           <div style={{ width: '100px', height: '100px' }}>
             <a href="https://reactjs.org/docs/getting-started.html" target="_blank" rel="noreferrer">
               <Image
@@ -65,7 +64,7 @@ const Libraries = () => {
             </a>
           </div>
         </div>
-        {/* Next.js */}
+
         <div className="animate-pulse hover:animate-none" style={{ animationDelay: '2.6s', marginTop: '-19px', zIndex: 1 }}>
           <div style={{ width: '100px', height: '100px' }}>
             <a href="https://nextjs.org/docs/getting-started/react-essentials/" target="_blank" rel="noreferrer">
@@ -79,6 +78,7 @@ const Libraries = () => {
             </a>
           </div>
         </div>
+
       </div>
     </div>
   );
