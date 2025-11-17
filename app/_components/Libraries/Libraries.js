@@ -42,7 +42,7 @@ const Libraries = () => {
             <a href="https:tailwindcss.com/docs/installation" target="_blank" rel="noreferrer">
               <Image
                 className="transition-transform duration-200 hover:scale-150 active:scale-50"
-                src="https:img.icons8.com/?size=96&amp;id=CIAZz2CYc6Kc&amp;format=png"
+                src="https://img.icons8.com/?size=96&id=CIAZz2CYc6Kc&format=png"
                 alt="TaillwindCSS"
                 width={100}
                 height={100}
