@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
 import { ThemeContext } from '../ThemeContext/ThemeContext';
 
@@ -10,7 +10,7 @@ const scrollToSection = (event, id) => {
   const el = document.getElementById(id);
   if (!el) return;
 
-  const top = el.getBoundingClientRect().top + window.scrollY - 70;
+  const top = el.getBoundingClientRect().top + window.scrollY - 80;
 
   window.scrollTo({
     top,
@@ -21,60 +21,72 @@ const scrollToSection = (event, id) => {
 const Topper = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [navVisible, setNavVisible] = useState(true);
+  const [lastScroll, setLastScroll] = useState(0);
 
   const navItemStyle =
     'text-white hover:text-emerald-400 active:scale-90 text-lg font-semibold cursor-pointer';
 
-  return (
-      <nav
-        className="navbar-animated-bg fixed top-0 left-0 right-0 z-50 w-full h-[55px] flex justify-between items-center px-4 md:px-8"
-        style={{
-          backgroundImage: `
-            linear-gradient(rgba(1, 161, 35, 0.35), rgba(1, 161, 35, 0.35)),
-            url(https://e0.pxfuel.com/wallpapers/170/477/desktop-wallpaper-matrix-miscellanea-miscellaneous-numbers-binary-code.jpg)
-          `,
-          backgroundSize: 'cover',
-          backgroundRepeat: 'repeat-x',
-          backgroundPosition: 'center',
-          backgroundBlendMode: 'overlay',
-        }}
-      >
+  // 🟢 Hide on scroll down — Show on scroll up
+  useEffect(() => {
+    const handleScroll = () => {
+      const current = window.scrollY;
 
-      {/* LEFT: Desktop Navigation */}
+      if (current > lastScroll && current > 120) {
+        setNavVisible(false);
+      } else {
+        setNavVisible(true);
+      }
+
+      setLastScroll(current);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScroll]);
+
+  // 🟢 NEW: Show navbar when mouse touches the top 80px
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      if (e.clientY < 80) {
+        setNavVisible(true);
+      }
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
+  return (
+    <nav
+      className={`
+        navbar-animated-bg
+        fixed top-0 left-0 right-0 z-[9999]
+        w-full h-[75px]
+        flex justify-between items-center px-4 md:px-8
+        ${navVisible ? 'nav-visible' : 'nav-hidden'}
+      `}
+      style={{
+        backgroundImage: `
+          linear-gradient(rgba(1, 161, 35, 0.35), rgba(1, 161, 35, 0.35)),
+          url(https://e0.pxfuel.com/wallpapers/170/477/desktop-wallpaper-matrix-miscellanea-miscellaneous-numbers-binary-code.jpg)
+        `,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'repeat-x',
+        backgroundPosition: 'center',
+        backgroundBlendMode: 'overlay',
+      }}
+    >
+      {/* Desktop Navigation */}
       <div className="hidden md:flex items-center space-x-6">
-        <a
-          onClick={(e) => scrollToSection(e, 'Home')}
-          className={navItemStyle}
-        >
-          Home
-        </a>
-        <a
-          onClick={(e) => scrollToSection(e, 'Projects')}
-          className={navItemStyle}
-        >
-          Projects
-        </a>
-        <a
-          onClick={(e) => scrollToSection(e, 'About')}
-          className={navItemStyle}
-        >
-          About
-        </a>
-        <a
-          onClick={(e) => scrollToSection(e, 'Skills')}
-          className={navItemStyle}
-        >
-          Skills
-        </a>
-        <a
-          onClick={(e) => scrollToSection(e, 'Contacts')}
-          className={navItemStyle}
-        >
-          Contact
-        </a>
+        <a onClick={(e) => scrollToSection(e, 'Home')} className={navItemStyle}>Home</a>
+        <a onClick={(e) => scrollToSection(e, 'Projects')} className={navItemStyle}>Projects</a>
+        <a onClick={(e) => scrollToSection(e, 'About')} className={navItemStyle}>About</a>
+        <a onClick={(e) => scrollToSection(e, 'Skills')} className={navItemStyle}>Skills</a>
+        <a onClick={(e) => scrollToSection(e, 'Contacts')} className={navItemStyle}>Contact</a>
       </div>
 
-      {/* MIDDLE: Mobile Menu Toggle */}
+      {/* Mobile Menu Toggle */}
       <div className="md:hidden">
         <button
           onClick={() => setMenuOpen(true)}
@@ -84,7 +96,7 @@ const Topper = () => {
         </button>
       </div>
 
-      {/* RIGHT: Theme Toggle */}
+      {/* Theme Toggle */}
       <button
         onClick={toggleTheme}
         className="text-white hover:text-emerald-400 active:scale-125 text-2xl"
@@ -92,7 +104,7 @@ const Topper = () => {
         {theme === 'light' ? <FaMoon /> : <FaSun />}
       </button>
 
-      {/* MOBILE MENU OVERLAY */}
+      {/* Mobile Menu Overlay */}
       {menuOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex flex-col items-center justify-center space-y-8 text-white text-3xl font-semibold">
           <button
@@ -102,55 +114,11 @@ const Topper = () => {
             <FaTimes />
           </button>
 
-          <a
-            onClick={(e) => {
-              setMenuOpen(false);
-              scrollToSection(e, 'Home');
-            }}
-            className="hover:text-emerald-400"
-          >
-            Home
-          </a>
-
-          <a
-            onClick={(e) => {
-              setMenuOpen(false);
-              scrollToSection(e, 'Projects');
-            }}
-            className="hover:text-emerald-400"
-          >
-            Projects
-          </a>
-
-          <a
-            onClick={(e) => {
-              setMenuOpen(false);
-              scrollToSection(e, 'About');
-            }}
-            className="hover:text-emerald-400"
-          >
-            About
-          </a>
-
-          <a
-            onClick={(e) => {
-              setMenuOpen(false);
-              scrollToSection(e, 'Skills');
-            }}
-            className="hover:text-emerald-400"
-          >
-            Skills
-          </a>
-
-          <a
-            onClick={(e) => {
-              setMenuOpen(false);
-              scrollToSection(e, 'Contacts');
-            }}
-            className="hover:text-emerald-400"
-          >
-            Contact
-          </a>
+          <a onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'Home'); }} className="hover:text-emerald-400">Home</a>
+          <a onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'Projects'); }} className="hover:text-emerald-400">Projects</a>
+          <a onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'About'); }} className="hover:text-emerald-400">About</a>
+          <a onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'Skills'); }} className="hover:text-emerald-400">Skills</a>
+          <a onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'Contacts'); }} className="hover:text-emerald-400">Contact</a>
         </div>
       )}
     </nav>

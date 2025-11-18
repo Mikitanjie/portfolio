@@ -35,19 +35,16 @@ export default function Home() {
       <Particles />
       <Topper />
 
-      {/* ---------------------------------- */}
-      {/* SECTION: Welcome */}
-      {/* ---------------------------------- */}
+      {/* SECTION: Home */}
+      <div id="Home"></div>
       <div className="text-center text-4xl sm:text-5xl font-semibold pt-24 pb-16">
         <span style={titleStyle}>Happy to see you here!</span>
       </div>
 
       <Hero />
 
-      {/* ---------------------------------- */}
       {/* SECTION: Projects */}
-      {/* ---------------------------------- */}
-      <div className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-20">
+      <div id="Projects" className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-20">
         <span style={titleStyle}>Projects</span>
       </div>
 
@@ -62,55 +59,43 @@ export default function Home() {
         </span>
       </div>
 
-      {/* ---------------------------------- */}
-      {/* SECTION: About Me */}
-      {/* ---------------------------------- */}
-      <div className="text-center text-4xl sm:text-5xl font-semibold pt-28 pb-12">
+      {/* SECTION: About */}
+      <div id="About" className="text-center text-4xl sm:text-5xl font-semibold pt-28 pb-12">
         <span style={titleStyle}>About me</span>
       </div>
 
       <About />
 
-      {/* ---------------------------------- */}
-      {/* SECTION: Programming & Markup */}
-      {/* ---------------------------------- */}
-      <div className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-16">
+      {/* SECTION: Skills (Programming Languages) */}
+      <div id="Skills" className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-16">
         <span style={titleStyle}>Programming &amp; Markup Languages</span>
       </div>
 
       <Tools />
 
-      {/* ---------------------------------- */}
       {/* SECTION: DevOps */}
-      {/* ---------------------------------- */}
       <div className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-16">
         <span style={titleStyle}>DevOps &amp; Deployment</span>
       </div>
 
       <Skills />
 
-      {/* ---------------------------------- */}
       {/* SECTION: Frameworks */}
-      {/* ---------------------------------- */}
       <div className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-16">
         <span style={titleStyle}>Frameworks &amp; Other</span>
       </div>
 
       <Libraries />
 
-      {/* ---------------------------------- */}
       {/* SECTION: Languages */}
-      {/* ---------------------------------- */}
       <div className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-16">
         <span style={titleStyle}>Languages</span>
       </div>
 
       <Languages />
 
-      {/* ---------------------------------- */}
       {/* SECTION: Contact */}
-      {/* ---------------------------------- */}
-      <div className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-12">
+      <div id="Contacts" className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-12">
         <span style={titleStyle}>Feel free to send me a message!</span>
       </div>
 
