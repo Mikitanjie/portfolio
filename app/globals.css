@@ -89,6 +89,11 @@
   }
 }
 
+@keyframes matrixScroll {
+  0% { background-position: 0 -50px; }
+  100% { background-position: 800px -50px; }
+}
+
 .animated-gradient-text {
   background: linear-gradient(
     to right ,
@@ -303,4 +308,31 @@ body {
 
 .herodiv {
  margin-top: 8%;
+}
+
+/* MOBILE FIX: Replace background-image with ::before layer */
+@media (max-width: 768px) {
+  .navbar-animated-bg {
+    background-image: none !important; /* disable broken background */
+    position: relative;
+    overflow: hidden;
+  }
+
+  .navbar-animated-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(https://e0.pxfuel.com/wallpapers/170/477/desktop-wallpaper-matrix-miscellanea-miscellaneous-numbers-binary-code.jpg);
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-position-y: -40px; /* adjust cropping */
+    background-blend-mode: overlay;
+    mix-blend-mode: normal;
+    opacity: 0.85;
+
+    /* the animation */
+    animation: matrixScroll 20s linear infinite;
+
+    z-index: -1;
+  }
 }
