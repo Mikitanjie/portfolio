@@ -130,9 +130,19 @@
   animation: pulse 1.5s infinite 0.6s;
 }
 
-.nav {
-  animation: carousel 90s linear infinite;
+@keyframes matrixScroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 800px 0; /* adjust speed/direction */
+  }
 }
+
+.navbar-animated-bg {
+  animation: matrixScroll 20s linear infinite;
+}
+
 
 .nav::before {
   content: "";

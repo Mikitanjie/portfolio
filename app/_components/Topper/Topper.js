@@ -26,15 +26,20 @@ const Topper = () => {
     'text-white hover:text-emerald-400 active:scale-90 text-lg font-semibold cursor-pointer';
 
   return (
-    <nav
-      className="fixed top-0 left-0 right-0 z-50 w-full h-[55px] flex justify-between items-center px-4 md:px-8"
-      style={{
-        backgroundImage:
-          'url(https://e0.pxfuel.com/wallpapers/170/477/desktop-wallpaper-matrix-miscellanea-miscellaneous-numbers-binary-code.jpg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
+      <nav
+        className="navbar-animated-bg fixed top-0 left-0 right-0 z-50 w-full h-[55px] flex justify-between items-center px-4 md:px-8"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(1, 161, 35, 0.35), rgba(1, 161, 35, 0.35)),
+            url(https://e0.pxfuel.com/wallpapers/170/477/desktop-wallpaper-matrix-miscellanea-miscellaneous-numbers-binary-code.jpg)
+          `,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'repeat-x',
+          backgroundPosition: 'center',
+          backgroundBlendMode: 'overlay',
+        }}
+      >
+
       {/* LEFT: Desktop Navigation */}
       <div className="hidden md:flex items-center space-x-6">
         <a
