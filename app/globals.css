@@ -89,11 +89,6 @@
   }
 }
 
-@keyframes matrixScroll {
-  0% { background-position: 0 -50px; }
-  100% { background-position: 800px -50px; }
-}
-
 .animated-gradient-text {
   background: linear-gradient(
     to right ,
@@ -310,29 +305,74 @@ body {
  margin-top: 8%;
 }
 
-/* MOBILE FIX: Replace background-image with ::before layer */
-@media (max-width: 768px) {
-  .navbar-animated-bg {
-    background-image: none !important; /* disable broken background */
-    position: relative;
-    overflow: hidden;
-  }
+/* ============================
+   CLEAN MATRIX NAVBAR
+============================ */
 
-  .navbar-animated-bg::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url(https://e0.pxfuel.com/wallpapers/170/477/desktop-wallpaper-matrix-miscellanea-miscellaneous-numbers-binary-code.jpg);
-    background-size: cover;
-    background-repeat: repeat-x;
-    background-position-y: -40px; /* adjust cropping */
-    background-blend-mode: overlay;
-    mix-blend-mode: normal;
-    opacity: 0.85;
+.navbar-animated-bg {
+  position: relative;
+  overflow: hidden;
+  height: 75px;
+}
 
-    /* the animation */
-    animation: matrixScroll 20s linear infinite;
+/* MOVING MATRIX BACKGROUND */
+.navbar-matrix {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 100%;
+  background-image: url(https://e0.pxfuel.com/wallpapers/170/477/desktop-wallpaper-matrix-miscellanea-miscellaneous-numbers-binary-code.jpg);
+  background-repeat: repeat-x;
+  background-size: auto 320%;
+  background-position-y: -0px; /* hides cut top */
+  opacity: 0.85;
+  filter: brightness(0.75) saturate(1.2);
+  animation: navbarMatrixMove 26s linear infinite;
+}
 
-    z-index: -1;
-  }
+@keyframes navbarMatrixMove {
+  from { transform: translateX(-33.33%); }
+  to   { transform: translateX(0); }
+}
+
+/* GREEN OVERLAY */
+.navbar-green-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(1, 161, 36, 0.84);
+  mix-blend-mode: overlay;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ==========================================================
+   TOP HOVER ZONE — PURE CSS (ALWAYS WORKS)
+   ========================================================== */
+
+.nav-hover-zone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;          /* hover zone height */
+  z-index: 9998;         /* just under navbar */
+  background: transparent;
+  pointer-events: auto;
+}
+
+/* When hover zone is hovered → force navbar to appear */
+.nav-hover-zone:hover + nav {
+  transform: translateY(0) !important;
+}
+
+/* Navbar logic stays the same */
+nav.nav-hidden {
+  transform: translateY(-100%);
+  transition: transform 0.35s ease;
+}
+
+nav.nav-visible {
+  transform: translateY(0);
+  transition: transform 0.35s ease;
 }
