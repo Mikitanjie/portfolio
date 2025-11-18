@@ -1,92 +1,154 @@
-import React, { useContext } from 'react';
-import { FaMoon, FaSun } from 'react-icons/fa';
+'use client';
+
+import React, { useContext, useState } from 'react';
+import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
 import { ThemeContext } from '../ThemeContext/ThemeContext';
 
-const handleClick = (event, elementId) => {
+const scrollToSection = (event, id) => {
   event.preventDefault();
 
-      // Special case for 'Home' button
-      if (elementId === 'Home') {
-        window.scrollTo({
-          top: 25,
-          behavior: 'smooth'
-        });
-        return;
-      }
-      // Special case for 'Home' button
-      if (elementId === 'Projects') {
-        window.scrollTo({
-          top: 1040,
-          behavior: 'smooth'
-        });
-        return;
-      }
-      // Special case for 'Home' button
-      if (elementId === 'About') {
-        window.scrollTo({
-          top: 2640,
-          behavior: 'smooth'
-        });
-        return;
-      }
-          // Special case for 'Home' button
-      if (elementId === 'Skills') {
-        window.scrollTo({
-          top: 3655,
-          behavior: 'smooth'
-        });
-        return;
-      }
+  const el = document.getElementById(id);
+  if (!el) return;
 
+  const top = el.getBoundingClientRect().top + window.scrollY - 70;
 
-  const element = document.getElementById(elementId);
-  const rect = element.getBoundingClientRect();
-  const absoluteTop = rect.top + window.scrollY;
   window.scrollTo({
-    top: absoluteTop - 100,
-    behavior: 'smooth'
+    top,
+    behavior: 'smooth',
   });
 };
 
 const Topper = () => {
-  const {theme, toggleTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const navItemStyle =
+    'text-white hover:text-emerald-400 active:scale-90 text-lg font-semibold cursor-pointer';
 
   return (
-      <nav className="nav fixed top-0 left-0 right-0 z-50 flex justify-between w-full px-2 md:px-4 lg:px-8"
-        style={{height: '55px', backgroundImage: `url(https://e0.pxfuel.com/wallpapers/170/477/desktop-wallpaper-matrix-miscellanea-miscellaneous-numbers-binary-code.jpg)`, background: 'cover', backgroundPosition: '152%'}}>
-        <div className="flex justify-between items-center w-full">
-          <div className="nav-links ml-1 flex items-baseline z-20 space-x-4">
-            <a onClick={(event) => handleClick(event, 'Home')} className="text-white hover:text-emerald-600 active:scale-90 px-4 py-2 text-md font-semibold" href="#Home"style={{ fontSize: '20px' }}>
-              Home
-            </a>
-              <a onClick={(event) => handleClick(event, 'Projects')} className="text-white hover:text-emerald-600 active:scale-90 px-3 py-2 text-md font-semibold" href="#Projects"style={{ fontSize: '20px' }}>
-                Projects
-              </a>
-              <a onClick={(event) => handleClick(event, 'About')} className="text-white hover:text-emerald-600 active:scale-90 px-3 py-2 text-md font-semibold" href="#About"style={{ fontSize: '20px' }}>
-                About
-              </a>
-              <a onClick={(event) => handleClick(event, 'Skills')} className="text-white hover:text-emerald-600 active:scale-90 px-3 py-2 text-md font-semibold" href="#Skills"style={{ fontSize: '20px' }}>
-                Skills
-              </a>
-              <a
-                onClick={(event) => handleClick(event, 'Contacts')}
-                href="#Contacts"
-                className="text-white hover:text-emerald-600 active:scale-90 px-3 py-2 text-md font-semibold"style={{ fontSize: '20px' }}>
-                Contact
-              </a>
-            </div>
-          </div>
-          <div className="theme-toggle text-white hover:text-emerald-600 active:scale-150 px-3 py-2 text-md font-semibold absolute right-5 top-1/2 transform -translate-y-1/2" style={{ fontSize: '23px' }}>
-            <button onClick={toggleTheme}>
-              {theme === 'light' ? <FaMoon /> : <FaSun />}
-            </button>
-          </div>
-        <div className="hidden md:block">
-          <div className="ml-4 flex items-center md:ml-6">
-            <div className="ml-3 relative"></div>
-          </div>
+    <nav
+      className="fixed top-0 left-0 right-0 z-50 w-full h-[55px] flex justify-between items-center px-4 md:px-8"
+      style={{
+        backgroundImage:
+          'url(https://e0.pxfuel.com/wallpapers/170/477/desktop-wallpaper-matrix-miscellanea-miscellaneous-numbers-binary-code.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      {/* LEFT: Desktop Navigation */}
+      <div className="hidden md:flex items-center space-x-6">
+        <a
+          onClick={(e) => scrollToSection(e, 'Home')}
+          className={navItemStyle}
+        >
+          Home
+        </a>
+        <a
+          onClick={(e) => scrollToSection(e, 'Projects')}
+          className={navItemStyle}
+        >
+          Projects
+        </a>
+        <a
+          onClick={(e) => scrollToSection(e, 'About')}
+          className={navItemStyle}
+        >
+          About
+        </a>
+        <a
+          onClick={(e) => scrollToSection(e, 'Skills')}
+          className={navItemStyle}
+        >
+          Skills
+        </a>
+        <a
+          onClick={(e) => scrollToSection(e, 'Contacts')}
+          className={navItemStyle}
+        >
+          Contact
+        </a>
+      </div>
+
+      {/* MIDDLE: Mobile Menu Toggle */}
+      <div className="md:hidden">
+        <button
+          onClick={() => setMenuOpen(true)}
+          className="text-white text-2xl active:scale-90"
+        >
+          <FaBars />
+        </button>
+      </div>
+
+      {/* RIGHT: Theme Toggle */}
+      <button
+        onClick={toggleTheme}
+        className="text-white hover:text-emerald-400 active:scale-125 text-2xl"
+      >
+        {theme === 'light' ? <FaMoon /> : <FaSun />}
+      </button>
+
+      {/* MOBILE MENU OVERLAY */}
+      {menuOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex flex-col items-center justify-center space-y-8 text-white text-3xl font-semibold">
+          <button
+            onClick={() => setMenuOpen(false)}
+            className="absolute top-6 right-6 text-4xl active:scale-90"
+          >
+            <FaTimes />
+          </button>
+
+          <a
+            onClick={(e) => {
+              setMenuOpen(false);
+              scrollToSection(e, 'Home');
+            }}
+            className="hover:text-emerald-400"
+          >
+            Home
+          </a>
+
+          <a
+            onClick={(e) => {
+              setMenuOpen(false);
+              scrollToSection(e, 'Projects');
+            }}
+            className="hover:text-emerald-400"
+          >
+            Projects
+          </a>
+
+          <a
+            onClick={(e) => {
+              setMenuOpen(false);
+              scrollToSection(e, 'About');
+            }}
+            className="hover:text-emerald-400"
+          >
+            About
+          </a>
+
+          <a
+            onClick={(e) => {
+              setMenuOpen(false);
+              scrollToSection(e, 'Skills');
+            }}
+            className="hover:text-emerald-400"
+          >
+            Skills
+          </a>
+
+          <a
+            onClick={(e) => {
+              setMenuOpen(false);
+              scrollToSection(e, 'Contacts');
+            }}
+            className="hover:text-emerald-400"
+          >
+            Contact
+          </a>
         </div>
-       </nav>
+      )}
+    </nav>
   );
 };
 

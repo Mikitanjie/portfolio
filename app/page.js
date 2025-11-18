@@ -14,132 +14,109 @@ import Tools from './_components/Tools/Tools';
 import Libraries from './_components/Libraries/Libraries';
 import ContactForm from './_components/ContactForm/ContactForm';
 
-// This is the Home page component
 export default function Home() {
-  // Get the theme from the context
-  const { theme,toggleTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
-    console.log("%c🧑🏼‍💻 Curious to know what else I can do? HIRE ME!", "color: green; font-size:16px;");
+    console.log(
+      "%c🧑🏼‍💻 Curious to know what else I can do? HIRE ME!",
+      "color: green; font-size:16px;"
+    );
   }, []);
 
+  const titleStyle = {
+    color: theme === 'light' ? 'black' : 'rgb(1, 161, 35)',
+    animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
+    filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
+  };
+
   return (
-    <div>
+    <div className="w-full flex flex-col items-center">
       <Particles />
       <Topper />
-      <div className="text-center text-5xl font-semibold pt-20 relative" style={{ marginTop: '5px', marginBottom: '320px'}}>
-      <span
-          className="bg-clip-text"
-          style={{
-            color: theme === 'light' ? 'black' : 'rgb(1, 161, 35)',
-            animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
-            filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
-          }}
-        >
-          Happy to see you here!</span>
+
+      {/* ---------------------------------- */}
+      {/* SECTION: Welcome */}
+      {/* ---------------------------------- */}
+      <div className="text-center text-4xl sm:text-5xl font-semibold pt-24 pb-16">
+        <span style={titleStyle}>Happy to see you here!</span>
       </div>
-        <Hero />
-        <div className="text-center text-5xl font-semibold relative" style={{ marginTop: '300px', marginBottom: '230px'}}>
-        <span
-          className="bg-clip-text"
-          style={{
-            color: theme === 'light' ? 'black' : 'rgb(1, 161, 35)',
-            animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
-            filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
-          }}
-        >
-          Projects</span>
+
+      <Hero />
+
+      {/* ---------------------------------- */}
+      {/* SECTION: Projects */}
+      {/* ---------------------------------- */}
+      <div className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-20">
+        <span style={titleStyle}>Projects</span>
       </div>
-        <Projects />
-        <div className="text-center flex justify-end font-semibold text-4xl pt-40 relative" style={{marginBottom: '200px', marginRight: '42px'}}>
-        <span
-          className="bg-clip-text"
-          style={{
-            color: theme === 'light' ? 'black' : 'rgb(1, 161, 35)',
-            animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
-            filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
-          }}
-        >
+
+      <Projects />
+
+      <div className="text-center text-3xl sm:text-4xl font-semibold pt-20 pb-20">
+        <span style={titleStyle} className="flex justify-center gap-1">
           More Projects coming soon
           <span className="dot1">.</span>
           <span className="dot2">.</span>
           <span className="dot3">.</span>
-          </span>
-      </div>
-        <div className="text-center text-5xl font-semibold" style={{ marginTop: '250px', marginBottom: '25px'}}>
-        <span
-          className="bg-clip-text"
-          style={{
-            color: theme === 'light' ? 'black' : 'rgb(1, 161, 35)',
-            animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
-            filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
-          }}
-        >
-          About me</span>
-      </div>
-        <About />
-        <div id="Skills" className="text-center text-5xl font-semibold pt-40" style={{ marginBottom: '220px'}}>
-        <span
-          className="bg-clip-text"
-          style={{
-            color: theme === 'light' ? 'black' : 'rgb(1, 161, 35)',
-            animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
-            filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
-          }}
-        >
-         Programming & Markup Languages</span>
-      </div>
-        <Tools />
-        <div id="Skills" className="text-center text-5xl font-semibold pt-40" style={{marginTop: '300px', marginBottom: '200px'}}>
-        <span
-          className="bg-clip-text "
-          style={{
-            color: theme === 'light' ? 'black' : 'rgb(1, 161, 35)',
-            animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
-            filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
-          }}
-        >
-         DevOps & Deployment
         </span>
       </div>
-        <Skills />
-        <div id="Skills" className="text-center text-5xl font-semibold pt-40" style={{marginTop: '300px', marginBottom: '170px'}}>
-        <span
-          className="bg-clip-text"
-          style={{
-            color: theme === 'light' ? 'black' : 'rgb(1, 161, 35)',
-            animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
-            filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
-          }}
-        >
-          Frameworks & other</span>
+
+      {/* ---------------------------------- */}
+      {/* SECTION: About Me */}
+      {/* ---------------------------------- */}
+      <div className="text-center text-4xl sm:text-5xl font-semibold pt-28 pb-12">
+        <span style={titleStyle}>About me</span>
       </div>
-        <Libraries />
-        <div id="Skills" className="text-center text-5xl font-semibold pt-40" style={{marginTop: '-70px', marginBottom: '50px'}}>
-        <span
-          className="bg-clip-text"
-          style={{
-            color: theme === 'light' ? 'black' : 'rgb(1, 161, 35)',
-            animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
-            filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
-          }}
-        >
-          Languages</span>
+
+      <About />
+
+      {/* ---------------------------------- */}
+      {/* SECTION: Programming & Markup */}
+      {/* ---------------------------------- */}
+      <div className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-16">
+        <span style={titleStyle}>Programming &amp; Markup Languages</span>
       </div>
-        <Languages />
-        <div id="Skills" className="text-center text-5xl font-semibold pt-40" style={{marginTop: '-70px', marginBottom: '50px'}}>
-        <span
-          className="bg-clip-text"
-          style={{
-            color: theme === 'light' ? 'black' : 'rgb(1, 161, 35)',
-            animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
-            filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
-          }}
-        >
-          Feel free to send me a message!</span>
+
+      <Tools />
+
+      {/* ---------------------------------- */}
+      {/* SECTION: DevOps */}
+      {/* ---------------------------------- */}
+      <div className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-16">
+        <span style={titleStyle}>DevOps &amp; Deployment</span>
       </div>
-        <ContactForm />
-        <Footer />
+
+      <Skills />
+
+      {/* ---------------------------------- */}
+      {/* SECTION: Frameworks */}
+      {/* ---------------------------------- */}
+      <div className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-16">
+        <span style={titleStyle}>Frameworks &amp; Other</span>
+      </div>
+
+      <Libraries />
+
+      {/* ---------------------------------- */}
+      {/* SECTION: Languages */}
+      {/* ---------------------------------- */}
+      <div className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-16">
+        <span style={titleStyle}>Languages</span>
+      </div>
+
+      <Languages />
+
+      {/* ---------------------------------- */}
+      {/* SECTION: Contact */}
+      {/* ---------------------------------- */}
+      <div className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-12">
+        <span style={titleStyle}>Feel free to send me a message!</span>
+      </div>
+
+      <ContactForm />
+
+      <Footer />
     </div>
   );
 }
