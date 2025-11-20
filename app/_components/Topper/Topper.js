@@ -101,7 +101,9 @@ const Topper = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-90 z-[99999] flex flex-col items-center justify-center space-y-8 text-white text-3xl font-semibold">
+        <div className="fixed inset-0 bg-black bg-opacity-90 z-[99999]
+            flex flex-col items-center justify-start pt-24
+            space-y-8 text-white text-3xl font-semibold">
           <button
             onClick={() => setMenuOpen(false)}
             className="absolute top-6 right-6 text-4xl active:scale-90"
