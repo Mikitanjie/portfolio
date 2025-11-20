@@ -139,35 +139,6 @@
   }
 }
 
-
-.navbar-animated-bg {
-  animation: matrixScroll 21s linear infinite;
-  background-size: auto 220%;   /* FIX: stretches vertically to hide cut top */
-  background-position-y: -60px; /* adjust to taste */
-}
-
-.nav::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgb(1, 161, 35);
-  mix-blend-mode: multiply; /* Adjust the blend mode as needed */
-  pointer-events: none; /* Prevents the pseudo-element from capturing clicks */
-}
-
-.nav-hidden {
-  transform: translateY(-100%);
-  transition: transform 0.35s ease;
-}
-
-.nav-visible {
-  transform: translateY(0);
-  transition: transform 0.35s ease;
-}
-
 .hover-effect {
   filter: grayscale(100%);
 }
@@ -309,11 +280,6 @@ body {
    CLEAN MATRIX NAVBAR
 ============================ */
 
-.navbar-animated-bg {
-  position: relative;
-  overflow: hidden;
-  height: 75px;
-}
 
 /* MOVING MATRIX BACKGROUND */
 .navbar-matrix {
@@ -347,26 +313,14 @@ body {
 }
 
 /* ==========================================================
-   TOP HOVER ZONE — PURE CSS (ALWAYS WORKS)
-   ========================================================== */
+   TOP HOVER ZONE — PURE CSS (WORKING)
+========================================================== */
+/* Hover zone (in layout.js) */
 
-.nav-hover-zone {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 70px;          /* hover zone height */
-  z-index: 9998;         /* just under navbar */
-  background: transparent;
-  pointer-events: auto;
-}
+/* Works even if Next.js injects extra wrapper divs */
+/* ========= HOVER ZONE FIX ========= */
 
-/* When hover zone is hovered → force navbar to appear */
-.nav-hover-zone:hover + nav {
-  transform: translateY(0) !important;
-}
-
-/* Navbar logic stays the same */
+/* Scroll-hidden / scroll-visible behaviors */
 nav.nav-hidden {
   transform: translateY(-100%);
   transition: transform 0.35s ease;
@@ -375,4 +329,10 @@ nav.nav-hidden {
 nav.nav-visible {
   transform: translateY(0);
   transition: transform 0.35s ease;
+}
+
+.navbar-animated-bg {
+  animation: matrixScroll 21s linear infinite;
+  background-size: auto 220%;   /* FIX: stretches vertically to hide cut top */
+  background-position-y: -60px; /* adjust to taste */
 }

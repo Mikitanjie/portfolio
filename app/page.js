@@ -3,7 +3,6 @@
 import React, { useContext, useEffect } from 'react';
 import { ThemeContext } from './_components/ThemeContext/ThemeContext';
 import Hero from './_components/Hero/Hero';
-import Topper from './_components/Topper/Topper';
 import Projects from './_components/Projects/Projects';
 import About from './_components/About/About';
 import Skills from './_components/Skills/Skills';
@@ -33,7 +32,6 @@ export default function Home() {
   return (
     <div className="w-full flex flex-col items-center">
       <Particles />
-      <Topper />
 
       {/* SECTION: Home */}
       <div id="Home"></div>
