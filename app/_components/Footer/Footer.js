@@ -41,7 +41,7 @@ const Footer = () => {
         <hr className="w-full border dark:border-emerald-600 animate-pulse" />
 
         <span className="text-sm text-emerald-600 text-center">
-          © 2023 - Michael Catania
+          © 2025 - Michael Catania
         </span>
 
       </div>
