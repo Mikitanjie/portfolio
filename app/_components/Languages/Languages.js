@@ -68,11 +68,12 @@ const Languages = () => {
       <div
         className="
           grid
-          grid-cols-2
-          sm:grid-cols-3
-          md:grid-cols-5
+          mx-auto
+          grid-cols-[repeat(auto-fit,minmax(150px,1fr))]
           gap-8
           place-items-center
+          w-full
+          max-w-5xl
         "
       >
 

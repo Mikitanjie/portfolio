@@ -10,22 +10,17 @@ const Libraries = () => {
       <div
         className="
           grid
-          grid-cols-2
-          sm:grid-cols-3
-          md:grid-cols-4
-          lg:grid-cols-6
-          xl:grid-cols-8
+          mx-auto
+          grid-cols-[repeat(auto-fit,minmax(120px,1fr))]
           gap-6
           place-items-center
+          w-full
+          max-w-7xl
         "
       >
 
         <div className="animate-pulse hover:animate-none">
-          <a
-            href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank" rel="noreferrer">
             <Image
               className="transition-transform duration-200 hover:scale-125 active:scale-75"
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
@@ -37,11 +32,7 @@ const Libraries = () => {
         </div>
 
         <div className="animate-pulse hover:animate-none">
-          <a
-            href="https://rubyonrails.org/"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://rubyonrails.org/" target="_blank" rel="noreferrer">
             <Image
               className="transition-transform duration-200 hover:scale-125 active:scale-75"
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-original-wordmark.svg"
@@ -53,11 +44,7 @@ const Libraries = () => {
         </div>
 
         <div className="animate-pulse hover:animate-none">
-          <a
-            href="https://tailwindcss.com/docs/installation"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://tailwindcss.com/docs/installation" target="_blank" rel="noreferrer">
             <Image
               className="transition-transform duration-200 hover:scale-125 active:scale-75"
               src="https://img.icons8.com/?size=96&id=CIAZz2CYc6Kc&format=png"
@@ -69,11 +56,7 @@ const Libraries = () => {
         </div>
 
         <div className="animate-pulse hover:animate-none">
-          <a
-            href="https://reactjs.org/docs/getting-started.html"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://reactjs.org/docs/getting-started.html" target="_blank" rel="noreferrer">
             <Image
               className="transition-transform duration-200 hover:scale-125 active:scale-75"
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
@@ -85,11 +68,7 @@ const Libraries = () => {
         </div>
 
         <div className="animate-pulse hover:animate-none">
-          <a
-            href="https://nextjs.org/docs/getting-started/react-essentials/"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://nextjs.org/docs/getting-started/react-essentials/" target="_blank" rel="noreferrer">
             <Image
               className={`transition-transform duration-200 hover:scale-125 active:scale-75 ${theme === 'dark' ? 'icon-dark' : ''}`}
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg"
