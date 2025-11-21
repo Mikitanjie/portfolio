@@ -336,3 +336,19 @@ nav.nav-visible {
   background-size: auto 220%;   /* FIX: stretches vertically to hide cut top */
   background-position-y: -60px; /* adjust to taste */
 }
+
+html, body {
+  overflow-x: hidden !important;
+  width: 100%;
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#app-root,
+#nav-root {
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+}

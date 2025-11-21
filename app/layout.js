@@ -1,4 +1,3 @@
-// app/layout.js
 import './globals.css';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from './_components/ThemeContext/ThemeContext';
@@ -19,13 +18,16 @@ export default function RootLayout({ children }) {
         <ThemeProvider>
 
           {/* NAV */}
-          <div id="nav-root">
+          <div id="nav-root" className="w-full overflow-x-hidden">
             <Topper />
           </div>
 
           {/* APP ROOT */}
-          <main id="app-root" className="w-full flex flex-col items-center">
-            <canvas id="canvas" />
+          <main
+            id="app-root"
+            className="w-full max-w-full overflow-x-hidden flex flex-col items-center relative"
+          >
+            <canvas id="canvas" className="fixed inset-0 w-full h-full pointer-events-none overflow-hidden" />
             {children}
           </main>
 
