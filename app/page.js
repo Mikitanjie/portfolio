@@ -9,6 +9,7 @@ import Skills from './_components/Skills/Skills';
 import Footer from './_components/Footer/Footer';
 import Languages from './_components/Languages/Languages';
 import Particles from './_components/Particles/Particles';
+import ParallaxLayers from './_components/ParallaxLayers/ParallaxLayers';
 import Tools from './_components/Tools/Tools';
 import Libraries from './_components/Libraries/Libraries';
 import ContactForm from './_components/ContactForm/ContactForm';
@@ -32,6 +33,7 @@ export default function Home() {
   return (
     <div className="w-full flex flex-col items-center">
       <Particles />
+      <ParallaxLayers />
 
       {/* SECTION: Home */}
       <div id="Home"></div>
