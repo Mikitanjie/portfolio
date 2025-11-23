@@ -7,6 +7,7 @@ export default async function handler(req, res) {
 
   try {
     // Validate environment variables
+    // Note: APP_PASSWORD can be an App Password or regular password
     if (!process.env.EMAIL_USER || !process.env.APP_PASSWORD) {
       console.error('Missing email configuration: EMAIL_USER or APP_PASSWORD not set');
       return res.status(500).json({
@@ -23,17 +24,24 @@ export default async function handler(req, res) {
       });
     }
 
-    // Create transporter
+    // Create transporter with explicit Outlook SMTP settings
     const transporter = nodemailer.createTransport({
-      service: 'Outlook365',
+      host: 'smtp-mail.outlook.com',
+      port: 587,
+      secure: false, // true for 465, false for other ports
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.APP_PASSWORD,
       },
+      tls: {
+        ciphers: 'SSLv3',
+        rejectUnauthorized: false,
+      },
+      // Add timeout to prevent hanging
+      connectionTimeout: 10000,
+      greetingTimeout: 10000,
+      socketTimeout: 10000,
     });
-
-    // Verify transporter configuration
-    await transporter.verify();
 
     // Prepare mail options
     const mailOptions = {
@@ -61,8 +69,15 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error('Error sending email:', error);
+    console.error('Error details:', {
+      message: error.message,
+      code: error.code,
+      response: error.response,
+      stack: error.stack,
+    });
     
     // Return user-friendly error message
+    // In production, don't expose internal error details
     return res.status(500).json({
       message: 'Sorry but something went wrong. Please try again later, I am working on it to fix this!',
     });
