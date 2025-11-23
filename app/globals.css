@@ -363,26 +363,30 @@ body {
 ============================ */
 
 
-/* MOVING MATRIX BACKGROUND */
+/* RAIN EFFECT BACKGROUND */
 .navbar-matrix {
   position: absolute;
-  top: 0;
   left: 0;
-  width: 300%;
-  height: 100%;
-  background-image: url(https://e0.pxfuel.com/wallpapers/170/477/desktop-wallpaper-matrix-miscellanea-miscellaneous-numbers-binary-code.jpg);
-  background-repeat: repeat-x;
-  background-size: auto 320%;
-  background-position-y: -0px; /* hides cut top */
+  width: 100%;
+  height: 200%;
+  background-image: url(/BackG.png);
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  background-position: top center;
   opacity: 0.85;
   filter: brightness(0.75) saturate(1.2);
-  animation: navbarMatrixMove 26s linear infinite;
+  animation: rainEffect 10s linear infinite;
 }
 
-@keyframes navbarMatrixMove {
-  from { transform: translateX(-33.33%); }
-  to   { transform: translateX(0); }
+@keyframes rainEffect {
+  from {
+    top: -50%;
+  }
+  to {
+    top: 0;
+  }
 }
+
 
 /* GREEN OVERLAY */
 .navbar-green-overlay {
@@ -404,19 +408,18 @@ body {
 
 /* Scroll-hidden / scroll-visible behaviors */
 nav.nav-hidden {
-  transform: translateY(-100%);
+  transform: translateY(-100%) !important;
   transition: transform 0.35s ease;
 }
 
 nav.nav-visible {
-  transform: translateY(0);
+  transform: translateY(0) !important;
   transition: transform 0.35s ease;
 }
 
 .navbar-animated-bg {
-  animation: matrixScroll 21s linear infinite;
-  background-size: auto 220%;   /* FIX: stretches vertically to hide cut top */
-  background-position-y: -60px; /* adjust to taste */
+  position: relative;
+  overflow: hidden;
 }
 
 html, body {
@@ -434,4 +437,3 @@ html, body {
   max-width: 100vw !important;
   overflow-x: hidden !important;
 }
-

@@ -35,12 +35,16 @@ const Topper = () => {
         const current = window.scrollY;
         const last = lastScrollRef.current;
 
+        // Always show at the top
+        if (current <= 50) {
+          setNavVisible(true);
+        }
         // hide on scroll down
-        if (current > last && current > 120) {
+        else if (current > last && current > 120) {
           setNavVisible(false);
         }
         // show on scroll up
-        else {
+        else if (current < last) {
           setNavVisible(true);
         }
 
@@ -49,6 +53,8 @@ const Topper = () => {
       });
     };
 
+    // Initial check
+    handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -58,14 +64,20 @@ const Topper = () => {
     'text-white hover:text-emerald-400 active:scale-90 text-lg font-semibold cursor-pointer';
 
   return (
+    <div
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 9999,
+        transform: navVisible ? 'translateY(0)' : 'translateY(-100%)',
+        transition: 'transform 0.35s ease',
+        willChange: 'transform'
+      }}
+    >
     <nav
-      className={`
-        navbar-animated-bg
-        fixed top-0 left-0 right-0 z-[9999]
-        w-full h-[75px]
-        flex justify-between items-center px-4 md:px-8
-        ${navVisible ? 'nav-visible' : 'nav-hidden'}
-      `}
+      className="navbar-animated-bg w-full h-[75px] flex justify-between items-center px-4 md:px-8"
     >
       <div className="navbar-matrix" />
       <div className="navbar-green-overlay" />
@@ -118,6 +130,7 @@ const Topper = () => {
         </div>
       )}
     </nav>
+    </div>
   );
 };
 
