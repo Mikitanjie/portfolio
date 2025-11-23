@@ -24,7 +24,7 @@ const About = () => {
   return (
     <div
       id="About"
-      className={`w-full flex flex-col lg:flex-row items-center justify-center px-6 py-12 gap-10 font-semibold ${
+      className={`w-full flex flex-col lg:flex-row items-center justify-center px-6 py-12 gap-10 font-semibold fade-in-up ${
         theme === 'light' ? 'text-black' : 'text-white'
       }`}
     >
@@ -50,10 +50,11 @@ const About = () => {
         </p>
       </div>
 
-      <div className="relative w-full max-w-md lg:max-w-lg">
-        <div className="relative border-2 rounded-md overflow-hidden" style={{ borderColor: '#01a123' }}>
+      <div className="relative w-full max-w-md lg:max-w-lg group">
+        <div className="absolute -inset-1 bg-gradient-to-r from-emerald-400 to-green-600 rounded-lg blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
+        <div className="relative border-2 rounded-lg overflow-hidden shadow-2xl transition-all duration-300 hover:shadow-emerald-500/20" style={{ borderColor: '#01a123' }}>
           <Image
-            className="object-cover w-full h-auto"
+            className="object-cover w-full h-auto transition-transform duration-500"
             src={images[activeImageIndex]}
             alt="About Images"
             width={800}
@@ -64,19 +65,19 @@ const About = () => {
           <button
             type="button"
             onClick={prevImage}
-            className="absolute top-1/2 -translate-y-1/2 left-2 hover:scale-125 active:scale-90 transition-transform"
+            className="absolute top-1/2 -translate-y-1/2 left-4 bg-black/50 hover:bg-black/70 backdrop-blur-sm rounded-full p-2 hover:scale-125 active:scale-90 transition-all duration-300"
             style={{ color: '#01a123' }}
           >
-            <FaArrowLeft size={26} />
+            <FaArrowLeft size={24} />
           </button>
 
           <button
             type="button"
             onClick={nextImage}
-            className="absolute top-1/2 -translate-y-1/2 right-2 hover:scale-125 active:scale-90 transition-transform"
+            className="absolute top-1/2 -translate-y-1/2 right-4 bg-black/50 hover:bg-black/70 backdrop-blur-sm rounded-full p-2 hover:scale-125 active:scale-90 transition-all duration-300"
             style={{ color: '#01a123' }}
           >
-            <FaArrowRight size={26} />
+            <FaArrowRight size={24} />
           </button>
         </div>
       </div>
