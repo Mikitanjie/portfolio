@@ -7,7 +7,7 @@ const Hero = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div className="relative w-full overflow-x-hidden flex md:flex-row flex-col-reverse items-center">
+    <div className="relative w-full overflow-x-hidden flex md:flex-row flex-col-reverse items-center md:gap-28 lg:gap-32 xl:gap-40">
 
       {/* LEFT COLUMN */}
       <div className="relative z-10 w-full md:w-1/2 flex flex-col">
@@ -45,7 +45,7 @@ const Hero = () => {
       </div>
 
       {/* RIGHT IMAGE */}
-      <div className="flex justify-center md:justify-end items-center w-full md:w-1/2 px-6 sm:px-10 md:px-14 mt-6 md:mt-0">
+      <div className="flex justify-center md:justify-end items-center w-full md:w-1/2 px-6 sm:px-10 md:px-4 lg:px-6 mt-6 md:mt-0">
         <Image
           className="responsive-image"
           src="/ProfilePic.png"

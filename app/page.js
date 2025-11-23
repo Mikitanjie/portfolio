@@ -10,6 +10,9 @@ import Footer from './_components/Footer/Footer';
 import Languages from './_components/Languages/Languages';
 import Particles from './_components/Particles/Particles';
 import ParallaxLayers from './_components/ParallaxLayers/ParallaxLayers';
+import ScrollProgress from './_components/ScrollProgress/ScrollProgress';
+import ScrollToTop from './_components/ScrollToTop/ScrollToTop';
+import SectionWrapper from './_components/SectionWrapper/SectionWrapper';
 import Tools from './_components/Tools/Tools';
 import Libraries from './_components/Libraries/Libraries';
 import ContactForm from './_components/ContactForm/ContactForm';
@@ -32,8 +35,10 @@ export default function Home() {
 
   return (
     <div className="w-full flex flex-col items-center">
+      <ScrollProgress />
       <Particles />
       <ParallaxLayers />
+      <ScrollToTop />
 
       {/* SECTION: Home */}
       <div id="Home"></div>
@@ -41,14 +46,20 @@ export default function Home() {
         <span style={titleStyle}>Happy to see you here!</span>
       </div>
 
-      <Hero />
+      <SectionWrapper>
+        <Hero />
+      </SectionWrapper>
 
       {/* SECTION: Projects */}
-      <div id="Projects" className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-20 fade-in-up">
-        <span style={titleStyle}>Projects</span>
-      </div>
+      <SectionWrapper>
+        <div id="Projects" className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-20">
+          <span style={titleStyle}>Projects</span>
+        </div>
+      </SectionWrapper>
 
-      <Projects />
+      <SectionWrapper>
+        <Projects />
+      </SectionWrapper>
 
       <div className="text-center text-3xl sm:text-4xl font-semibold pt-20 pb-20">
         <span style={titleStyle} className="flex justify-center gap-1">
@@ -60,46 +71,70 @@ export default function Home() {
       </div>
 
       {/* SECTION: About */}
-      <div id="About" className="text-center text-4xl sm:text-5xl font-semibold pt-28 pb-12 fade-in-up">
-        <span style={titleStyle}>About me</span>
-      </div>
+      <SectionWrapper>
+        <div id="About" className="text-center text-4xl sm:text-5xl font-semibold pt-28 pb-12">
+          <span style={titleStyle}>About me</span>
+        </div>
+      </SectionWrapper>
 
-      <About />
+      <SectionWrapper>
+        <About />
+      </SectionWrapper>
 
       {/* SECTION: Skills (Programming Languages) */}
-      <div id="Skills" className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-16 fade-in-up">
-        <span style={titleStyle}>Programming &amp; Markup Languages</span>
-      </div>
+      <SectionWrapper>
+        <div id="Skills" className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-16">
+          <span style={titleStyle}>Programming &amp; Markup Languages</span>
+        </div>
+      </SectionWrapper>
 
-      <Tools />
+      <SectionWrapper>
+        <Tools />
+      </SectionWrapper>
 
       {/* SECTION: DevOps */}
-      <div className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-16 fade-in-up">
-        <span style={titleStyle}>DevOps &amp; Deployment</span>
-      </div>
+      <SectionWrapper>
+        <div className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-16">
+          <span style={titleStyle}>DevOps &amp; Deployment</span>
+        </div>
+      </SectionWrapper>
 
-      <Skills />
+      <SectionWrapper>
+        <Skills />
+      </SectionWrapper>
 
       {/* SECTION: Frameworks */}
-      <div className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-16 fade-in-up">
-        <span style={titleStyle}>Frameworks &amp; Other</span>
-      </div>
+      <SectionWrapper>
+        <div className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-16">
+          <span style={titleStyle}>Frameworks &amp; Other</span>
+        </div>
+      </SectionWrapper>
 
-      <Libraries />
+      <SectionWrapper>
+        <Libraries />
+      </SectionWrapper>
 
       {/* SECTION: Languages */}
-      <div className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-16 fade-in-up">
-        <span style={titleStyle}>Languages</span>
-      </div>
+      <SectionWrapper>
+        <div className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-16">
+          <span style={titleStyle}>Languages</span>
+        </div>
+      </SectionWrapper>
 
-      <Languages />
+      <SectionWrapper>
+        <Languages />
+      </SectionWrapper>
 
       {/* SECTION: Contact */}
-      <div id="Contacts" className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-12 fade-in-up">
-        <span style={titleStyle}>Feel free to send me a message!</span>
-      </div>
+      <SectionWrapper>
+        <div id="Contacts" className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-12">
+          <span style={titleStyle}>Feel free to send me a message!</span>
+        </div>
+      </SectionWrapper>
 
-      <ContactForm />
+      <SectionWrapper>
+        <ContactForm />
+      </SectionWrapper>
 
       <div className="mt-20"></div>
       <Footer />

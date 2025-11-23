@@ -111,24 +111,66 @@ const Topper = () => {
       </button>
 
       {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-90 z-[99999]
-            flex flex-col items-center justify-start pt-24
-            space-y-8 text-white text-3xl font-semibold">
-          <button
-            onClick={() => setMenuOpen(false)}
-            className="absolute top-6 right-6 text-4xl active:scale-90"
-          >
-            <FaTimes />
-          </button>
+      <div 
+        className={`fixed inset-0 bg-black bg-opacity-95 backdrop-blur-sm z-[99999]
+          flex flex-col items-center justify-start pt-24
+          space-y-8 text-white text-3xl font-semibold
+          transition-all duration-300 ease-in-out
+          ${menuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}
+      >
+        <button
+          onClick={() => setMenuOpen(false)}
+          className="absolute top-6 right-6 text-4xl active:scale-90 transition-transform duration-200 hover:text-emerald-400"
+        >
+          <FaTimes />
+        </button>
 
-          <a onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'Home'); }} className="hover:text-emerald-400">Home</a>
-          <a onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'Projects'); }} className="hover:text-emerald-400">Projects</a>
-          <a onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'About'); }} className="hover:text-emerald-400">About</a>
-          <a onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'Skills'); }} className="hover:text-emerald-400">Skills</a>
-          <a onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'Contacts'); }} className="hover:text-emerald-400">Contact</a>
-        </div>
-      )}
+        <a 
+          onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'Home'); }} 
+          className="hover:text-emerald-400 transition-colors duration-200 transform hover:scale-110 active:scale-95"
+          style={{ 
+            animation: menuOpen ? 'fadeInDown 0.3s ease-out 0.1s both' : 'none'
+          }}
+        >
+          Home
+        </a>
+        <a 
+          onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'Projects'); }} 
+          className="hover:text-emerald-400 transition-colors duration-200 transform hover:scale-110 active:scale-95"
+          style={{ 
+            animation: menuOpen ? 'fadeInDown 0.3s ease-out 0.2s both' : 'none'
+          }}
+        >
+          Projects
+        </a>
+        <a 
+          onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'About'); }} 
+          className="hover:text-emerald-400 transition-colors duration-200 transform hover:scale-110 active:scale-95"
+          style={{ 
+            animation: menuOpen ? 'fadeInDown 0.3s ease-out 0.3s both' : 'none'
+          }}
+        >
+          About
+        </a>
+        <a 
+          onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'Skills'); }} 
+          className="hover:text-emerald-400 transition-colors duration-200 transform hover:scale-110 active:scale-95"
+          style={{ 
+            animation: menuOpen ? 'fadeInDown 0.3s ease-out 0.4s both' : 'none'
+          }}
+        >
+          Skills
+        </a>
+        <a 
+          onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'Contacts'); }} 
+          className="hover:text-emerald-400 transition-colors duration-200 transform hover:scale-110 active:scale-95"
+          style={{ 
+            animation: menuOpen ? 'fadeInDown 0.3s ease-out 0.5s both' : 'none'
+          }}
+        >
+          Contact
+        </a>
+      </div>
     </nav>
     </div>
   );

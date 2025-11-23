@@ -11,7 +11,10 @@ const Projects = () => {
       <div className={`flex flex-col md:flex-row items-center gap-8 md:gap-12 mb-20 md:mb-24 fade-in-up`}>
         <div className="w-full md:w-1/2 flex justify-center md:justify-start">
           <Link href="https://www.travelpal.rest/" target="_blank" passHref className="group block">
-            <div className="relative overflow-hidden rounded-lg transition-all duration-300 hover:scale-105">
+            <div className="relative overflow-hidden rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-end justify-center pb-4">
+                <span className="text-white text-lg font-semibold">Visit Project →</span>
+              </div>
               <Image
                 className="prjt-image object-cover transition-transform duration-300 group-hover:scale-110"
                 src="/Projectpic.png"
@@ -58,7 +61,10 @@ const Projects = () => {
       <div className={`flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12 mb-20 md:mb-24 fade-in-up`}>
         <div className="w-full md:w-1/2 flex justify-center md:justify-end">
           <Link href="https://www.donvitoantipasti.com/" target="_blank" passHref className="group block">
-            <div className="relative overflow-hidden rounded-lg transition-all duration-300 hover:scale-105">
+            <div className="relative overflow-hidden rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-end justify-center pb-4">
+                <span className="text-white text-lg font-semibold">Visit Project →</span>
+              </div>
               <Image
                 className="prjt-image object-cover transition-transform duration-300 group-hover:scale-110"
                 src="/vitopasti.png"
