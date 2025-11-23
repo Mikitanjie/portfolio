@@ -12,7 +12,7 @@ const Tools = () => {
           grid
           mx-auto
           grid-cols-[repeat(auto-fit,minmax(120px,1fr))]
-          gap-6
+          gap-16
           place-items-center
           w-full
           max-w-6xl

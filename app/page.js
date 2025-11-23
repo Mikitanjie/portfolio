@@ -127,7 +127,7 @@ export default function Home() {
 
       {/* SECTION: Contact */}
       <SectionWrapper>
-        <div id="Contacts" className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-12">
+        <div id="Contacts" className="text-center text-4xl sm:text-5xl font-semibold pt-48 pb-12">
           <span style={titleStyle}>Feel free to send me a message!</span>
         </div>
       </SectionWrapper>
