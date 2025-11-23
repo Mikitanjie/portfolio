@@ -53,7 +53,6 @@ const Topper = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // ❗ NO HOVER LOGIC ANYMORE — REMOVED COMPLETELY
 
   const navItemStyle =
     'text-white hover:text-emerald-400 active:scale-90 text-lg font-semibold cursor-pointer';
