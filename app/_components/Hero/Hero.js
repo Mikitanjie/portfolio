@@ -27,8 +27,9 @@ const Hero = () => {
           <div className="flex flex-row gap-6 mt-4 items-center flex-wrap">
 
             <a
-              href="/resume.pdf"
-              download
+              href="https://drive.google.com/uc?export=download&id=1DPcpHRBLi8_mvWXWW9H-gSJzCngb5JUx"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`underline-on-hover inline-flex justify-center px-1 py-2 active:scale-90 text-fontStyle ${
                 theme === 'light' ? 'text-black' : 'text-white'
               }`}
