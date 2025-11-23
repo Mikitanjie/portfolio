@@ -49,7 +49,7 @@ const Hero = () => {
         <Image
           className="responsive-image"
           src="/ProfilePic.png"
-          alt="Picture of the author"
+          alt="Michael Catania, Full Stack Web Developer - Professional portrait"
           width={350}
           height={350}
           priority={true}

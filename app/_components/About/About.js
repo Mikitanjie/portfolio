@@ -56,7 +56,7 @@ const About = () => {
           <Image
             className="object-cover w-full h-auto transition-transform duration-500"
             src={images[activeImageIndex]}
-            alt="About Images"
+            alt={`About Michael Catania - Image ${activeImageIndex + 1} showcasing development work and interests`}
             width={800}
             height={600}
             priority

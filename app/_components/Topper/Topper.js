@@ -83,19 +83,68 @@ const Topper = () => {
       <div className="navbar-green-overlay" />
 
       {/* Desktop Navigation */}
-      <div className="hidden md:flex items-center space-x-6 z-[5]">
-        <a onClick={(e) => scrollToSection(e, 'Home')} className={navItemStyle}>Home</a>
-        <a onClick={(e) => scrollToSection(e, 'Projects')} className={navItemStyle}>Projects</a>
-        <a onClick={(e) => scrollToSection(e, 'About')} className={navItemStyle}>About</a>
-        <a onClick={(e) => scrollToSection(e, 'Skills')} className={navItemStyle}>Skills</a>
-        <a onClick={(e) => scrollToSection(e, 'Contacts')} className={navItemStyle}>Contact</a>
-      </div>
+      <nav className="hidden md:flex items-center space-x-6 z-[5]" aria-label="Main navigation">
+        <a 
+          onClick={(e) => scrollToSection(e, 'Home')} 
+          onKeyDown={(e) => e.key === 'Enter' && scrollToSection(e, 'Home')}
+          className={navItemStyle}
+          role="button"
+          tabIndex={0}
+          aria-label="Navigate to Home section"
+        >
+          Home
+        </a>
+        <a 
+          onClick={(e) => scrollToSection(e, 'Projects')} 
+          onKeyDown={(e) => e.key === 'Enter' && scrollToSection(e, 'Projects')}
+          className={navItemStyle}
+          role="button"
+          tabIndex={0}
+          aria-label="Navigate to Projects section"
+        >
+          Projects
+        </a>
+        <a 
+          onClick={(e) => scrollToSection(e, 'About')} 
+          onKeyDown={(e) => e.key === 'Enter' && scrollToSection(e, 'About')}
+          className={navItemStyle}
+          role="button"
+          tabIndex={0}
+          aria-label="Navigate to About section"
+        >
+          About
+        </a>
+        <a 
+          onClick={(e) => scrollToSection(e, 'Skills')} 
+          onKeyDown={(e) => e.key === 'Enter' && scrollToSection(e, 'Skills')}
+          className={navItemStyle}
+          role="button"
+          tabIndex={0}
+          aria-label="Navigate to Skills section"
+        >
+          Skills
+        </a>
+        <a 
+          onClick={(e) => scrollToSection(e, 'Contacts')} 
+          onKeyDown={(e) => e.key === 'Enter' && scrollToSection(e, 'Contacts')}
+          className={navItemStyle}
+          role="button"
+          tabIndex={0}
+          aria-label="Navigate to Contact section"
+        >
+          Contact
+        </a>
+      </nav>
 
       {/* Mobile Menu Button */}
       <div className="md:hidden z-[5]">
         <button
           onClick={() => setMenuOpen(true)}
+          onKeyDown={(e) => e.key === 'Enter' && setMenuOpen(true)}
           className="text-white text-2xl active:scale-90"
+          aria-label="Open mobile menu"
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
         >
           <FaBars />
         </button>
@@ -111,23 +160,32 @@ const Topper = () => {
       </button>
 
       {/* Mobile Menu */}
-      <div 
+      <nav 
+        id="mobile-menu"
         className={`fixed inset-0 bg-black bg-opacity-95 backdrop-blur-sm z-[99999]
           flex flex-col items-center justify-start pt-24
           space-y-8 text-white text-3xl font-semibold
           transition-all duration-300 ease-in-out
           ${menuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}
+        aria-label="Mobile navigation"
+        aria-hidden={!menuOpen}
       >
         <button
           onClick={() => setMenuOpen(false)}
+          onKeyDown={(e) => e.key === 'Enter' && setMenuOpen(false)}
           className="absolute top-6 right-6 text-4xl active:scale-90 transition-transform duration-200 hover:text-emerald-400"
+          aria-label="Close mobile menu"
         >
           <FaTimes />
         </button>
 
         <a 
           onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'Home'); }} 
+          onKeyDown={(e) => { if (e.key === 'Enter') { setMenuOpen(false); scrollToSection(e, 'Home'); } }}
           className="hover:text-emerald-400 transition-colors duration-200 transform hover:scale-110 active:scale-95"
+          role="button"
+          tabIndex={menuOpen ? 0 : -1}
+          aria-label="Navigate to Home section"
           style={{ 
             animation: menuOpen ? 'fadeInDown 0.3s ease-out 0.1s both' : 'none'
           }}
@@ -136,7 +194,11 @@ const Topper = () => {
         </a>
         <a 
           onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'Projects'); }} 
+          onKeyDown={(e) => { if (e.key === 'Enter') { setMenuOpen(false); scrollToSection(e, 'Projects'); } }}
           className="hover:text-emerald-400 transition-colors duration-200 transform hover:scale-110 active:scale-95"
+          role="button"
+          tabIndex={menuOpen ? 0 : -1}
+          aria-label="Navigate to Projects section"
           style={{ 
             animation: menuOpen ? 'fadeInDown 0.3s ease-out 0.2s both' : 'none'
           }}
@@ -145,7 +207,11 @@ const Topper = () => {
         </a>
         <a 
           onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'About'); }} 
+          onKeyDown={(e) => { if (e.key === 'Enter') { setMenuOpen(false); scrollToSection(e, 'About'); } }}
           className="hover:text-emerald-400 transition-colors duration-200 transform hover:scale-110 active:scale-95"
+          role="button"
+          tabIndex={menuOpen ? 0 : -1}
+          aria-label="Navigate to About section"
           style={{ 
             animation: menuOpen ? 'fadeInDown 0.3s ease-out 0.3s both' : 'none'
           }}
@@ -154,7 +220,11 @@ const Topper = () => {
         </a>
         <a 
           onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'Skills'); }} 
+          onKeyDown={(e) => { if (e.key === 'Enter') { setMenuOpen(false); scrollToSection(e, 'Skills'); } }}
           className="hover:text-emerald-400 transition-colors duration-200 transform hover:scale-110 active:scale-95"
+          role="button"
+          tabIndex={menuOpen ? 0 : -1}
+          aria-label="Navigate to Skills section"
           style={{ 
             animation: menuOpen ? 'fadeInDown 0.3s ease-out 0.4s both' : 'none'
           }}
@@ -163,14 +233,18 @@ const Topper = () => {
         </a>
         <a 
           onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'Contacts'); }} 
+          onKeyDown={(e) => { if (e.key === 'Enter') { setMenuOpen(false); scrollToSection(e, 'Contacts'); } }}
           className="hover:text-emerald-400 transition-colors duration-200 transform hover:scale-110 active:scale-95"
+          role="button"
+          tabIndex={menuOpen ? 0 : -1}
+          aria-label="Navigate to Contact section"
           style={{ 
             animation: menuOpen ? 'fadeInDown 0.3s ease-out 0.5s both' : 'none'
           }}
         >
           Contact
         </a>
-      </div>
+      </nav>
     </nav>
     </div>
   );

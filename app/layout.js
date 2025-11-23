@@ -6,8 +6,24 @@ import Topper from './_components/Topper/Topper';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: "Michael's Portfolio",
-  description: "Portfolio of Michael Catania",
+  title: "Michael Catania - Full Stack Web Developer Portfolio",
+  description: "Portfolio of Michael Catania, a full stack web developer specializing in React, Next.js, Ruby on Rails, and modern web technologies. View projects, skills, and get in touch.",
+  keywords: "web developer, full stack developer, React, Next.js, Ruby on Rails, JavaScript, portfolio, frontend developer, backend developer",
+  authors: [{ name: "Michael Catania" }],
+  openGraph: {
+    title: "Michael Catania - Full Stack Web Developer",
+    description: "Portfolio showcasing web development projects, skills, and experience",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Michael Catania - Full Stack Web Developer",
+    description: "Portfolio showcasing web development projects, skills, and experience",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }) {

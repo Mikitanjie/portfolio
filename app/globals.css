@@ -256,6 +256,101 @@ body {
   overflow-x: hidden;
 }
 
+
+/* Animated Backgrounds for Sections */
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  33% {
+    transform: translateY(-10px) translateX(5px);
+  }
+  66% {
+    transform: translateY(5px) translateX(-5px);
+  }
+}
+
+.section-animated-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-animated-bg::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(1, 161, 35, 0.03) 0%, transparent 70%);
+  animation: subtleFloat 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section-animated-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Typography Improvements */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 0.875rem;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  margin-bottom: 0.75rem;
+}
+
+p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* Color Scheme Refinement */
+:root {
+  --primary-green: rgb(1, 161, 35);
+  --primary-green-light: rgb(16, 185, 129);
+  --primary-green-dark: rgb(5, 150, 105);
+  --text-primary: var(--color-text-light);
+  --text-secondary: rgba(30, 30, 30, 0.7);
+  --bg-primary: var(--color-background-light);
+  --bg-secondary: rgba(245, 250, 245, 0.8);
+}
+
+[data-theme="dark"] {
+  --text-primary: rgb(255, 255, 255);
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --bg-primary: rgb(0, 0, 0);
+  --bg-secondary: rgba(0, 0, 0, 0.8);
+}
+
+/* Screen reader only class */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 /* ContactForm.css - Modern Glassmorphism Design */
 .contact-form {
   display: flex;

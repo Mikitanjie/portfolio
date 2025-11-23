@@ -117,44 +117,63 @@ function ContactForm() {
         '--input-text-color': inputTextColor,
         '--placeholder-color': placeholderColor
       }}
+      aria-label="Contact form"
     >
       <div className="w-full flex flex-col items-center">
+        <label htmlFor="name" className="sr-only">Your name</label>
         <input 
+          id="name"
           className={`input-field ${errors.name && touched.name ? 'border-red-500' : ''}`}
           name="name" 
           placeholder="Your name" 
           onBlur={handleBlur}
           onChange={handleChange}
+          aria-label="Your name"
+          aria-required="true"
+          aria-invalid={errors.name && touched.name ? 'true' : 'false'}
+          aria-describedby={errors.name && touched.name ? 'name-error' : undefined}
         />
         {errors.name && touched.name && (
-          <p className="text-red-500 text-sm mt-1 text-center">{errors.name}</p>
+          <p id="name-error" className="text-red-500 text-sm mt-1 text-center" role="alert">{errors.name}</p>
         )}
       </div>
       
       <div className="w-full flex flex-col items-center">
+        <label htmlFor="email" className="sr-only">Your email</label>
         <input 
+          id="email"
           className={`input-field ${errors.email && touched.email ? 'border-red-500' : ''}`}
           name="email" 
           type="email" 
           placeholder="Your email" 
           onBlur={handleBlur}
           onChange={handleChange}
+          aria-label="Your email"
+          aria-required="true"
+          aria-invalid={errors.email && touched.email ? 'true' : 'false'}
+          aria-describedby={errors.email && touched.email ? 'email-error' : undefined}
         />
         {errors.email && touched.email && (
-          <p className="text-red-500 text-sm mt-1 text-center">{errors.email}</p>
+          <p id="email-error" className="text-red-500 text-sm mt-1 text-center" role="alert">{errors.email}</p>
         )}
       </div>
       
       <div className="w-full flex flex-col items-center">
+        <label htmlFor="message" className="sr-only">Your message</label>
         <textarea 
+          id="message"
           className={`textarea-field ${errors.message && touched.message ? 'border-red-500' : ''}`}
           name="message" 
           placeholder="Your message" 
           onBlur={handleBlur}
           onChange={handleChange}
+          aria-label="Your message"
+          aria-required="true"
+          aria-invalid={errors.message && touched.message ? 'true' : 'false'}
+          aria-describedby={errors.message && touched.message ? 'message-error' : undefined}
         />
         {errors.message && touched.message && (
-          <p className="text-red-500 text-sm mt-1 text-center">{errors.message}</p>
+          <p id="message-error" className="text-red-500 text-sm mt-1 text-center" role="alert">{errors.message}</p>
         )}
       </div>
       

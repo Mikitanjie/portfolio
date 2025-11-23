@@ -18,7 +18,7 @@ const Projects = () => {
               <Image
                 className="prjt-image object-cover transition-transform duration-300 group-hover:scale-110"
                 src="/Projectpic.png"
-                alt="Travelpal project"
+                alt="Travelpal - Social travel planning platform project screenshot"
                 width={500}
                 height={500}
               />
@@ -68,7 +68,7 @@ const Projects = () => {
               <Image
                 className="prjt-image object-cover transition-transform duration-300 group-hover:scale-110"
                 src="/vitopasti.png"
-                alt="DonVito Antipasti project"
+                alt="DonVito Antipasti - Salzburg antipasti shop website project screenshot"
                 width={500}
                 height={500}
               />
