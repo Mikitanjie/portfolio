@@ -24,7 +24,7 @@ export default function Home() {
   }, []);
 
   const titleStyle = {
-    color: theme === 'light' ? 'black' : 'rgb(1, 161, 35)',
+    color: theme === 'light' ? 'rgb(0, 100, 0)' : 'rgb(1, 161, 35)',
     animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
     filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
   };
