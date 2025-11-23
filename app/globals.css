@@ -260,9 +260,9 @@ body {
 .contact-form {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 500px;
-  margin: auto;
+  width: 50vw !important;
+  max-width: 50vw !important;
+  margin: 0 auto !important;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -271,6 +271,7 @@ body {
   border: 1px solid rgba(1, 161, 35, 0.2);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   transition: all 0.3s ease;
+  align-items: center;
 }
 
 .contact-form:hover {
@@ -281,7 +282,7 @@ body {
 .input-field, .textarea-field {
   margin-bottom: 1.25em;
   padding: 0.875em 1.125em;
-  color: inherit;
+  color: var(--input-text-color, inherit);
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
   border: 1px solid rgba(1, 161, 35, 0.3);
@@ -289,10 +290,13 @@ body {
   font-size: 1rem;
   transition: all 0.3s ease;
   outline: none;
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
 }
 
 .input-field::placeholder, .textarea-field::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--placeholder-color, rgba(255, 255, 255, 0.6));
 }
 
 .input-field:focus, .textarea-field:focus {
@@ -306,6 +310,7 @@ body {
   min-height: 120px;
   resize: vertical;
   font-family: inherit;
+  text-align: center;
 }
 
 .submit-button {

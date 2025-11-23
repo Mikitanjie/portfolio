@@ -1,11 +1,16 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import '../../globals.css';
+import { ThemeContext } from '../ThemeContext/ThemeContext';
 
 function ContactForm() {
+  const { theme } = useContext(ThemeContext);
   const [status, setStatus] = useState('');
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  const inputTextColor = theme === 'light' ? 'rgb(30, 30, 30)' : 'rgb(255, 255, 255)';
+  const placeholderColor = theme === 'light' ? 'rgba(30, 30, 30, 0.6)' : 'rgba(255, 255, 255, 0.6)';
 
   const validateField = (name, value) => {
     let error = '';
@@ -102,8 +107,18 @@ function ContactForm() {
   };
 
   return (
-    <form className="contact-form fade-in-up" onSubmit={handleSubmit}>
-      <div>
+    <form 
+      className="contact-form fade-in-up" 
+      onSubmit={handleSubmit}
+      style={{ 
+        width: '50vw', 
+        maxWidth: '50vw', 
+        margin: '0 auto',
+        '--input-text-color': inputTextColor,
+        '--placeholder-color': placeholderColor
+      }}
+    >
+      <div className="w-full flex flex-col items-center">
         <input 
           className={`input-field ${errors.name && touched.name ? 'border-red-500' : ''}`}
           name="name" 
@@ -112,11 +127,11 @@ function ContactForm() {
           onChange={handleChange}
         />
         {errors.name && touched.name && (
-          <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+          <p className="text-red-500 text-sm mt-1 text-center">{errors.name}</p>
         )}
       </div>
       
-      <div>
+      <div className="w-full flex flex-col items-center">
         <input 
           className={`input-field ${errors.email && touched.email ? 'border-red-500' : ''}`}
           name="email" 
@@ -126,11 +141,11 @@ function ContactForm() {
           onChange={handleChange}
         />
         {errors.email && touched.email && (
-          <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+          <p className="text-red-500 text-sm mt-1 text-center">{errors.email}</p>
         )}
       </div>
       
-      <div>
+      <div className="w-full flex flex-col items-center">
         <textarea 
           className={`textarea-field ${errors.message && touched.message ? 'border-red-500' : ''}`}
           name="message" 
@@ -139,7 +154,7 @@ function ContactForm() {
           onChange={handleChange}
         />
         {errors.message && touched.message && (
-          <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+          <p className="text-red-500 text-sm mt-1 text-center">{errors.message}</p>
         )}
       </div>
       
