@@ -378,6 +378,15 @@ body {
   animation: rainEffect 10s linear infinite;
 }
 
+/* Show more of the image on desktop (similar to mobile) */
+@media (min-width: 768px) {
+  .navbar-matrix {
+    background-size: 90% auto;
+    background-position: center top;
+    height: 280%;
+  }
+}
+
 @keyframes rainEffect {
   from {
     top: -50%;
@@ -420,6 +429,7 @@ nav.nav-visible {
 .navbar-animated-bg {
   position: relative;
   overflow: hidden;
+  background-color: black;
 }
 
 html, body {
