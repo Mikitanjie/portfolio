@@ -69,8 +69,10 @@ const Languages = () => {
         className="
           grid
           mx-auto
-          grid-cols-[repeat(auto-fit,minmax(150px,1fr))]
-          gap-8
+          grid-cols-2
+          sm:grid-cols-[repeat(auto-fit,minmax(150px,1fr))]
+          gap-4
+          sm:gap-8
           place-items-center
           w-full
           max-w-5xl
@@ -80,7 +82,7 @@ const Languages = () => {
         <div className="text-center animate-pulse hover:animate-none">
           <div onClick={() => handleClick("Portuguese is my mother-tongue!")}>
             <Image
-              className="transition-transform duration-200 hover:scale-125 active:scale-90"
+              className="transition-transform duration-200 hover:scale-125 active:scale-90 w-16 h-16 sm:w-24 sm:h-24"
               src="https://cdn-icons-png.flaticon.com/128/321/321256.png"
               alt="Portuguese"
               width={90}
@@ -95,7 +97,7 @@ const Languages = () => {
         <div className="text-center animate-pulse hover:animate-none">
           <div onClick={() => handleClick("This is the language I use every day at home - my girlfriend is Italian!")}>
             <Image
-              className="transition-transform duration-200 hover:scale-125 active:scale-90"
+              className="transition-transform duration-200 hover:scale-125 active:scale-90 w-16 h-16 sm:w-24 sm:h-24"
               src="https://cdn-icons-png.flaticon.com/128/321/321240.png"
               alt="Italian"
               width={90}
@@ -110,7 +112,7 @@ const Languages = () => {
         <div className="text-center animate-pulse hover:animate-none">
           <div onClick={() => handleClick("This is the first foreign language that I have learnt!")}>
             <Image
-              className="transition-transform duration-200 hover:scale-125 active:scale-90"
+              className="transition-transform duration-200 hover:scale-125 active:scale-90 w-16 h-16 sm:w-24 sm:h-24"
               src="https://cdn-icons-png.flaticon.com/128/321/321233.png"
               alt="German"
               width={90}
@@ -125,7 +127,7 @@ const Languages = () => {
         <div className="text-center animate-pulse hover:animate-none">
           <div onClick={() => handleClick("Living near the border with Spain and having friends there has taught me that!")}>
             <Image
-              className="transition-transform duration-200 hover:scale-125 active:scale-90"
+              className="transition-transform duration-200 hover:scale-125 active:scale-90 w-16 h-16 sm:w-24 sm:h-24"
               src="https://cdn-icons-png.flaticon.com/128/321/321260.png"
               alt="Spanish"
               width={90}
@@ -140,7 +142,7 @@ const Languages = () => {
         <div className="text-center animate-pulse hover:animate-none">
           <div onClick={() => handleClick("This is the language I learnt at school and which has improved with time in the UK!")}>
             <Image
-              className="transition-transform duration-200 hover:scale-125 active:scale-90"
+              className="transition-transform duration-200 hover:scale-125 active:scale-90 w-16 h-16 sm:w-24 sm:h-24"
               src="https://cdn-icons-png.flaticon.com/128/321/321269.png"
               alt="English"
               width={90}

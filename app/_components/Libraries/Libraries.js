@@ -11,11 +11,15 @@ const Libraries = () => {
         className="
           grid
           mx-auto
-          grid-cols-[repeat(auto-fit,minmax(120px,1fr))]
+          grid-cols-2
+          sm:grid-cols-[repeat(auto-fit,minmax(120px,1fr))]
           gap-6
+          sm:gap-6
           place-items-center
           w-full
           max-w-7xl
+          pb-12
+          sm:pb-0
         "
       >
 

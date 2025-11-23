@@ -11,11 +11,15 @@ const Tools = () => {
         className="
           grid
           mx-auto
-          grid-cols-[repeat(auto-fit,minmax(120px,1fr))]
-          gap-16
+          grid-cols-2
+          sm:grid-cols-[repeat(auto-fit,minmax(120px,1fr))]
+          gap-8
+          sm:gap-16
           place-items-center
           w-full
           max-w-6xl
+          pb-12
+          sm:pb-0
         "
       >
 
