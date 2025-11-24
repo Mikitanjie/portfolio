@@ -21,6 +21,8 @@ const Projects = () => {
                 alt="Travelpal - Social travel planning platform project screenshot"
                 width={500}
                 height={500}
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </Link>
@@ -71,6 +73,8 @@ const Projects = () => {
                 alt="DonVito Antipasti - Salzburg antipasti shop website project screenshot"
                 width={500}
                 height={500}
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </Link>

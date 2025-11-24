@@ -21,6 +21,31 @@ const Topper = () => {
 
   const lastScrollRef = useRef(0);
   const tickingRef = useRef(false);
+  const menuButtonRef = useRef(null);
+  const closeButtonRef = useRef(null);
+
+  // Focus management for mobile menu
+  useEffect(() => {
+    if (menuOpen && closeButtonRef.current) {
+      // Focus close button when menu opens
+      closeButtonRef.current.focus();
+    } else if (!menuOpen && menuButtonRef.current) {
+      // Return focus to menu button when menu closes
+      menuButtonRef.current.focus();
+    }
+  }, [menuOpen]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [menuOpen]);
 
   /* --------------------------------------------------
      ONLY scroll up → show
@@ -139,9 +164,15 @@ const Topper = () => {
       {/* Mobile Menu Button */}
       <div className="md:hidden z-[5]">
         <button
+          ref={menuButtonRef}
           onClick={() => setMenuOpen(true)}
-          onKeyDown={(e) => e.key === 'Enter' && setMenuOpen(true)}
-          className="text-white text-2xl active:scale-90"
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              setMenuOpen(true);
+            }
+          }}
+          className="text-white text-2xl active:scale-90 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black rounded"
           aria-label="Open mobile menu"
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
@@ -162,18 +193,32 @@ const Topper = () => {
       {/* Mobile Menu */}
       <nav 
         id="mobile-menu"
-        className={`fixed inset-0 bg-black bg-opacity-95 backdrop-blur-sm z-[99999]
+        className={`fixed inset-0 bg-black bg-opacity-95 backdrop-blur-md z-[99999]
           flex flex-col items-center justify-start pt-24
           space-y-8 text-white text-3xl font-semibold
           transition-all duration-300 ease-in-out
           ${menuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}
+        style={{
+          animation: menuOpen ? 'slideInFromRight 0.3s ease-out' : 'none'
+        }}
         aria-label="Mobile navigation"
         aria-hidden={!menuOpen}
       >
         <button
+          ref={closeButtonRef}
           onClick={() => setMenuOpen(false)}
-          onKeyDown={(e) => e.key === 'Enter' && setMenuOpen(false)}
-          className="absolute top-6 right-6 text-4xl active:scale-90 transition-transform duration-200 hover:text-emerald-400"
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              setMenuOpen(false);
+            } else if (e.key === 'Escape') {
+              setMenuOpen(false);
+            }
+          }}
+          className="absolute top-6 right-6 text-4xl active:scale-90 transition-all duration-200 hover:text-emerald-400 hover:rotate-90 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black rounded"
+          style={{
+            animation: menuOpen ? 'scaleIn 0.3s ease-out 0.1s both' : 'none'
+          }}
           aria-label="Close mobile menu"
         >
           <FaTimes />

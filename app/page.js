@@ -1,37 +1,131 @@
 'use client'
 
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useMemo } from 'react';
+import dynamic from 'next/dynamic';
 import { ThemeContext } from './_components/ThemeContext/ThemeContext';
 import Hero from './_components/Hero/Hero';
-import Projects from './_components/Projects/Projects';
-import About from './_components/About/About';
-import Skills from './_components/Skills/Skills';
-import Footer from './_components/Footer/Footer';
-import Languages from './_components/Languages/Languages';
-import Particles from './_components/Particles/Particles';
-import ParallaxLayers from './_components/ParallaxLayers/ParallaxLayers';
 import ScrollProgress from './_components/ScrollProgress/ScrollProgress';
 import ScrollToTop from './_components/ScrollToTop/ScrollToTop';
 import SectionWrapper from './_components/SectionWrapper/SectionWrapper';
-import Tools from './_components/Tools/Tools';
-import Libraries from './_components/Libraries/Libraries';
-import ContactForm from './_components/ContactForm/ContactForm';
+import Footer from './_components/Footer/Footer';
+import SkeletonLoader from './_components/SkeletonLoader/SkeletonLoader';
+
+// Dynamic imports for below-the-fold components (lazy loading)
+const Projects = dynamic(() => import('./_components/Projects/Projects'), {
+  loading: () => (
+    <div className="w-full max-w-7xl mx-auto px-6 py-20 space-y-8">
+      <SkeletonLoader type="title" className="mb-8" />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <SkeletonLoader type="project" />
+        <SkeletonLoader type="project" />
+      </div>
+    </div>
+  ),
+});
+
+const About = dynamic(() => import('./_components/About/About'), {
+  loading: () => (
+    <div className="w-full px-6 py-12 space-y-6">
+      <div className="flex flex-col lg:flex-row gap-8">
+        <div className="w-full lg:w-1/2 space-y-4">
+          <SkeletonLoader type="text" />
+          <SkeletonLoader type="text" />
+          <SkeletonLoader type="text" className="w-3/4" />
+        </div>
+        <SkeletonLoader type="image" className="w-full lg:w-1/2" />
+      </div>
+    </div>
+  ),
+});
+
+const Tools = dynamic(() => import('./_components/Tools/Tools'), {
+  loading: () => (
+    <div className="w-full px-6 py-12">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+        {[...Array(12)].map((_, i) => (
+          <SkeletonLoader key={i} type="circle" />
+        ))}
+      </div>
+    </div>
+  ),
+});
+
+const Skills = dynamic(() => import('./_components/Skills/Skills'), {
+  loading: () => (
+    <div className="w-full px-6 py-12">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+        {[...Array(12)].map((_, i) => (
+          <SkeletonLoader key={i} type="circle" />
+        ))}
+      </div>
+    </div>
+  ),
+});
+
+const Libraries = dynamic(() => import('./_components/Libraries/Libraries'), {
+  loading: () => (
+    <div className="w-full px-6 py-12">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+        {[...Array(12)].map((_, i) => (
+          <SkeletonLoader key={i} type="circle" />
+        ))}
+      </div>
+    </div>
+  ),
+});
+
+const Languages = dynamic(() => import('./_components/Languages/Languages'), {
+  loading: () => (
+    <div className="w-full px-6 py-12">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        {[...Array(8)].map((_, i) => (
+          <SkeletonLoader key={i} type="card" />
+        ))}
+      </div>
+    </div>
+  ),
+});
+
+const ContactForm = dynamic(() => import('./_components/ContactForm/ContactForm'), {
+  loading: () => (
+    <div className="w-full px-6 py-12" style={{ width: '50vw', maxWidth: '50vw', margin: '0 auto' }}>
+      <div className="space-y-4">
+        <SkeletonLoader type="text" className="h-12" />
+        <SkeletonLoader type="text" className="h-12" />
+        <SkeletonLoader type="text" className="h-32" />
+        <SkeletonLoader type="text" className="h-12 w-1/3 mx-auto" />
+      </div>
+    </div>
+  ),
+});
+
+// Heavy components with no SSR (canvas-based animations)
+const Particles = dynamic(() => import('./_components/Particles/Particles'), {
+  ssr: false,
+});
+
+const ParallaxLayers = dynamic(() => import('./_components/ParallaxLayers/ParallaxLayers'), {
+  ssr: false,
+});
 
 export default function Home() {
   const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
-    console.log(
-      "%c🧑🏼‍💻 Curious to know what else I can do? HIRE ME!",
-      "color: green; font-size:16px;"
-    );
+    // Only log in development
+    if (process.env.NODE_ENV === 'development') {
+      console.log(
+        "%c🧑🏼‍💻 Curious to know what else I can do? HIRE ME!",
+        "color: green; font-size:16px;"
+      );
+    }
   }, []);
 
-  const titleStyle = {
+  const titleStyle = useMemo(() => ({
     color: theme === 'light' ? 'rgb(0, 100, 0)' : 'rgb(1, 161, 35)',
     animation: theme === 'dark' ? 'lightingEffect 2s linear infinite' : undefined,
     filter: theme === 'dark' ? 'drop-shadow(0 0 20px green)' : undefined,
-  };
+  }), [theme]);
 
   return (
     <div className="w-full flex flex-col items-center">

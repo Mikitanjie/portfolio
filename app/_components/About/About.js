@@ -59,7 +59,8 @@ const About = () => {
             alt={`About Michael Catania - Image ${activeImageIndex + 1} showcasing development work and interests`}
             width={800}
             height={600}
-            priority
+            loading={activeImageIndex === 0 ? "eager" : "lazy"}
+            sizes="(max-width: 1024px) 100vw, 50vw"
           />
 
           <button

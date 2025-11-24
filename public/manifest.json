@@ -1,0 +1,27 @@
+{
+  "name": "Michael Catania - Full Stack Web Developer Portfolio",
+  "short_name": "Michael Catania",
+  "description": "Portfolio of Michael Catania, a full stack web developer specializing in React, Next.js, Ruby on Rails, and modern web technologies.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#01a123",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "developer", "web development"],
+  "lang": "en"
+}
+
