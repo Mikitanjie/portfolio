@@ -228,65 +228,125 @@ const Topper = () => {
         <a 
           onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'Home'); }} 
           onKeyDown={(e) => { if (e.key === 'Enter') { setMenuOpen(false); scrollToSection(e, 'Home'); } }}
-          className="hover:text-emerald-400 transition-colors duration-200 transform hover:scale-110 active:scale-95"
+          className="px-6 py-3 rounded-lg transition-all duration-200 transform hover:scale-110 active:scale-95"
+          style={{ 
+            color: theme === 'light' ? 'rgb(30, 30, 30)' : 'white',
+            backgroundColor: theme === 'light' ? 'rgba(1, 161, 35, 0.5)' : 'transparent',
+            border: theme === 'light' ? '2px solid rgba(1, 161, 35, 0.7)' : 'none',
+            textShadow: theme === 'light' ? 'none' : '0 2px 4px rgba(0, 0, 0, 0.5)',
+            animation: menuOpen ? 'fadeInDown 0.3s ease-out 0.1s both' : 'none'
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.backgroundColor = theme === 'light' ? 'rgba(1, 161, 35, 0.65)' : 'rgba(16, 185, 129, 0.2)';
+            e.target.style.borderColor = theme === 'light' ? 'rgba(1, 161, 35, 0.9)' : 'rgba(16, 185, 129, 0.5)';
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.backgroundColor = theme === 'light' ? 'rgba(1, 161, 35, 0.5)' : 'transparent';
+            e.target.style.borderColor = theme === 'light' ? 'rgba(1, 161, 35, 0.7)' : 'transparent';
+          }}
           role="button"
           tabIndex={menuOpen ? 0 : -1}
           aria-label="Navigate to Home section"
-          style={{ 
-            animation: menuOpen ? 'fadeInDown 0.3s ease-out 0.1s both' : 'none'
-          }}
         >
           Home
         </a>
         <a 
           onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'Projects'); }} 
           onKeyDown={(e) => { if (e.key === 'Enter') { setMenuOpen(false); scrollToSection(e, 'Projects'); } }}
-          className="hover:text-emerald-400 transition-colors duration-200 transform hover:scale-110 active:scale-95"
+          className="px-6 py-3 rounded-lg transition-all duration-200 transform hover:scale-110 active:scale-95"
+          style={{ 
+            color: theme === 'light' ? 'rgb(30, 30, 30)' : 'white',
+            backgroundColor: theme === 'light' ? 'rgba(1, 161, 35, 0.15)' : 'transparent',
+            border: theme === 'light' ? '2px solid rgba(1, 161, 35, 0.3)' : 'none',
+            textShadow: theme === 'light' ? 'none' : '0 2px 4px rgba(0, 0, 0, 0.5)',
+            animation: menuOpen ? 'fadeInDown 0.3s ease-out 0.2s both' : 'none'
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.backgroundColor = theme === 'light' ? 'rgba(1, 161, 35, 0.25)' : 'rgba(16, 185, 129, 0.2)';
+            e.target.style.borderColor = theme === 'light' ? 'rgba(1, 161, 35, 0.5)' : 'rgba(16, 185, 129, 0.5)';
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.backgroundColor = theme === 'light' ? 'rgba(1, 161, 35, 0.15)' : 'transparent';
+            e.target.style.borderColor = theme === 'light' ? 'rgba(1, 161, 35, 0.3)' : 'transparent';
+          }}
           role="button"
           tabIndex={menuOpen ? 0 : -1}
           aria-label="Navigate to Projects section"
-          style={{ 
-            animation: menuOpen ? 'fadeInDown 0.3s ease-out 0.2s both' : 'none'
-          }}
         >
           Projects
         </a>
         <a 
           onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'About'); }} 
           onKeyDown={(e) => { if (e.key === 'Enter') { setMenuOpen(false); scrollToSection(e, 'About'); } }}
-          className="hover:text-emerald-400 transition-colors duration-200 transform hover:scale-110 active:scale-95"
+          className="px-6 py-3 rounded-lg transition-all duration-200 transform hover:scale-110 active:scale-95"
+          style={{ 
+            color: theme === 'light' ? 'rgb(30, 30, 30)' : 'white',
+            backgroundColor: theme === 'light' ? 'rgba(1, 161, 35, 0.15)' : 'transparent',
+            border: theme === 'light' ? '2px solid rgba(1, 161, 35, 0.3)' : 'none',
+            textShadow: theme === 'light' ? 'none' : '0 2px 4px rgba(0, 0, 0, 0.5)',
+            animation: menuOpen ? 'fadeInDown 0.3s ease-out 0.3s both' : 'none'
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.backgroundColor = theme === 'light' ? 'rgba(1, 161, 35, 0.25)' : 'rgba(16, 185, 129, 0.2)';
+            e.target.style.borderColor = theme === 'light' ? 'rgba(1, 161, 35, 0.5)' : 'rgba(16, 185, 129, 0.5)';
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.backgroundColor = theme === 'light' ? 'rgba(1, 161, 35, 0.15)' : 'transparent';
+            e.target.style.borderColor = theme === 'light' ? 'rgba(1, 161, 35, 0.3)' : 'transparent';
+          }}
           role="button"
           tabIndex={menuOpen ? 0 : -1}
           aria-label="Navigate to About section"
-          style={{ 
-            animation: menuOpen ? 'fadeInDown 0.3s ease-out 0.3s both' : 'none'
-          }}
         >
           About
         </a>
         <a 
           onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'Skills'); }} 
           onKeyDown={(e) => { if (e.key === 'Enter') { setMenuOpen(false); scrollToSection(e, 'Skills'); } }}
-          className="hover:text-emerald-400 transition-colors duration-200 transform hover:scale-110 active:scale-95"
+          className="px-6 py-3 rounded-lg transition-all duration-200 transform hover:scale-110 active:scale-95"
+          style={{ 
+            color: theme === 'light' ? 'rgb(30, 30, 30)' : 'white',
+            backgroundColor: theme === 'light' ? 'rgba(1, 161, 35, 0.15)' : 'transparent',
+            border: theme === 'light' ? '2px solid rgba(1, 161, 35, 0.3)' : 'none',
+            textShadow: theme === 'light' ? 'none' : '0 2px 4px rgba(0, 0, 0, 0.5)',
+            animation: menuOpen ? 'fadeInDown 0.3s ease-out 0.4s both' : 'none'
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.backgroundColor = theme === 'light' ? 'rgba(1, 161, 35, 0.25)' : 'rgba(16, 185, 129, 0.2)';
+            e.target.style.borderColor = theme === 'light' ? 'rgba(1, 161, 35, 0.5)' : 'rgba(16, 185, 129, 0.5)';
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.backgroundColor = theme === 'light' ? 'rgba(1, 161, 35, 0.15)' : 'transparent';
+            e.target.style.borderColor = theme === 'light' ? 'rgba(1, 161, 35, 0.3)' : 'transparent';
+          }}
           role="button"
           tabIndex={menuOpen ? 0 : -1}
           aria-label="Navigate to Skills section"
-          style={{ 
-            animation: menuOpen ? 'fadeInDown 0.3s ease-out 0.4s both' : 'none'
-          }}
         >
           Skills
         </a>
         <a 
           onClick={(e) => { setMenuOpen(false); scrollToSection(e, 'Contacts'); }} 
           onKeyDown={(e) => { if (e.key === 'Enter') { setMenuOpen(false); scrollToSection(e, 'Contacts'); } }}
-          className="hover:text-emerald-400 transition-colors duration-200 transform hover:scale-110 active:scale-95"
+          className="px-6 py-3 rounded-lg transition-all duration-200 transform hover:scale-110 active:scale-95"
+          style={{ 
+            color: theme === 'light' ? 'rgb(30, 30, 30)' : 'white',
+            backgroundColor: theme === 'light' ? 'rgba(1, 161, 35, 0.15)' : 'transparent',
+            border: theme === 'light' ? '2px solid rgba(1, 161, 35, 0.3)' : 'none',
+            textShadow: theme === 'light' ? 'none' : '0 2px 4px rgba(0, 0, 0, 0.5)',
+            animation: menuOpen ? 'fadeInDown 0.3s ease-out 0.5s both' : 'none'
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.backgroundColor = theme === 'light' ? 'rgba(1, 161, 35, 0.25)' : 'rgba(16, 185, 129, 0.2)';
+            e.target.style.borderColor = theme === 'light' ? 'rgba(1, 161, 35, 0.5)' : 'rgba(16, 185, 129, 0.5)';
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.backgroundColor = theme === 'light' ? 'rgba(1, 161, 35, 0.15)' : 'transparent';
+            e.target.style.borderColor = theme === 'light' ? 'rgba(1, 161, 35, 0.3)' : 'transparent';
+          }}
           role="button"
           tabIndex={menuOpen ? 0 : -1}
           aria-label="Navigate to Contact section"
-          style={{ 
-            animation: menuOpen ? 'fadeInDown 0.3s ease-out 0.5s both' : 'none'
-          }}
         >
           Contact
         </a>

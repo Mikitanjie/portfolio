@@ -19,10 +19,14 @@ const Footer = () => {
           </span>
 
           <h2 
-            className="text-sm font-semibold uppercase text-center"
-            style={{ color: theme === 'light' ? 'rgb(1, 161, 35)' : 'rgb(209, 213, 219)' }}
+            className={`text-base font-bold uppercase text-center follow-me-futuristic ${theme === 'light' ? '' : 'text-gray-300'}`}
+            style={{ 
+              letterSpacing: '0.2em'
+            }}
           >
-            Follow me
+            <span>
+              Follow me
+            </span>
           </h2>
 
           <div className="flex gap-6 dark:text-gray-100">

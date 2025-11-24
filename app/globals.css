@@ -902,3 +902,39 @@ html {
   transform: translateY(0) scale(0.95);
   box-shadow: 0 2px 10px rgba(1, 161, 35, 0.3);
 }
+
+/* Futuristic shimmer animation for "Follow me" text */
+@keyframes shimmer-text {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Futuristic "Follow me" text styling */
+.follow-me-futuristic {
+  position: relative;
+}
+
+.follow-me-futuristic span {
+  display: inline-block;
+  position: relative;
+}
+
+[data-theme="light"] .follow-me-futuristic span {
+  color: rgb(0, 120, 0) !important;
+  background: linear-gradient(135deg, 
+    rgb(0, 80, 0) 0%, 
+    rgb(0, 120, 0) 30%,
+    rgb(1, 161, 35) 60%, 
+    rgb(16, 185, 129) 90%,
+    rgb(1, 161, 35) 100%
+  );
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  background-size: 200% 200%;
+  animation: shimmer-text 3s ease-in-out infinite;
+}
