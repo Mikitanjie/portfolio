@@ -1,13 +1,16 @@
 import { useState, useContext } from 'react';
 import '../../globals.css';
 import { ThemeContext } from '../ThemeContext/ThemeContext';
+import Toast from '../Toast/Toast';
 
 function ContactForm() {
   const { theme } = useContext(ThemeContext);
   const [status, setStatus] = useState('');
+  const [toast, setToast] = useState(null);
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [messageLength, setMessageLength] = useState(0);
   
   const inputTextColor = theme === 'light' ? 'rgb(30, 30, 30)' : 'rgb(255, 255, 255)';
   const placeholderColor = theme === 'light' ? 'rgba(30, 30, 30, 0.6)' : 'rgba(255, 255, 255, 0.6)';
@@ -51,6 +54,9 @@ function ContactForm() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    if (name === 'message') {
+      setMessageLength(value.length);
+    }
     if (touched[name]) {
       const error = validateField(name, value);
       setErrors({ ...errors, [name]: error });
@@ -91,16 +97,23 @@ function ContactForm() {
       const result = await response.json();
 
       if (response.ok) {
-        setStatus(result.message || 'Thanks for contacting me. I will get back to you shortly!');
+        const successMessage = result.message || 'Thanks for contacting me. I will get back to you shortly!';
+        setToast({ message: successMessage, type: 'success' });
         event.target.reset();
         setErrors({});
         setTouched({});
+        setMessageLength(0);
+        setStatus(''); // Clear old status
       } else {
-        setStatus(result.message || 'Sorry but something went wrong. Please try again later, I am working on it to fix this!');
+        const errorMessage = result.message || 'Sorry but something went wrong. Please try again later, I am working on it to fix this!';
+        setToast({ message: errorMessage, type: 'error' });
+        setStatus(''); // Clear old status
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      setStatus('Sorry but something went wrong. Please try again later, I am working on it to fix this!');
+      const errorMessage = 'Sorry but something went wrong. Please try again later, I am working on it to fix this!';
+      setToast({ message: errorMessage, type: 'error' });
+      setStatus(''); // Clear old status
     } finally {
       setIsSubmitting(false);
     }
@@ -171,10 +184,16 @@ function ContactForm() {
           aria-required="true"
           aria-invalid={errors.message && touched.message ? 'true' : 'false'}
           aria-describedby={errors.message && touched.message ? 'message-error' : undefined}
+          maxLength={5000}
         />
-        {errors.message && touched.message && (
-          <p id="message-error" className="text-red-500 text-sm mt-1 text-center" role="alert">{errors.message}</p>
-        )}
+        <div className="w-full flex justify-between items-center mt-1">
+          {errors.message && touched.message && (
+            <p id="message-error" className="text-red-500 text-sm text-center" role="alert">{errors.message}</p>
+          )}
+          <p className={`text-xs ml-auto ${messageLength > 4500 ? 'text-orange-500' : 'text-gray-400'}`}>
+            {messageLength}/5000
+          </p>
+        </div>
       </div>
       
       <button 
@@ -193,19 +212,13 @@ function ContactForm() {
           </span>
         ) : 'Send Message'}
       </button>
-      {status && (
-        <div 
-          className="mt-4 p-3 rounded-lg text-center transition-all"
-          style={{ 
-            color: status.includes('Thanks') ? '#10B981' : '#ef4444',
-            background: status.includes('Thanks') 
-              ? 'rgba(16, 185, 129, 0.1)' 
-              : 'rgba(239, 68, 68, 0.1)',
-            border: `1px solid ${status.includes('Thanks') ? '#10B981' : '#ef4444'}`
-          }}
-        >
-          {status}
-        </div>
+      {toast && (
+        <Toast
+          message={toast.message}
+          type={toast.type}
+          onClose={() => setToast(null)}
+          duration={toast.type === 'success' ? 5000 : 0}
+        />
       )}
     </form>
   );

@@ -23,13 +23,13 @@ const Footer = () => {
           </h2>
 
           <div className="flex gap-6 dark:text-gray-100">
-            <Link href="https://github.com/Mikitanjie" target="_blank">
+            <Link href="https://github.com/Mikitanjie" target="_blank" rel="noopener noreferrer">
               <AiFillGithub
                 size="2.8rem"
                 className="active:scale-50 hover:text-emerald-600 transition-transform duration-150"
               />
             </Link>
-            <Link href="https://www.linkedin.com/in/mc16/" target="_blank">
+            <Link href="https://www.linkedin.com/in/mc16/" target="_blank" rel="noopener noreferrer">
               <AiFillLinkedin
                 size="2.8rem"
                 className="active:scale-50 hover:text-emerald-600 transition-transform duration-150"

@@ -1,19 +1,28 @@
 import Image from "next/image";
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Link from "next/link";
 import { ThemeContext } from '../ThemeContext/ThemeContext';
+import ImageLightbox from '../ImageLightbox/ImageLightbox';
 
 const Projects = () => {
   const { theme } = useContext(ThemeContext);
+  const [lightboxImage, setLightboxImage] = useState(null);
+  const [lightboxUrl, setLightboxUrl] = useState(null);
   return (
     <div className="w-full max-w-7xl mx-auto px-6">
       {/* Project 1 - Travelpal */}
       <div className={`flex flex-col md:flex-row items-center gap-8 md:gap-12 mb-20 md:mb-24 fade-in-up`}>
         <div className="w-full md:w-1/2 flex justify-center md:justify-start">
-          <Link href="https://www.travelpal.rest/" target="_blank" passHref className="group block">
-            <div className="relative overflow-hidden rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+          <div className="group block w-full">
+            <div 
+              className="relative overflow-hidden rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              onClick={() => {
+                setLightboxImage('/Projectpic.png');
+                setLightboxUrl('https://www.travelpal.rest/');
+              }}
+            >
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-end justify-center pb-4">
-                <span className="text-white text-lg font-semibold">Visit Project →</span>
+                <span className="text-white text-lg font-semibold transform group-hover:translate-y-0 translate-y-2 transition-transform duration-300">Click to enlarge →</span>
               </div>
               <Image
                 className="prjt-image object-cover transition-transform duration-300 group-hover:scale-110"
@@ -25,7 +34,7 @@ const Projects = () => {
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
-          </Link>
+          </div>
         </div>
         <div className="w-full md:w-1/2 space-y-4">
           <h3
@@ -56,16 +65,37 @@ const Projects = () => {
               This project has taught me a lot to work efficiently as team although remotely, front and backend development and new code. It also taught me a lot about myself.
             </p>
           </div>
+
+          <div className="mt-6">
+            <Link 
+              href="https://www.travelpal.rest/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${
+                theme === 'light' 
+                  ? 'bg-[#4a79fa] text-white hover:bg-[#3a69ea]' 
+                  : 'bg-emerald-500 text-white hover:bg-emerald-600'
+              }`}
+            >
+              Visit Project →
+            </Link>
+          </div>
         </div>
       </div>
 
       {/* Project 2 - DonVito-Antipasti */}
       <div className={`flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12 mb-20 md:mb-24 fade-in-up`}>
         <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-          <Link href="https://www.donvitoantipasti.com/" target="_blank" passHref className="group block">
-            <div className="relative overflow-hidden rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+          <div className="group block w-full">
+            <div 
+              className="relative overflow-hidden rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              onClick={() => {
+                setLightboxImage('/vitopasti.png');
+                setLightboxUrl('https://www.donvitoantipasti.com/');
+              }}
+            >
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-end justify-center pb-4">
-                <span className="text-white text-lg font-semibold">Visit Project →</span>
+                <span className="text-white text-lg font-semibold transform group-hover:translate-y-0 translate-y-2 transition-transform duration-300">Click to enlarge →</span>
               </div>
               <Image
                 className="prjt-image object-cover transition-transform duration-300 group-hover:scale-110"
@@ -77,7 +107,7 @@ const Projects = () => {
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
-          </Link>
+          </div>
         </div>
         <div className="w-full md:w-1/2 space-y-4">
           <h3
@@ -108,8 +138,36 @@ const Projects = () => {
               The project honed my full-stack development skills and emphasized the value of autonomy in web development. It was a straightforward task that reinforced my proficiency and taught me the power of simplicity in design and execution.
             </p>
           </div>
+
+          <div className="mt-6">
+            <Link 
+              href="https://www.donvitoantipasti.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${
+                theme === 'light' 
+                  ? 'bg-[#4a79fa] text-white hover:bg-[#3a69ea]' 
+                  : 'bg-emerald-500 text-white hover:bg-emerald-600'
+              }`}
+            >
+              Visit Project →
+            </Link>
+          </div>
         </div>
       </div>
+
+      {/* Image Lightbox */}
+      {lightboxImage && (
+        <ImageLightbox
+          image={lightboxImage}
+          alt="Project screenshot"
+          projectUrl={lightboxUrl}
+          onClose={() => {
+            setLightboxImage(null);
+            setLightboxUrl(null);
+          }}
+        />
+      )}
     </div>
 
   );
