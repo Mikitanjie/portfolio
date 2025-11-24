@@ -184,7 +184,7 @@ const Topper = () => {
       {/* Theme Toggle */}
       <button
         onClick={toggleTheme}
-        className="text-white hover:text-emerald-400 active:scale-125 text-2xl z-[5]"
+        className="text-white hover:text-emerald-400 text-2xl z-[5]"
         aria-label="Toggle theme"
       >
         {theme === 'light' ? <FaMoon /> : <FaSun />}

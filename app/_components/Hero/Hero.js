@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Button from "../Button/Button";
 import { useContext } from 'react';
 import { ThemeContext } from '../../_components/ThemeContext/ThemeContext';
+import HeroActions from '../HeroActions/HeroActions';
 
 const Hero = () => {
   const { theme } = useContext(ThemeContext);
@@ -23,23 +23,8 @@ const Hero = () => {
             Web Developer
           </h1>
 
-          {/* Buttons EXACTLY under the headings */}
-          <div className="flex flex-row gap-6 mt-4 items-center flex-wrap">
-
-            <a
-              href="https://drive.google.com/uc?export=download&id=1DPcpHRBLi8_mvWXWW9H-gSJzCngb5JUx"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`underline-on-hover inline-flex justify-center px-1 py-2 active:scale-90 text-fontStyle ${
-                theme === 'light' ? 'text-black' : 'text-white'
-              }`}
-            >
-              Download my CV
-            </a>
-
-            <Button text="Connect on LinkedIn" href="https://www.linkedin.com/in/mc16/" />
-            <Button text="Follow me on Github" href="https://github.com/Mikitanjie" />
-          </div>
+          {/* Action Buttons Container */}
+          <HeroActions />
 
         </div>
       </div>

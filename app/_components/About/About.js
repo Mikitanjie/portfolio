@@ -66,7 +66,7 @@ const About = () => {
           <button
             type="button"
             onClick={prevImage}
-            className="absolute top-1/2 -translate-y-1/2 left-4 bg-black/50 hover:bg-black/70 backdrop-blur-sm rounded-full p-2 hover:scale-125 active:scale-90 transition-all duration-300"
+            className="absolute top-1/2 -translate-y-1/2 left-4 bg-black/50 hover:bg-black/70 backdrop-blur-sm rounded-full p-2 transition-all duration-300"
             style={{ color: '#01a123' }}
           >
             <FaArrowLeft size={24} />
@@ -75,7 +75,7 @@ const About = () => {
           <button
             type="button"
             onClick={nextImage}
-            className="absolute top-1/2 -translate-y-1/2 right-4 bg-black/50 hover:bg-black/70 backdrop-blur-sm rounded-full p-2 hover:scale-125 active:scale-90 transition-all duration-300"
+            className="absolute top-1/2 -translate-y-1/2 right-4 bg-black/50 hover:bg-black/70 backdrop-blur-sm rounded-full p-2 transition-all duration-300"
             style={{ color: '#01a123' }}
           >
             <FaArrowRight size={24} />

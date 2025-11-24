@@ -18,7 +18,10 @@ const Footer = () => {
             Get in touch
           </span>
 
-          <h2 className="text-sm font-semibold uppercase text-center dark:text-gray-100">
+          <h2 
+            className="text-sm font-semibold uppercase text-center"
+            style={{ color: theme === 'light' ? 'rgb(1, 161, 35)' : 'rgb(209, 213, 219)' }}
+          >
             Follow me
           </h2>
 
