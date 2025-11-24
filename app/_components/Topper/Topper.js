@@ -2,7 +2,8 @@
 'use client';
 
 import React, { useContext, useState, useEffect, useRef } from 'react';
-import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { HiOutlineSun, HiOutlineMoon } from 'react-icons/hi2';
 import { ThemeContext } from '../ThemeContext/ThemeContext';
 
 const scrollToSection = (event, id) => {
@@ -184,10 +185,10 @@ const Topper = () => {
       {/* Theme Toggle */}
       <button
         onClick={toggleTheme}
-        className="text-white hover:text-emerald-400 text-2xl z-[5]"
+        className="text-white hover:text-emerald-400 text-2xl z-[5] transition-all duration-300 hover:scale-110 active:scale-95"
         aria-label="Toggle theme"
       >
-        {theme === 'light' ? <FaMoon /> : <FaSun />}
+        {theme === 'light' ? <HiOutlineMoon size={28} /> : <HiOutlineSun size={28} />}
       </button>
 
       {/* Mobile Menu */}
