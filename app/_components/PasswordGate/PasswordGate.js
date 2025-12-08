@@ -4,11 +4,13 @@ import { useState, useEffect } from 'react';
 import { useContext } from 'react';
 import { ThemeContext } from '../ThemeContext/ThemeContext';
 import { useRouter } from 'next/navigation';
+import { HiEye, HiEyeOff } from 'react-icons/hi';
 
 export default function PasswordGate({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const router = useRouter();
   useContext(ThemeContext); // Ensure theme context is available for dark mode styling
@@ -80,7 +82,7 @@ export default function PasswordGate({ children }) {
                 Portfolio Protected
               </h1>
               <p className="text-gray-600 dark:text-gray-400">
-                Please enter the password to access this site
+                Authorized humans only 🛡️ Bots & wannabe hackers will be emotionally damaged 😂
               </p>
             </div>
 
@@ -92,16 +94,30 @@ export default function PasswordGate({ children }) {
                 >
                   Password
                 </label>
-                <input
-                  id="password"
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all"
-                  placeholder="Enter password"
-                  autoFocus
-                  autoComplete="current-password"
-                />
+                <div className="relative">
+                  <input
+                    id="password"
+                    type={showPassword ? 'text' : 'password'}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="w-full px-4 py-3 pr-12 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all"
+                    placeholder="Enter password"
+                    autoFocus
+                    autoComplete="current-password"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors focus:outline-none"
+                    aria-label={showPassword ? 'Hide password' : 'Show password'}
+                  >
+                    {showPassword ? (
+                      <HiEyeOff className="w-5 h-5" />
+                    ) : (
+                      <HiEye className="w-5 h-5" />
+                    )}
+                  </button>
+                </div>
               </div>
 
               {error && (
