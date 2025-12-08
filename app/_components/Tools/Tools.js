@@ -25,28 +25,28 @@ const Tools = () => {
 
         <SkillIcon
           href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-          alt="JavaScript"
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+              alt="JavaScript"
           name="JavaScript"
         />
         <SkillIcon
           href="https://www.w3.org/html/"
-          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
-          alt="HTML5"
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+              alt="HTML5"
           name="HTML5"
-        />
+            />
         <SkillIcon
           href="https://www.w3schools.com/css/"
-          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
-          alt="CSS3"
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+              alt="CSS3"
           name="CSS3"
-        />
+            />
         <SkillIcon
           href="https://www.ruby-lang.org/en/"
-          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg"
-          alt="Ruby"
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg"
+              alt="Ruby"
           name="Ruby"
-        />
+            />
 
       </div>
     </div>

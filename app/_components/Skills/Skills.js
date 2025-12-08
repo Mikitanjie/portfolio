@@ -25,34 +25,34 @@ const Skills = () => {
 
         <SkillIcon
           href="https://www.figma.com/"
-          src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg"
-          alt="Figma"
+              src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg"
+              alt="Figma"
           name="Figma"
-        />
+            />
         <SkillIcon
           href="https://www.heroku.com/what"
-          src="https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg"
-          alt="Heroku"
+              src="https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg"
+              alt="Heroku"
           name="Heroku"
         />
         <SkillIcon
           href="https://git-scm.com/"
-          src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
-          alt="Git"
+              src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
+              alt="Git"
           name="Git"
-        />
+            />
         <SkillIcon
           href="https://webpack.js.org/"
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg"
-          alt="Webpack"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg"
+              alt="Webpack"
           name="Webpack"
         />
         <SkillIcon
           href="https://code.visualstudio.com/"
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original-wordmark.svg"
-          alt="VSCode"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original-wordmark.svg"
+              alt="VSCode"
           name="VSCode"
-        />
+            />
 
       </div>
     </div>

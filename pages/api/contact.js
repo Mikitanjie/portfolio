@@ -49,15 +49,15 @@ export default async function handler(req, res) {
 
     // Log environment variable status (without exposing values) - only in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('=== CONTACT FORM API CALLED ===');
-      console.log('RESEND_API_KEY exists:', !!process.env.RESEND_API_KEY);
-      console.log('CONTACT_EMAIL exists:', !!process.env.CONTACT_EMAIL);
+    console.log('=== CONTACT FORM API CALLED ===');
+    console.log('RESEND_API_KEY exists:', !!process.env.RESEND_API_KEY);
+    console.log('CONTACT_EMAIL exists:', !!process.env.CONTACT_EMAIL);
     }
     
     // Validate environment variables
     if (!process.env.RESEND_API_KEY || !process.env.CONTACT_EMAIL) {
       if (process.env.NODE_ENV === 'development') {
-        console.error('Missing email configuration: RESEND_API_KEY or CONTACT_EMAIL not set');
+      console.error('Missing email configuration: RESEND_API_KEY or CONTACT_EMAIL not set');
       }
       return res.status(500).json({
         message: 'Server configuration error. Please contact the administrator.',
@@ -126,7 +126,7 @@ export default async function handler(req, res) {
     };
 
     if (process.env.NODE_ENV === 'development') {
-      console.log('Sending email to Resend API...');
+    console.log('Sending email to Resend API...');
     }
 
     // Send email using Resend API
@@ -138,22 +138,22 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify(emailPayload),
     });
-
+    
     const data = await response.json();
 
     if (!response.ok) {
       if (process.env.NODE_ENV === 'development') {
-        console.error('Resend API error:', {
-          status: response.status,
-          statusText: response.statusText,
-          data: data,
-        });
+      console.error('Resend API error:', {
+        status: response.status,
+        statusText: response.statusText,
+        data: data,
+      });
       }
       throw new Error(data.message || `Resend API error: ${response.status} ${response.statusText}`);
     }
     
     if (process.env.NODE_ENV === 'development') {
-      console.log('Email sent successfully:', data.id);
+    console.log('Email sent successfully:', data.id);
     }
     
     return res.status(200).json({
@@ -162,9 +162,9 @@ export default async function handler(req, res) {
 
   } catch (error) {
     if (process.env.NODE_ENV === 'development') {
-      console.error('=== EMAIL SEND ERROR ===');
-      console.error('Error message:', error.message);
-      console.error('Error stack:', error.stack);
+    console.error('=== EMAIL SEND ERROR ===');
+    console.error('Error message:', error.message);
+    console.error('Error stack:', error.stack);
     }
     
     return res.status(500).json({

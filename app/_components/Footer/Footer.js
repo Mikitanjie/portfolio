@@ -25,7 +25,7 @@ const Footer = () => {
             }}
           >
             <span>
-              Follow me
+            Follow me
             </span>
           </h2>
 
@@ -48,9 +48,9 @@ const Footer = () => {
         <hr className="w-full border dark:border-emerald-600 animate-pulse" />
 
         <div className="flex flex-col items-center gap-3">
-          <span className="text-sm text-emerald-600 text-center">
-            © 2025 - Michael Catania
-          </span>
+        <span className="text-sm text-emerald-600 text-center">
+          © 2025 - Michael Catania
+        </span>
           <Link 
             href="/privacy" 
             className="text-xs text-emerald-600 hover:text-emerald-400 hover:underline transition-colors"

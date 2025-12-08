@@ -114,10 +114,10 @@ export default function Home() {
   useEffect(() => {
     // Only log in development
     if (process.env.NODE_ENV === 'development') {
-      console.log(
-        "%c🧑🏼‍💻 Curious to know what else I can do? HIRE ME!",
-        "color: green; font-size:16px;"
-      );
+    console.log(
+      "%c🧑🏼‍💻 Curious to know what else I can do? HIRE ME!",
+      "color: green; font-size:16px;"
+    );
     }
   }, []);
 
@@ -141,18 +141,18 @@ export default function Home() {
       </div>
 
       <SectionWrapper>
-        <Hero />
+      <Hero />
       </SectionWrapper>
 
       {/* SECTION: Projects */}
       <SectionWrapper>
         <div id="Projects" className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-20">
-          <span style={titleStyle}>Projects</span>
-        </div>
+        <span style={titleStyle}>Projects</span>
+      </div>
       </SectionWrapper>
 
       <SectionWrapper>
-        <Projects />
+      <Projects />
       </SectionWrapper>
 
       <div className="text-center text-3xl sm:text-4xl font-semibold pt-20 pb-20">
@@ -167,67 +167,67 @@ export default function Home() {
       {/* SECTION: About */}
       <SectionWrapper>
         <div id="About" className="text-center text-4xl sm:text-5xl font-semibold pt-28 pb-12">
-          <span style={titleStyle}>About me</span>
-        </div>
+        <span style={titleStyle}>About me</span>
+      </div>
       </SectionWrapper>
 
       <SectionWrapper>
-        <About />
+      <About />
       </SectionWrapper>
 
       {/* SECTION: Skills (Programming Languages) */}
       <SectionWrapper>
         <div id="Skills" className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-16">
-          <span style={titleStyle}>Programming &amp; Markup Languages</span>
-        </div>
+        <span style={titleStyle}>Programming &amp; Markup Languages</span>
+      </div>
       </SectionWrapper>
 
       <SectionWrapper>
-        <Tools />
+      <Tools />
       </SectionWrapper>
 
       {/* SECTION: DevOps */}
       <SectionWrapper>
         <div className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-16">
-          <span style={titleStyle}>DevOps &amp; Deployment</span>
-        </div>
+        <span style={titleStyle}>DevOps &amp; Deployment</span>
+      </div>
       </SectionWrapper>
 
       <SectionWrapper>
-        <Skills />
+      <Skills />
       </SectionWrapper>
 
       {/* SECTION: Frameworks */}
       <SectionWrapper>
         <div className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-16">
-          <span style={titleStyle}>Frameworks &amp; Other</span>
-        </div>
+        <span style={titleStyle}>Frameworks &amp; Other</span>
+      </div>
       </SectionWrapper>
 
       <SectionWrapper>
-        <Libraries />
+      <Libraries />
       </SectionWrapper>
 
       {/* SECTION: Languages */}
       <SectionWrapper>
         <div className="text-center text-4xl sm:text-5xl font-semibold pt-32 pb-16">
-          <span style={titleStyle}>Languages</span>
-        </div>
+        <span style={titleStyle}>Languages</span>
+      </div>
       </SectionWrapper>
 
       <SectionWrapper>
-        <Languages />
+      <Languages />
       </SectionWrapper>
 
       {/* SECTION: Contact */}
       <SectionWrapper>
         <div id="Contacts" className="text-center text-4xl sm:text-5xl font-semibold pt-48 pb-12">
-          <span style={titleStyle}>Feel free to send me a message!</span>
-        </div>
+        <span style={titleStyle}>Feel free to send me a message!</span>
+      </div>
       </SectionWrapper>
 
       <SectionWrapper>
-        <ContactForm />
+      <ContactForm />
       </SectionWrapper>
 
       <div className="mt-20"></div>
