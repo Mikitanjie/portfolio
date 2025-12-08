@@ -10,9 +10,91 @@ const Projects = () => {
   const [lightboxUrl, setLightboxUrl] = useState(null);
   return (
     <div className="w-full max-w-7xl mx-auto px-6">
-      {/* Project 1 - Travelpal */}
-      <div className={`flex flex-col md:flex-row items-center gap-8 md:gap-12 mb-20 md:mb-24 fade-in-up`}>
-        <div className="w-full md:w-1/2 flex justify-center md:justify-start">
+      {/* Project 1 - Cut Create */}
+      <div className={`flex flex-col md:flex-row items-start gap-8 md:gap-12 mb-20 md:mb-24 fade-in-up`}>
+        <div className="w-full md:w-1/2 flex justify-center md:justify-start pt-16 md:pt-20">
+          <div className="group block w-full">
+            <div 
+              className="relative overflow-hidden rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              onClick={() => {
+                setLightboxImage('/cutcreate.png');
+                setLightboxUrl('https://www.cutcreate.at/');
+              }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-end justify-center pb-4">
+                <span className="text-white text-lg font-semibold transform group-hover:translate-y-0 translate-y-2 transition-transform duration-300">Click to enlarge →</span>
+              </div>
+              <Image
+                className="prjt-image object-cover transition-transform duration-300 group-hover:scale-110"
+                src="/cutcreate.png"
+                alt="CUT & CREATE - Salzburg creative workshop website project screenshot"
+                width={500}
+                height={500}
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="w-full md:w-1/2 space-y-4">
+          <h3
+            className={`text-4xl md:text-5xl font-bold mb-4 ${
+              theme === 'light' ? 'text-[#4a79fa]' : 'text-[#01a123]'
+            }`}
+          >
+            CUT & CREATE
+          </h3>
+          <p className={`text-lg leading-relaxed ${theme === 'light' ? 'text-black' : 'text-white'}`}>
+            A full-stack website for a Salzburg creative workshop, built with Next.js and a headless WordPress CMS. Integrated GraphQL API, custom post types, and ACF fields to enable dynamic content management while preserving a custom frontend design.
+          </p>
+          
+          <div className="mt-6 space-y-3">
+            <h4 className={`text-2xl font-semibold ${theme === 'light' ? 'text-[#4a79fa]' : 'text-emerald-400'}`}>
+              Accomplished!
+            </h4>
+            <p className={`text-base leading-relaxed ${theme === 'light' ? 'text-black' : 'text-gray-300'}`}>
+              Delivered a production website with WordPress-powered blog and projects sections. Solved GraphQL schema mismatches, SSL certificate issues, and image optimization challenges. Implemented ISR for performance and type-safe API integration with TypeScript.
+            </p>
+          </div>
+
+          <div className="mt-6 space-y-3">
+            <h4 className={`text-2xl font-semibold ${theme === 'light' ? 'text-[#4a79fa]' : 'text-emerald-400'}`}>
+              Lessons learned
+            </h4>
+            <p className={`text-base leading-relaxed ${theme === 'light' ? 'text-black' : 'text-gray-300'}`}>
+              This project taught me the complexities of headless CMS integration, from debugging GraphQL queries to handling deployment edge cases. Merging static components with dynamic content required careful architecture planning. The experience highlighted the importance of robust error handling and type safety when working with external APIs.
+            </p>
+          </div>
+
+          <div className="mt-6 space-y-2">
+            <p className={`text-sm font-medium ${theme === 'light' ? 'text-gray-700' : 'text-gray-400'}`}>
+              Tech Stack:
+            </p>
+            <p className={`text-sm ${theme === 'light' ? 'text-gray-600' : 'text-gray-500'}`}>
+              Next.js 16 • TypeScript • GraphQL • WordPress • WPGraphQL • ACF • Tailwind CSS • Vercel
+            </p>
+          </div>
+
+          <div className="mt-6">
+            <Link 
+              href="https://www.cutcreate.at/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${
+                theme === 'light' 
+                  ? 'bg-[#4a79fa] text-white hover:bg-[#3a69ea]' 
+                  : 'bg-emerald-500 text-white hover:bg-emerald-600'
+              }`}
+            >
+              Visit Project →
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Project 2 - Travelpal */}
+      <div className={`flex flex-col md:flex-row items-start gap-8 md:gap-12 mb-20 md:mb-24 fade-in-up`}>
+        <div className="w-full md:w-1/2 flex justify-center md:justify-start pt-16 md:pt-20">
           <div className="group block w-full">
             <div 
               className="relative overflow-hidden rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
@@ -83,9 +165,9 @@ const Projects = () => {
         </div>
       </div>
 
-      {/* Project 2 - DonVito-Antipasti */}
-      <div className={`flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12 mb-20 md:mb-24 fade-in-up`}>
-        <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+      {/* Project 3 - DonVito-Antipasti */}
+      <div className={`flex flex-col md:flex-row-reverse items-start gap-8 md:gap-12 mb-20 md:mb-24 fade-in-up`}>
+        <div className="w-full md:w-1/2 flex justify-center md:justify-end pt-16 md:pt-20">
           <div className="group block w-full">
             <div 
               className="relative overflow-hidden rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"

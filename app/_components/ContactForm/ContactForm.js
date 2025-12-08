@@ -134,11 +134,11 @@ function ContactForm() {
     >
       <div className="w-full flex flex-col items-center">
         <label htmlFor="name" className="sr-only">Your name</label>
-        <input 
+      <input 
           id="name"
           className={`input-field ${errors.name && touched.name ? 'border-red-500' : ''}`}
-          name="name" 
-          placeholder="Your name" 
+        name="name" 
+        placeholder="Your name" 
           onBlur={handleBlur}
           onChange={handleChange}
           aria-label="Your name"
@@ -153,12 +153,12 @@ function ContactForm() {
       
       <div className="w-full flex flex-col items-center">
         <label htmlFor="email" className="sr-only">Your email</label>
-        <input 
+      <input 
           id="email"
           className={`input-field ${errors.email && touched.email ? 'border-red-500' : ''}`}
-          name="email" 
-          type="email" 
-          placeholder="Your email" 
+        name="email" 
+        type="email" 
+        placeholder="Your email" 
           onBlur={handleBlur}
           onChange={handleChange}
           aria-label="Your email"
@@ -173,11 +173,11 @@ function ContactForm() {
       
       <div className="w-full flex flex-col items-center">
         <label htmlFor="message" className="sr-only">Your message</label>
-        <textarea 
+      <textarea 
           id="message"
           className={`textarea-field ${errors.message && touched.message ? 'border-red-500' : ''}`}
-          name="message" 
-          placeholder="Your message" 
+        name="message" 
+        placeholder="Your message" 
           onBlur={handleBlur}
           onChange={handleChange}
           aria-label="Your message"
@@ -185,7 +185,7 @@ function ContactForm() {
           aria-invalid={errors.message && touched.message ? 'true' : 'false'}
           aria-describedby={errors.message && touched.message ? 'message-error' : undefined}
           maxLength={5000}
-        />
+      />
         <div className="w-full flex justify-between items-center mt-1">
           {errors.message && touched.message && (
             <p id="message-error" className="text-red-500 text-sm text-center" role="alert">{errors.message}</p>

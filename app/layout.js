@@ -6,6 +6,7 @@ import ErrorBoundary from './_components/ErrorBoundary/ErrorBoundary';
 import StructuredData from './_components/StructuredData/StructuredData';
 import SkipToContent from './_components/SkipToContent/SkipToContent';
 import WebVitals from './_components/WebVitals/WebVitals';
+import PasswordGate from './_components/PasswordGate/PasswordGate';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -97,7 +98,8 @@ export default function RootLayout({ children }) {
         <WebVitals />
 
         <ThemeProvider>
-          <ErrorBoundary>
+          <PasswordGate>
+            <ErrorBoundary>
             {/* NAV */}
             <div id="nav-root" className="w-full overflow-x-hidden">
               <Topper />
@@ -107,12 +109,13 @@ export default function RootLayout({ children }) {
             <main
               id="app-root"
               className="w-full max-w-full overflow-x-hidden flex flex-col items-center relative"
-              tabIndex="-1"
+                tabIndex="-1"
             >
               <canvas id="canvas" className="fixed inset-0 w-full h-full pointer-events-none overflow-hidden" />
               {children}
             </main>
-          </ErrorBoundary>
+            </ErrorBoundary>
+          </PasswordGate>
         </ThemeProvider>
 
       </body>

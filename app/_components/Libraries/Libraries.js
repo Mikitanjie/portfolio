@@ -25,35 +25,35 @@ const Libraries = () => {
 
         <SkillIcon
           href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-          alt="Bootstrap"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+              alt="Bootstrap"
           name="Bootstrap"
         />
         <SkillIcon
           href="https://rubyonrails.org/"
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-original-wordmark.svg"
-          alt="Rails"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-original-wordmark.svg"
+              alt="Rails"
           name="Rails"
         />
         <SkillIcon
           href="https://tailwindcss.com/docs/installation"
-          src="https://img.icons8.com/?size=96&id=CIAZz2CYc6Kc&format=png"
-          alt="TailwindCSS"
+              src="https://img.icons8.com/?size=96&id=CIAZz2CYc6Kc&format=png"
+              alt="TailwindCSS"
           name="TailwindCSS"
         />
         <SkillIcon
           href="https://reactjs.org/docs/getting-started.html"
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
-          alt="React"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
+              alt="React"
           name="React"
-        />
+            />
         <SkillIcon
           href="https://nextjs.org/docs/getting-started/react-essentials/"
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg"
-          alt="Next.js"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg"
+              alt="Next.js"
           name="Next.js"
           className={theme === 'dark' ? 'icon-dark' : ''}
-        />
+            />
 
       </div>
     </div>
