@@ -166,7 +166,7 @@ export default function ParallaxLayers() {
           transform: 'rotate(45deg)',
           filter: 'blur(1px)'
         }}></div>
-        <div className="absolute bottom-1/4 right-10 w-32 h-32" style={{ 
+        <div className="absolute bottom-1/4 right-10 w-32 w-32" style={{ 
           backgroundColor: 'rgba(16, 185, 129, 0.35)', 
           transform: 'rotate(45deg)',
           filter: 'blur(1px)'
@@ -264,4 +264,3 @@ export default function ParallaxLayers() {
     </div>
   );
 }
-
