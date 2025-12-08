@@ -3,54 +3,59 @@
 import { useState, useEffect } from 'react';
 import { useContext } from 'react';
 import { ThemeContext } from '../ThemeContext/ThemeContext';
-
-const STORAGE_KEY = 'portfolio_authenticated';
-const PASSWORD_KEY = 'portfolio_auth_token';
+import { useRouter } from 'next/navigation';
 
 export default function PasswordGate({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const router = useRouter();
   useContext(ThemeContext); // Ensure theme context is available for dark mode styling
 
   useEffect(() => {
-    // Check if user is already authenticated
-    const isAuthFlagSet = localStorage.getItem(STORAGE_KEY) === 'true';
-    const authToken = localStorage.getItem(PASSWORD_KEY);
-    // Note: For client-side access, env var must be prefixed with NEXT_PUBLIC_
-    const correctPassword = process.env.NEXT_PUBLIC_PORTFOLIO_PASSWORD;
-    
-    // Verify both the authentication flag and that the stored password still matches
-    // This ensures authentication persists but also validates if password changed
-    if (isAuthFlagSet && authToken && correctPassword && authToken === correctPassword) {
-      setIsAuthenticated(true);
-    } else if (isAuthFlagSet && (!authToken || !correctPassword || authToken !== correctPassword)) {
-      // Clear invalid authentication state if password changed or env var missing
-      localStorage.removeItem(STORAGE_KEY);
-      localStorage.removeItem(PASSWORD_KEY);
-    }
-    setIsLoading(false);
+    // Check authentication via server API
+    fetch('/api/auth/check', {
+      credentials: 'include', // Important: include cookies
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.authenticated) {
+          setIsAuthenticated(true);
+        }
+        setIsLoading(false);
+      })
+      .catch(() => {
+        setIsLoading(false);
+      });
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
 
-    // Note: For client-side access, env var must be prefixed with NEXT_PUBLIC_
-    const correctPassword = process.env.NEXT_PUBLIC_PORTFOLIO_PASSWORD;
-    
-    if (!correctPassword) {
-      setError('Password protection is not configured. Please contact the site administrator.');
-      return;
-    }
+    try {
+      const response = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include', // Important: include cookies
+        body: JSON.stringify({ password }),
+      });
 
-    if (password === correctPassword) {
-      localStorage.setItem(PASSWORD_KEY, password);
-      localStorage.setItem(STORAGE_KEY, 'true');
-      setIsAuthenticated(true);
-    } else {
-      setError('Incorrect password. Please try again.');
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setIsAuthenticated(true);
+        // Refresh to ensure cookie is set
+        router.refresh();
+      } else {
+        setError(data.message || 'Incorrect password. Please try again.');
+        setPassword('');
+      }
+    } catch (err) {
+      setError('An error occurred. Please try again.');
       setPassword('');
     }
   };
