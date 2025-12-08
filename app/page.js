@@ -114,7 +114,7 @@ export default function Home() {
   useEffect(() => {
     // Show hiring message in console (production too)
     console.log(
-      "%c🧑🏼‍💻 Curious to see what else I can build? Hire me! =)",
+      "%c💼 If you're checking the console, you're probably hiring. Good news: I'm available.",
       "color: green; font-size:16px; font-weight: bold;"
     );
   }, []);
