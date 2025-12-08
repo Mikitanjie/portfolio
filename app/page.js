@@ -112,13 +112,11 @@ export default function Home() {
   const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
-    // Only log in development
-    if (process.env.NODE_ENV === 'development') {
+    // Show hiring message in console (production too)
     console.log(
-      "%c🧑🏼‍💻 Curious to know what else I can do? HIRE ME!",
-      "color: green; font-size:16px;"
+      "%c🧑🏼‍💻 Curious to see what else I can build? Hire me! =)",
+      "color: green; font-size:16px; font-weight: bold;"
     );
-    }
   }, []);
 
   const titleStyle = useMemo(() => ({
