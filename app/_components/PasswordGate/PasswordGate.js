@@ -16,12 +16,19 @@ export default function PasswordGate({ children }) {
 
   useEffect(() => {
     // Check if user is already authenticated
+    const isAuthFlagSet = localStorage.getItem(STORAGE_KEY) === 'true';
     const authToken = localStorage.getItem(PASSWORD_KEY);
     // Note: For client-side access, env var must be prefixed with NEXT_PUBLIC_
     const correctPassword = process.env.NEXT_PUBLIC_PORTFOLIO_PASSWORD;
     
-    if (authToken && correctPassword && authToken === correctPassword) {
+    // Verify both the authentication flag and that the stored password still matches
+    // This ensures authentication persists but also validates if password changed
+    if (isAuthFlagSet && authToken && correctPassword && authToken === correctPassword) {
       setIsAuthenticated(true);
+    } else if (isAuthFlagSet && (!authToken || !correctPassword || authToken !== correctPassword)) {
+      // Clear invalid authentication state if password changed or env var missing
+      localStorage.removeItem(STORAGE_KEY);
+      localStorage.removeItem(PASSWORD_KEY);
     }
     setIsLoading(false);
   }, []);
