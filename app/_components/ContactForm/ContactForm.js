@@ -138,6 +138,8 @@ function ContactForm() {
           id="name"
           className={`input-field ${errors.name && touched.name ? 'border-red-500' : ''}`}
         name="name" 
+        type="text"
+        autoComplete="name"
         placeholder="Your name" 
           onBlur={handleBlur}
           onChange={handleChange}
@@ -158,6 +160,7 @@ function ContactForm() {
           className={`input-field ${errors.email && touched.email ? 'border-red-500' : ''}`}
         name="email" 
         type="email" 
+        autoComplete="email"
         placeholder="Your email" 
           onBlur={handleBlur}
           onChange={handleChange}
@@ -177,6 +180,7 @@ function ContactForm() {
           id="message"
           className={`textarea-field ${errors.message && touched.message ? 'border-red-500' : ''}`}
         name="message" 
+        autoComplete="off"
         placeholder="Your message" 
           onBlur={handleBlur}
           onChange={handleChange}

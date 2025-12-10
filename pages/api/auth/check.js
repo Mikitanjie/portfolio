@@ -12,6 +12,7 @@ export default async function handler(req, res) {
     return res.status(200).json({ authenticated: true });
   }
   
-  // Return 401 for unauthenticated requests
-  return res.status(401).json({ authenticated: false });
+  // Return 200 with authenticated: false to prevent console errors
+  // This is a status check endpoint, not an authentication-required endpoint
+  return res.status(200).json({ authenticated: false });
 }

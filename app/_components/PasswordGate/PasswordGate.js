@@ -21,25 +21,21 @@ export default function PasswordGate({ children }) {
       credentials: 'include', // Important: include cookies
     })
       .then(async res => {
-        // 401 is expected when not authenticated, handle silently without logging
-        if (res.status === 401) {
-          setIsLoading(false);
-          return;
-        }
-        // For successful responses, parse JSON
+        // Parse JSON response
         if (res.ok) {
-          const data = await res.json();
-          if (data.authenticated) {
-            setIsAuthenticated(true);
+          try {
+            const data = await res.json();
+            if (data.authenticated) {
+              setIsAuthenticated(true);
+            }
+          } catch (e) {
+            // Silently handle JSON parse errors
           }
-          setIsLoading(false);
-          return;
         }
-        // For other unexpected errors, handle gracefully
         setIsLoading(false);
       })
       .catch(() => {
-        // Network errors are handled silently
+        // Network errors are handled silently - this prevents console errors
         setIsLoading(false);
       });
   }, []);
