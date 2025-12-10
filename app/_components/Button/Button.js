@@ -6,14 +6,14 @@ const Button = ({ text, href }) => {
 
   if (href) {
     return (
-        <a
-          href={href}
-          target="_blank"
-          rel="noreferrer"
+      <a
+        href={href}
+        target="_blank"
+        rel="noreferrer"
         className="hero-action-button inline-flex justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 active:scale-90"
-        >
-          {text}
-        </a>
+      >
+        {text}
+      </a>
     );
   }
 };
