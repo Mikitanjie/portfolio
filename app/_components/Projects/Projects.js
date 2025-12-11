@@ -44,7 +44,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="w-full md:w-1/2 space-y-4">
+        <div className="w-full md:w-1/2 space-y-4 pt-16 md:pt-20">
           <h3
             className={`text-4xl md:text-5xl font-bold mb-4 ${
               theme === 'light' ? 'text-[#4a79fa]' : 'text-[#01a123]'
@@ -53,24 +53,12 @@ const Projects = () => {
             CUT & CREATE
           </h3>
           <p className={`text-lg leading-relaxed ${theme === 'light' ? 'text-black' : 'text-white'}`}>
-            A full-stack website for a Salzburg creative workshop, built with Next.js and a headless WordPress CMS. Integrated GraphQL API, custom post types, and ACF fields to enable dynamic content management while preserving a custom frontend design.
+            A full-stack website for a Salzburg creative workshop, built with Next.js and a headless WordPress CMS. Integrated GraphQL, custom post types, and ACF fields to enable dynamic content management while preserving a custom frontend design.
           </p>
           
           <div className="mt-6 space-y-3">
-            <h4 className={`text-2xl font-semibold ${theme === 'light' ? 'text-[#4a79fa]' : 'text-emerald-400'}`}>
-              Accomplished!
-            </h4>
             <p className={`text-base leading-relaxed ${theme === 'light' ? 'text-black' : 'text-gray-300'}`}>
-              Delivered a production website with WordPress-powered blog and projects sections. Solved GraphQL schema mismatches, SSL certificate issues, and image optimization challenges. Implemented ISR for performance and type-safe API integration with TypeScript.
-            </p>
-          </div>
-
-          <div className="mt-6 space-y-3">
-            <h4 className={`text-2xl font-semibold ${theme === 'light' ? 'text-[#4a79fa]' : 'text-emerald-400'}`}>
-              Lessons learned
-            </h4>
-            <p className={`text-base leading-relaxed ${theme === 'light' ? 'text-black' : 'text-gray-300'}`}>
-              This project taught me the complexities of headless CMS integration, from debugging GraphQL queries to handling deployment edge cases. Merging static components with dynamic content required careful architecture planning. The experience highlighted the importance of robust error handling and type safety when working with external APIs.
+              Delivered a production-ready website featuring a WordPress-powered blog and projects section. Solved GraphQL schema mismatches, SSL configuration issues, and image optimization challenges. Implemented ISR for high performance and type-safe API integration using TypeScript.
             </p>
           </div>
 
@@ -129,7 +117,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="w-full md:w-1/2 space-y-4">
+        <div className="w-full md:w-1/2 space-y-4 pt-16 md:pt-20">
           <h3
             className={`text-4xl md:text-5xl font-bold mb-4 ${
               theme === 'light' ? 'text-[#4a79fa]' : 'text-[#01a123]'
@@ -147,15 +135,6 @@ const Projects = () => {
             </h4>
             <p className={`text-base leading-relaxed ${theme === 'light' ? 'text-black' : 'text-gray-300'}`}>
               Idea, pitch, implementation and shipped to production in 2 weeks. Worked in a remote team of 4 people, across different geographies.
-            </p>
-          </div>
-
-          <div className="mt-6 space-y-3">
-            <h4 className={`text-2xl font-semibold ${theme === 'light' ? 'text-[#4a79fa]' : 'text-emerald-400'}`}>
-              Lessons learned
-            </h4>
-            <p className={`text-base leading-relaxed ${theme === 'light' ? 'text-black' : 'text-gray-300'}`}>
-              This project has taught me a lot to work efficiently as team although remotely, front and backend development and new code. It also taught me a lot about myself.
             </p>
           </div>
 
@@ -205,7 +184,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="w-full md:w-1/2 space-y-4">
+        <div className="w-full md:w-1/2 space-y-4 pt-16 md:pt-20">
           <h3
             className={`text-4xl md:text-5xl font-bold mb-4 ${
               theme === 'light' ? 'text-[#4a79fa]' : 'text-[#01a123]'
@@ -216,24 +195,6 @@ const Projects = () => {
           <p className={`text-lg leading-relaxed ${theme === 'light' ? 'text-black' : 'text-white'}`}>
             A solo journey from concept to production in just two days, DonVito Antipasti is a testament to streamlined, efficient web development. Crafting this simple yet elegant page for a celebrated Salzburg antipasti shop, I managed all aspects of development and deployment with ease.
           </p>
-          
-          <div className="mt-6 space-y-3">
-            <h4 className={`text-2xl font-semibold ${theme === 'light' ? 'text-[#4a79fa]' : 'text-emerald-400'}`}>
-              Accomplished!
-            </h4>
-            <p className={`text-base leading-relaxed ${theme === 'light' ? 'text-black' : 'text-gray-300'}`}>
-              Crafted and launched single-handedly, the DonVito Antipasti website stands as a clear reflection of straightforward and effective web development.
-            </p>
-          </div>
-
-          <div className="mt-6 space-y-3">
-            <h4 className={`text-2xl font-semibold ${theme === 'light' ? 'text-[#4a79fa]' : 'text-emerald-400'}`}>
-              Lessons learned
-            </h4>
-            <p className={`text-base leading-relaxed ${theme === 'light' ? 'text-black' : 'text-gray-300'}`}>
-              The project honed my full-stack development skills and emphasized the value of autonomy in web development. It was a straightforward task that reinforced my proficiency and taught me the power of simplicity in design and execution.
-            </p>
-          </div>
 
           <div className="mt-6">
             <Link 
