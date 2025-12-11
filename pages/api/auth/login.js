@@ -158,18 +158,11 @@ export default async function handler(req, res) {
     const correctPassword = process.env.PORTFOLIO_PASSWORD?.trim(); // NO NEXT_PUBLIC_ prefix!
     const trimmedPassword = password?.trim();
 
-    // Debug logging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('=== LOGIN ATTEMPT ===');
-      console.log('Client IP:', clientIp);
-      console.log('PORTFOLIO_PASSWORD exists:', !!correctPassword);
-      console.log('PORTFOLIO_PASSWORD length:', correctPassword ? correctPassword.length : 0);
-      console.log('Received password length:', trimmedPassword ? trimmedPassword.length : 0);
-      if (!correctPassword) {
-        console.error('⚠️  PORTFOLIO_PASSWORD is not set in .env file!');
-        console.error('   Make sure you have PORTFOLIO_PASSWORD=yourpassword in your .env or .env.local file');
-        console.error('   Then restart your dev server with: npm run dev');
-      }
+    // Minimal logging - only log errors or missing config
+    if (!correctPassword) {
+      console.error('⚠️  PORTFOLIO_PASSWORD is not set in .env file!');
+      console.error('   Make sure you have PORTFOLIO_PASSWORD=yourpassword in your .env or .env.local file');
+      console.error('   Then restart your dev server with: npm run dev');
     }
 
     if (!correctPassword) {
@@ -188,18 +181,11 @@ export default async function handler(req, res) {
       
       // Set secure HTTP-only cookie
       res.setHeader('Set-Cookie', createAuthCookie());
-      if (process.env.NODE_ENV === 'development') {
-        console.log('✅ Login successful');
-      }
       return res.status(200).json({ success: true });
     } else {
       // Record failed attempt
       recordFailedAttempt(clientIp);
       
-      if (process.env.NODE_ENV === 'development') {
-        console.log('❌ Login failed - password mismatch');
-        // Don't log lengths in production to avoid information leakage
-      }
       return res.status(401).json({ message: 'Incorrect password' });
     }
   } catch (error) {

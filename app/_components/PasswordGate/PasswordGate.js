@@ -15,6 +15,144 @@ export default function PasswordGate({ children }) {
   const router = useRouter();
   useContext(ThemeContext); // Ensure theme context is available for dark mode styling
 
+  // Generate and play a "wrong" error sound
+  const playWrongSound = () => {
+    try {
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      if (!AudioContextClass) return;
+      
+      const audioContext = new AudioContextClass();
+      if (audioContext.state === 'suspended') {
+        audioContext.resume();
+      }
+      
+      const now = audioContext.currentTime;
+      const duration = 0.3;
+      
+      // Create a harsh, buzzer-like "wrong" sound
+      const osc1 = audioContext.createOscillator();
+      const osc2 = audioContext.createOscillator();
+      const gain1 = audioContext.createGain();
+      const gain2 = audioContext.createGain();
+      
+      // Two dissonant frequencies for "wrong" sound
+      osc1.type = 'sawtooth';
+      osc1.frequency.setValueAtTime(200, now);
+      osc1.frequency.exponentialRampToValueAtTime(150, now + duration);
+      
+      osc2.type = 'square';
+      osc2.frequency.setValueAtTime(250, now);
+      osc2.frequency.exponentialRampToValueAtTime(200, now + duration);
+      
+      // Quick attack, sustain, then fade
+      gain1.gain.setValueAtTime(0, now);
+      gain1.gain.linearRampToValueAtTime(0.3, now + 0.05);
+      gain1.gain.setValueAtTime(0.3, now + 0.15);
+      gain1.gain.exponentialRampToValueAtTime(0.01, now + duration);
+      
+      gain2.gain.setValueAtTime(0, now);
+      gain2.gain.linearRampToValueAtTime(0.2, now + 0.05);
+      gain2.gain.setValueAtTime(0.2, now + 0.15);
+      gain2.gain.exponentialRampToValueAtTime(0.01, now + duration);
+      
+      osc1.connect(gain1);
+      osc2.connect(gain2);
+      gain1.connect(audioContext.destination);
+      gain2.connect(audioContext.destination);
+      
+      osc1.start(now);
+      osc2.start(now);
+      osc1.stop(now + duration);
+      osc2.stop(now + duration);
+      
+      osc1.onended = () => {
+        audioContext.close().catch(() => {});
+      };
+    } catch (error) {
+      // Silently fail
+    }
+  };
+
+  // Generate and play a pleasant "plinnn" success sound
+  const playSuccessSound = () => {
+    try {
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      if (!AudioContextClass) return;
+      
+      const audioContext = new AudioContextClass();
+      if (audioContext.state === 'suspended') {
+        audioContext.resume();
+      }
+      
+      const now = audioContext.currentTime;
+      const duration = 0.6;
+      
+      // Create a pleasant chime/plink sound with multiple harmonics
+      const osc1 = audioContext.createOscillator();
+      const osc2 = audioContext.createOscillator();
+      const osc3 = audioContext.createOscillator();
+      const gain1 = audioContext.createGain();
+      const gain2 = audioContext.createGain();
+      const gain3 = audioContext.createGain();
+      
+      // Main tone - pleasant frequency
+      osc1.type = 'sine';
+      osc1.frequency.setValueAtTime(523.25, now); // C5 note
+      osc1.frequency.exponentialRampToValueAtTime(659.25, now + 0.3); // E5
+      osc1.frequency.exponentialRampToValueAtTime(783.99, now + duration); // G5
+      
+      // Harmonic 1
+      osc2.type = 'sine';
+      osc2.frequency.setValueAtTime(1046.5, now); // C6
+      osc2.frequency.exponentialRampToValueAtTime(1318.5, now + 0.3); // E6
+      osc2.frequency.exponentialRampToValueAtTime(1567.98, now + duration); // G6
+      
+      // Harmonic 2 (higher)
+      osc3.type = 'sine';
+      osc3.frequency.setValueAtTime(1567.98, now); // G6
+      osc3.frequency.exponentialRampToValueAtTime(1975.5, now + 0.3); // B6
+      osc3.frequency.exponentialRampToValueAtTime(2349.3, now + duration); // D7
+      
+      // Envelope for main tone - quick attack, long sustain, slow fade
+      gain1.gain.setValueAtTime(0, now);
+      gain1.gain.linearRampToValueAtTime(0.4, now + 0.05);
+      gain1.gain.setValueAtTime(0.4, now + 0.4);
+      gain1.gain.exponentialRampToValueAtTime(0.01, now + duration);
+      
+      // Envelope for harmonic 1 - slightly delayed
+      gain2.gain.setValueAtTime(0, now);
+      gain2.gain.linearRampToValueAtTime(0.2, now + 0.1);
+      gain2.gain.setValueAtTime(0.2, now + 0.4);
+      gain2.gain.exponentialRampToValueAtTime(0.01, now + duration);
+      
+      // Envelope for harmonic 2 - even more delayed
+      gain3.gain.setValueAtTime(0, now);
+      gain3.gain.linearRampToValueAtTime(0.15, now + 0.15);
+      gain3.gain.setValueAtTime(0.15, now + 0.4);
+      gain3.gain.exponentialRampToValueAtTime(0.01, now + duration);
+      
+      osc1.connect(gain1);
+      osc2.connect(gain2);
+      osc3.connect(gain3);
+      gain1.connect(audioContext.destination);
+      gain2.connect(audioContext.destination);
+      gain3.connect(audioContext.destination);
+      
+      osc1.start(now);
+      osc2.start(now);
+      osc3.start(now);
+      osc1.stop(now + duration);
+      osc2.stop(now + duration);
+      osc3.stop(now + duration);
+      
+      osc1.onended = () => {
+        audioContext.close().catch(() => {});
+      };
+    } catch (error) {
+      // Silently fail
+    }
+  };
+
   useEffect(() => {
     // Check authentication via server API
     fetch('/api/auth/check', {
@@ -57,16 +195,22 @@ export default function PasswordGate({ children }) {
       const data = await response.json();
 
       if (response.ok && data.success) {
+        // Play success sound
+        playSuccessSound();
         setIsAuthenticated(true);
         // Refresh to ensure cookie is set
         router.refresh();
       } else {
         setError(data.message || 'Incorrect password. Please try again.');
         setPassword('');
+        // Play wrong sound for incorrect password
+        playWrongSound();
       }
     } catch (err) {
       setError('An error occurred. Please try again.');
       setPassword('');
+      // Play wrong sound for error
+      playWrongSound();
     }
   };
 
