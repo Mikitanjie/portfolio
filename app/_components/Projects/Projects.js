@@ -3,11 +3,16 @@ import React, { useContext, useState } from 'react';
 import Link from "next/link";
 import { ThemeContext } from '../ThemeContext/ThemeContext';
 import ImageLightbox from '../ImageLightbox/ImageLightbox';
+import { use3DTilt } from '../use3DTilt/use3DTilt';
 
 const Projects = () => {
   const { theme } = useContext(ThemeContext);
   const [lightboxImage, setLightboxImage] = useState(null);
   const [lightboxUrl, setLightboxUrl] = useState(null);
+  const tiltRef1 = use3DTilt();
+  const tiltRef2 = use3DTilt();
+  const tiltRef3 = use3DTilt();
+  
   return (
     <div className="w-full max-w-7xl mx-auto px-6">
       {/* Project 1 - Cut Create */}
@@ -15,23 +20,26 @@ const Projects = () => {
         <div className="w-full md:w-1/2 flex justify-center md:justify-start pt-16 md:pt-20">
           <div className="group block w-full">
             <div 
-              className="relative overflow-hidden rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              ref={tiltRef1}
+              className="relative overflow-hidden rounded-lg hover:shadow-2xl cursor-pointer"
+              style={{ transformStyle: 'preserve-3d' }}
               onClick={() => {
                 setLightboxImage('/cutcreate.png');
                 setLightboxUrl('https://www.cutcreate.at/');
               }}
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-end justify-center pb-4">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-end justify-center pb-4 pointer-events-none">
                 <span className="text-white text-lg font-semibold transform group-hover:translate-y-0 translate-y-2 transition-transform duration-300">Click to enlarge →</span>
               </div>
               <Image
-                className="prjt-image object-cover transition-transform duration-300 group-hover:scale-110"
+                className="prjt-image object-cover"
                 src="/cutcreate.png"
                 alt="CUT & CREATE - Salzburg creative workshop website project screenshot"
                 width={500}
                 height={500}
                 loading="lazy"
                 sizes="(max-width: 768px) 100vw, 50vw"
+                style={{ pointerEvents: 'none' }}
               />
             </div>
           </div>
@@ -97,23 +105,26 @@ const Projects = () => {
         <div className="w-full md:w-1/2 flex justify-center md:justify-start pt-16 md:pt-20">
           <div className="group block w-full">
             <div 
-              className="relative overflow-hidden rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              ref={tiltRef2}
+              className="relative overflow-hidden rounded-lg hover:shadow-2xl cursor-pointer"
+              style={{ transformStyle: 'preserve-3d' }}
               onClick={() => {
                 setLightboxImage('/Projectpic.png');
                 setLightboxUrl('https://www.travelpal.rest/');
               }}
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-end justify-center pb-4">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-end justify-center pb-4 pointer-events-none">
                 <span className="text-white text-lg font-semibold transform group-hover:translate-y-0 translate-y-2 transition-transform duration-300">Click to enlarge →</span>
               </div>
               <Image
-                className="prjt-image object-cover transition-transform duration-300 group-hover:scale-110"
+                className="prjt-image object-cover"
                 src="/Projectpic.png"
                 alt="Travelpal - Social travel planning platform project screenshot"
                 width={500}
                 height={500}
                 loading="lazy"
                 sizes="(max-width: 768px) 100vw, 50vw"
+                style={{ pointerEvents: 'none' }}
               />
             </div>
           </div>
@@ -170,23 +181,26 @@ const Projects = () => {
         <div className="w-full md:w-1/2 flex justify-center md:justify-end pt-16 md:pt-20">
           <div className="group block w-full">
             <div 
-              className="relative overflow-hidden rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              ref={tiltRef3}
+              className="relative overflow-hidden rounded-lg hover:shadow-2xl cursor-pointer"
+              style={{ transformStyle: 'preserve-3d' }}
               onClick={() => {
                 setLightboxImage('/vitopasti.png');
                 setLightboxUrl('https://www.donvitoantipasti.com/');
               }}
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-end justify-center pb-4">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-end justify-center pb-4 pointer-events-none">
                 <span className="text-white text-lg font-semibold transform group-hover:translate-y-0 translate-y-2 transition-transform duration-300">Click to enlarge →</span>
               </div>
               <Image
-                className="prjt-image object-cover transition-transform duration-300 group-hover:scale-110"
+                className="prjt-image object-cover"
                 src="/vitopasti.png"
                 alt="DonVito Antipasti - Salzburg antipasti shop website project screenshot"
                 width={500}
                 height={500}
                 loading="lazy"
                 sizes="(max-width: 768px) 100vw, 50vw"
+                style={{ pointerEvents: 'none' }}
               />
             </div>
           </div>
