@@ -56,6 +56,16 @@ export const metadata = {
       { url: '/favicon.ico' },
     ],
   },
+  manifest: '/manifest.json',
+  themeColor: '#01a123',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    title: 'Michael Catania',
+  },
+  other: {
+    'mobile-web-app-capable': 'yes',
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -85,14 +95,6 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <head>
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#01a123" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="Michael Catania" />
-      </head>
       <body className={inter.className}>
         <StructuredData data={structuredData} />
         <SkipToContent />

@@ -44,7 +44,7 @@ export default function PrivacyPolicy() {
               1. Introduction
             </h2>
             <p>
-              Welcome to Michael Catania's portfolio website. This Privacy Policy explains how I collect, 
+              Welcome to Michael Catania&apos;s portfolio website. This Privacy Policy explains how I collect, 
               use, and protect your personal information when you visit this website or use the contact form.
             </p>
           </section>
@@ -63,7 +63,7 @@ export default function PrivacyPolicy() {
             </ul>
             <p className="mt-3">
               <strong>Theme Preference:</strong> This website stores your theme preference (light/dark mode) 
-              in your browser's local storage. This data is stored locally on your device and is not transmitted 
+              in your browser&apos;s local storage. This data is stored locally on your device and is not transmitted 
               to any server.
             </p>
           </section>
@@ -102,7 +102,7 @@ export default function PrivacyPolicy() {
             </h2>
             <p>
               This website does not use cookies or any tracking technologies. The only data stored locally 
-              is your theme preference in your browser's local storage, which is not transmitted to any server 
+              is your theme preference in your browser&apos;s local storage, which is not transmitted to any server 
               and can be cleared at any time through your browser settings.
             </p>
           </section>
@@ -138,7 +138,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="text-2xl font-semibold mb-4" style={titleStyle}>
-              8. Children's Privacy
+              8. Children&apos;s Privacy
             </h2>
             <p>
               This website is not intended for children under the age of 13. I do not knowingly collect 
@@ -153,7 +153,7 @@ export default function PrivacyPolicy() {
             </h2>
             <p>
               I may update this Privacy Policy from time to time. Any changes will be posted on this page 
-              with an updated "Last updated" date. I encourage you to review this Privacy Policy periodically 
+              with an updated &quot;Last updated&quot; date. I encourage you to review this Privacy Policy periodically 
               to stay informed about how I protect your information.
             </p>
           </section>
