@@ -3,6 +3,14 @@ import { NextResponse } from 'next/server';
 export function middleware(request) {
   const { pathname } = request.nextUrl;
 
+  // Skip authentication in development mode
+  const isDevelopment = process.env.NODE_ENV === 'development';
+  if (isDevelopment) {
+    const response = NextResponse.next();
+    response.headers.set('X-Auth-Status', 'authenticated');
+    return response;
+  }
+
   // Allow access to auth API routes (login, check) - these need to be accessible
   if (pathname.startsWith('/api/auth/')) {
     return NextResponse.next();

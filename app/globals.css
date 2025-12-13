@@ -670,46 +670,79 @@ p {
 ============================ */
 
 
-/* RAIN EFFECT BACKGROUND */
+/* Subtle animated gradient background */
 .navbar-matrix {
   position: absolute;
   left: 0;
+  top: 0;
   width: 100%;
-  height: 200%;
-  background-image: url(/backG.png);
-  background-repeat: repeat-y;
-  background-size: 100% auto;
-  background-position: top center;
-  opacity: 0.85;
-  filter: brightness(0.75) saturate(1.2);
-  animation: rainEffect 10s linear infinite;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(1, 161, 35, 0.05) 0%,
+    rgba(16, 185, 129, 0.03) 50%,
+    rgba(1, 161, 35, 0.05) 100%
+  );
+  background-size: 200% 200%;
+  animation: subtleGradientShift 8s ease-in-out infinite;
+  opacity: 0.6;
+  pointer-events: none;
 }
 
-/* Show more of the image on desktop (similar to mobile) */
-@media (min-width: 768px) {
-  .navbar-matrix {
-    background-size: 90% auto;
-    background-position: center top;
-    height: 280%;
+[data-theme="light"] .navbar-matrix {
+  display: none;
+}
+
+@keyframes subtleGradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
 }
 
-@keyframes rainEffect {
-  from {
-    top: -50%;
+/* Floating animation for geometric shapes */
+@keyframes floatShape {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
   }
-  to {
-    top: 0;
+  25% {
+    transform: translate(10px, -8px) rotate(5deg);
+  }
+  50% {
+    transform: translate(-5px, -15px) rotate(-3deg);
+  }
+  75% {
+    transform: translate(-10px, -5px) rotate(4deg);
+  }
+}
+
+@keyframes floatShapeReverse {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-8px, -10px) rotate(-4deg);
+  }
+  50% {
+    transform: translate(5px, -12px) rotate(3deg);
+  }
+  75% {
+    transform: translate(12px, -6px) rotate(-5deg);
   }
 }
 
 
-/* GREEN OVERLAY */
+/* Subtle green accent overlay */
 .navbar-green-overlay {
   position: absolute;
   inset: 0;
-  background: transparent;
-  mix-blend-mode: overlay;
+  background: linear-gradient(
+    to bottom,
+    rgba(1, 161, 35, 0.08) 0%,
+    transparent 100%
+  );
   z-index: 2;
   pointer-events: none;
 }
@@ -736,7 +769,17 @@ nav.nav-visible {
 .navbar-animated-bg {
   position: relative;
   overflow: hidden;
-  background-color: black;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(10, 10, 10, 0.98) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(1, 161, 35, 0.1);
+}
+
+[data-theme="light"] .navbar-animated-bg {
+  background: rgb(17, 24, 39); /* gray-900 same as footer */
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(1, 161, 35, 0.2);
 }
 
 html, body {

@@ -17,6 +17,12 @@ async function checkAuth() {
 }
 
 export default async function ServerAuthGuard({ children }) {
+  // Skip authentication in development mode
+  const isDevelopment = process.env.NODE_ENV === 'development';
+  if (isDevelopment) {
+    return <>{children}</>;
+  }
+
   const isAuthenticated = await checkAuth();
 
   // If not authenticated, return an empty div

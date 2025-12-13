@@ -24,6 +24,7 @@ const Topper = () => {
   const tickingRef = useRef(false);
   const menuButtonRef = useRef(null);
   const closeButtonRef = useRef(null);
+  const navbarParticlesRef = useRef(null);
 
   // Focus management for mobile menu
   useEffect(() => {
@@ -85,6 +86,81 @@ const Topper = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Navbar particles effect (only for dark theme)
+  useEffect(() => {
+    if (theme !== 'dark') return;
+
+    const canvas = navbarParticlesRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    const navbarHeight = 75;
+
+    const resize = () => {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = navbarHeight;
+    };
+
+    resize();
+    window.addEventListener('resize', resize);
+
+    let particles = [];
+    let animationFrameId;
+
+    const createParticles = () => {
+      particles = [];
+      // More particles for a richer effect
+      const particleCount = 25;
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          speedX: (Math.random() * 0.5 - 0.25) * 0.5, // Slower horizontal movement
+          speedY: (Math.random() * 0.5 - 0.25) * 0.5, // Slower vertical movement
+          size: Math.random() * 1.5 + 0.5, // Smaller particles (0.5-2px)
+          opacity: Math.random() * 0.5 + 0.3, // Subtle opacity
+        });
+      }
+    };
+
+    createParticles();
+
+    function drawParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (let p of particles) {
+        p.x += p.speedX;
+        p.y += p.speedY;
+
+        // Wrap around edges
+        if (p.x < 0) p.x = canvas.width;
+        if (p.x > canvas.width) p.x = 0;
+        if (p.y < 0) p.y = canvas.height;
+        if (p.y > canvas.height) p.y = 0;
+
+        // Draw particle with green color
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.closePath();
+        ctx.fillStyle = `rgba(16, 185, 129, ${p.opacity})`; // emerald-400 with opacity
+        ctx.fill();
+      }
+
+      animationFrameId = requestAnimationFrame(drawParticles);
+    }
+
+    drawParticles();
+
+    const intervalId = setInterval(createParticles, 3 * 60 * 1000); // Regenerate every 3 minutes
+
+    return () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+      clearInterval(intervalId);
+      window.removeEventListener('resize', resize);
+    };
+  }, [theme]);
 
   const navItemStyle =
     'text-white hover:text-emerald-400 active:scale-90 text-lg font-semibold cursor-pointer';
@@ -104,9 +180,23 @@ const Topper = () => {
     >
     <nav
       className="navbar-animated-bg w-full h-[75px] flex justify-between items-center px-4 md:px-8"
+      style={{
+        backgroundClip: 'unset',
+        WebkitBackgroundClip: 'unset'
+      }}
     >
-      <div className="navbar-matrix" />
-      <div className="navbar-green-overlay" />
+      {theme === 'dark' && (
+        <>
+          <div className="navbar-matrix" />
+          <div className="navbar-green-overlay" />
+          {/* Navbar particles canvas (dark theme) */}
+          <canvas
+            ref={navbarParticlesRef}
+            className="absolute inset-0 w-full h-full pointer-events-none"
+            style={{ zIndex: 1 }}
+          />
+        </>
+      )}
 
       {/* Desktop Navigation */}
       <nav className="hidden md:flex items-center space-x-6 z-[5]" aria-label="Main navigation">

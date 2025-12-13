@@ -154,6 +154,14 @@ export default function PasswordGate({ children }) {
   };
 
   useEffect(() => {
+    // Skip authentication in development mode
+    const isDevelopment = process.env.NODE_ENV === 'development';
+    if (isDevelopment) {
+      setIsAuthenticated(true);
+      setIsLoading(false);
+      return;
+    }
+
     // Check authentication via server API
     fetch('/api/auth/check', {
       credentials: 'include', // Important: include cookies
